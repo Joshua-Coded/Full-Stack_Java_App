@@ -1,9 +1,0 @@
-/* Styles for Jitsi in Default Skin */
-
-.uiIconSocJitsi:before {
-	content: "\e829";
-}
-
-.uiIconJitsiCall {
-	vertical-align: text-bottom;
-}

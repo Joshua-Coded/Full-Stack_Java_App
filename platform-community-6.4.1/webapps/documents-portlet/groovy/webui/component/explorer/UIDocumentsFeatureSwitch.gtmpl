@@ -1,8 +1,0 @@
-<%
-    String switchLabel = _ctx.appRes("documents.switchToNewDocuments");
-	def rcontext = _ctx.getRequestContext() ;
-	def jsManager = rcontext.getJavascriptManager();
-	jsManager.require("PORTLET/documents-portlet/Documents", "app").addScripts("app.initSwitchApp();");
-%>
-<div id="newAppSwitch" >
-</div>

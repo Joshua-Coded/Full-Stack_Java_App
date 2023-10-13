@@ -1,6 +1,0 @@
-{
-  "application":{
-    "org.exoplatform.platform.portlet.juzu.notificationsAdmin":{},
-    "org.exoplatform.search.portlet.indexing.management":{}
-  }
-}

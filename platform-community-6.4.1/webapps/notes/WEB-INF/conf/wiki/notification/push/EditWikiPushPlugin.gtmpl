@@ -1,4 +1,0 @@
-<%
-String message = "";
-    message = _ctx.appRes("Notification.wiki.editWikiNotification" ,WIKI_PAGE_NAME, CREATOR);
-%>

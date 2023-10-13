@@ -1,1 +1,0 @@
-define((()=>(extensionRegistry,exoi18n,{})));
