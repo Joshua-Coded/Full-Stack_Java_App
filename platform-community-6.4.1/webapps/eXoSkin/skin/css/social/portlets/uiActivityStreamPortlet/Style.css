@@ -1,0 +1,1401 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+#UIPopupComposer .PopupContent {
+  padding: 0;
+}
+#UIPopupComposer .PopupContent .uiActionBorder {
+  margin: 0;
+  padding: 15px;
+}
+#UIPopupComposer .PopupContent .uiAction {
+  padding-top: 5px;
+  margin: 0;
+}
+#UIPopupComposer .PopupContent .limitMessage {
+  text-align: left;
+  line-height: 30px;
+  color: #555;
+}
+#UIPopupComposer .popupHeader {
+  padding: 12px 10px 12px 15px;
+}
+#UIPopupComposer .popupHeader .uiIconClose {
+  top: 12px;
+}
+#UIDocActivitySelector {
+  margin-bottom: 5px;
+}
+#UIComposer .cke_chrome {
+  border-radius: 0 ! important;
+}
+#ComposerContainer {
+  width: 100%;
+  overflow: hidden;
+}
+#ComposerContainer .UIActivityComposerContainer #UIActivityComposerContainer_LINK_ACTIVITY_,
+#ComposerContainer .UIActivityComposerContainer #UIActivityComposerContainer_DOC_ACTIVITY_ {
+  border-right: 1px solid #b6b6b6;
+  border-left: 1px solid #b6b6b6;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainer {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  height: 36px;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainer > div {
+  height: 36px;
+  line-height: 36px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 10px;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainer .progress {
+  width: 20%;
+  height: 20px;
+  margin-top: 8px;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainer .progress .bar {
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: center;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainer .fileNameLabel {
+  width: 35%;
+  text-overflow: ellipsis;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainer .fileType {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-top: 2px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainer .fileSize {
+  width: 75px;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainers {
+  clear: both;
+  background: white;
+  border-top: 1px #b6b6b6 solid;
+}
+#ComposerContainer .UIActivityComposerContainer .uploadContainers .uploadContainer {
+  border-top: 0;
+  border-bottom: 1px #b6b6b6 solid;
+}
+#ComposerContainer .UIActivityComposerContainer .sizeExceeded {
+  margin-top: 50px;
+}
+#ComposerContainer .UIActivityComposerContainer .fileAlreadyExists {
+  margin-top: -50px;
+}
+#ComposerContainer .UIActivityComposerContainer .fileAlreadyExists,
+#ComposerContainer .UIActivityComposerContainer .sizeExceeded,
+#ComposerContainer .UIActivityComposerContainer .countExceeded {
+  display: block;
+  position: absolute;
+  width: auto;
+  left: 50vw;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+#ComposerContainer .UIActivityComposerContainer .limitMessage {
+  height: 20px;
+  padding: 12px 23px;
+  color: #555;
+  display: flex;
+}
+#ComposerContainer .UIActivityComposerContainer .limitMessage .sizeLimit,
+#ComposerContainer .UIActivityComposerContainer .limitMessage .countLimit {
+  margin-right: 2px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+#ComposerContainer .UIActivityComposerContainer .limitMessage .sizeLimit:before {
+  font-family: "PLF-FONT-ICONS";
+  content: "\e771";
+}
+#ComposerContainer .UIActivityComposerContainer .limitMessage .countLimit:before {
+  font-family: "PLF-FONT-ICONS";
+  content: "\e767";
+}
+#ComposerContainer .UIActivityComposerContainer .selectFolder {
+  display: inline-block;
+  margin: auto;
+  padding-right: 5px;
+  line-height: 20px;
+}
+#ComposerContainer .UIActivityComposerContainer .selectFolder .uiIconClose {
+  top: 0;
+  left: 5px;
+}
+#ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector {
+  width: 100%;
+  text-align: center;
+}
+#ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector > div {
+  white-space: nowrap;
+  display: inline-block;
+  margin: 5px auto 0;
+  padding: 0;
+}
+#ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector .dragEntered {
+  background: #ccc;
+}
+#ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector .dropFileBox {
+  height: 75px;
+  line-height: 75px;
+  width: 94%;
+  border-radius: 5px;
+  border: 3px dashed var(--allPagesDropFileAreaBackgroundOnDragEnter, #e6e6e6);
+  font-size: 14px;
+  color: #333333;
+  margin-top: 10px;
+}
+#ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector .dropFileBox a {
+  text-decoration: underline;
+}
+#ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector .dropFileBox .mobileText {
+  display: none;
+}
+#ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector .multiploadWordSeperator {
+  display: block;
+}
+#UIDocumentSelectorTab .breadcrumbContainer,
+#UIFolderSelectorTab .breadcrumbContainer {
+  display: inline-block;
+  padding: 5px 20px;
+  border-bottom: 1px #ccc solid;
+  box-sizing: border-box;
+  line-height: 33px;
+  width: 100%;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .breadcrumb,
+#UIFolderSelectorTab .breadcrumbContainer .breadcrumb {
+  margin: 6px 0;
+  display: flex;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .breadcrumb .backBTN,
+#UIFolderSelectorTab .breadcrumbContainer .breadcrumb .backBTN {
+  display: none;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .breadcrumb > li,
+#UIFolderSelectorTab .breadcrumbContainer .breadcrumb > li {
+  height: 21px;
+  max-width: 100px;
+  display: flex;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .breadcrumb > li a,
+#UIFolderSelectorTab .breadcrumbContainer .breadcrumb > li a {
+  float: initial;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .breadcrumb .uiIconMiniArrowRight,
+#UIFolderSelectorTab .breadcrumbContainer .breadcrumb .uiIconMiniArrowRight {
+  margin: 7px 5px 5px 5px;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .breadcrumb .active,
+#UIFolderSelectorTab .breadcrumbContainer .breadcrumb .active {
+  color: #2f5e92;
+  max-width: 100px;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .searchBox,
+#UIFolderSelectorTab .breadcrumbContainer .searchBox {
+  width: 150px;
+  position: relative;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .searchBox > input,
+#UIFolderSelectorTab .breadcrumbContainer .searchBox > input {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 6px;
+}
+#UIDocumentSelectorTab .breadcrumbContainer .searchBox > a,
+#UIFolderSelectorTab .breadcrumbContainer .searchBox > a {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+}
+#UIDocumentSelectorTab .selectionBox,
+#UIFolderSelectorTab .selectionBox {
+  height: 350px;
+  max-height: 350px;
+  overflow: auto;
+  padding: 5px;
+  background-position-y: -50px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#UIDocumentSelectorTab .selectionBox h4,
+#UIFolderSelectorTab .selectionBox h4 {
+  margin-left: 20px;
+}
+#UIDocumentSelectorTab .selectionBox .driveData,
+#UIFolderSelectorTab .selectionBox .driveData,
+#UIDocumentSelectorTab .selectionBox .folderSelection,
+#UIFolderSelectorTab .selectionBox .folderSelection,
+#UIDocumentSelectorTab .selectionBox .fileSelection,
+#UIFolderSelectorTab .selectionBox .fileSelection {
+  display: inline-table;
+  text-align: center;
+  border: 1px transparent solid;
+}
+#UIDocumentSelectorTab .selectionBox .folderSelection,
+#UIFolderSelectorTab .selectionBox .folderSelection,
+#UIDocumentSelectorTab .selectionBox .fileSelection,
+#UIFolderSelectorTab .selectionBox .fileSelection {
+  margin: 5px;
+  width: 95px;
+  padding: 0;
+}
+#UIDocumentSelectorTab .selectionBox .driveData,
+#UIFolderSelectorTab .selectionBox .driveData {
+  margin: 0 5px;
+  width: 114px;
+  padding: 20px;
+}
+#UIDocumentSelectorTab .selectionBox .center,
+#UIFolderSelectorTab .selectionBox .center {
+  margin: auto;
+  padding: 2px;
+  text-align: center;
+  word-break: normal;
+}
+#UIDocumentSelectorTab .selectionBox .selectionLabel,
+#UIFolderSelectorTab .selectionBox .selectionLabel {
+  padding-top: 2px;
+  display: block;
+  padding: 0;
+  color: #000;
+}
+#UIDocumentSelectorTab .selectionBox .folderSelection .selectionIcon,
+#UIFolderSelectorTab .selectionBox .folderSelection .selectionIcon {
+  padding-bottom: 2px;
+  font-size: 55px;
+}
+#UIDocumentSelectorTab .selectionBox .driveData .selectionIcon,
+#UIFolderSelectorTab .selectionBox .driveData .selectionIcon {
+  padding-bottom: 2px;
+  font-size: 55px;
+}
+#UIDocumentSelectorTab .selectionBox .fileSelection .selectionIcon,
+#UIFolderSelectorTab .selectionBox .fileSelection .selectionIcon {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  margin-top: 2px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#UIDocumentSelectorTab .selectionBox .fileSelection.selected,
+#UIFolderSelectorTab .selectionBox .fileSelection.selected {
+  border: 1px #2f5e92 solid;
+  background-repeat: no-repeat;
+  background-position-x: 102%;
+  background-position-y: -2px;
+  background-image: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/selectedDocument.gif");
+}
+#UIDocumentSelectorTab .selectionBox .truncate,
+#UIFolderSelectorTab .selectionBox .truncate {
+  max-width: 90px;
+  width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#UIDocumentSelectorTab .emptyFolder,
+#UIFolderSelectorTab .emptyFolder,
+#UIDocumentSelectorTab .emptyResults,
+#UIFolderSelectorTab .emptyResults {
+  margin: auto 0;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5em;
+  color: black;
+  white-space: pre-line;
+  display: none;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  margin-top: 15%;
+  padding-top: 45px;
+}
+#UIDocumentSelectorTab .emptyFolder,
+#UIFolderSelectorTab .emptyFolder {
+  background-image: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/emptyfolder.png");
+}
+#UIDocumentSelectorTab .emptyResults,
+#UIFolderSelectorTab .emptyResults {
+  background-image: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/noresult.png");
+}
+#UIDocumentSelectorTab .fileAlreadySelected,
+#UIFolderSelectorTab .fileAlreadySelected {
+  position: absolute;
+  width: 75%;
+  opacity: 0.9;
+}
+.multiFilesActivity .previews {
+  box-sizing: content-box;
+  display: block;
+  clear: both;
+  height: 100%;
+  max-height: 300px;
+  padding: 0 16px 16px 16px;
+}
+.multiFilesActivity .ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.multiFilesActivity .fileShare {
+  display: block;
+  width: 100%;
+  height: 300px;
+  max-height: 300px;
+  overflow: hidden;
+}
+.multiFilesActivity .isPreviewable {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 300px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.multiFilesActivity .isPreviewable.linkExists.previewable30 {
+  width: 70%;
+  padding: 0 !important;
+  border: 1px solid #ccc !important;
+}
+.multiFilesActivity .isPreviewable.linkExists.previewable20 {
+  width: 63%;
+  padding: 0 !important;
+  border: 1px solid #ccc !important;
+}
+.multiFilesActivity .isPreviewable.linkExists.previewable21 {
+  width: calc(36% - 5px);
+}
+.multiFilesActivity .isPreviewable.linkExists.previewable31,
+.multiFilesActivity .isPreviewable.linkExists.previewable32 {
+  width: calc(30% - 10px);
+}
+.multiFilesActivity .isPreviewable .linkClass {
+  margin: 0 !important;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.multiFilesActivity .isPreviewable .linkClass .linkPreview {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1 0 auto;
+  margin: 0;
+}
+.multiFilesActivity .isPreviewable .linkClass .linkPreview.defaultPreview {
+  background-size: auto;
+  background-position-y: top;
+}
+.multiFilesActivity .isPreviewable .linkClass .linkPreview .boxDescription {
+  width: auto;
+  background-color: rgba(225, 232, 238, 0.8);
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+.multiFilesActivity .isPreviewable .linkClass .linkPreview .boxDescription .block {
+  padding: 10px;
+  margin-top: 0;
+  align-items: flex-start;
+}
+.multiFilesActivity .isPreviewable .linkClass .linkPreview .boxDescription .block .titlePreview {
+  width: 100%;
+}
+.multiFilesActivity .isPreviewable .linkClass .linkPreview .boxDescription .block .descriptionLink {
+  height: auto;
+  text-align: left;
+  -webkit-line-clamp: 1;
+}
+.multiFilesActivity .isPreviewable .linkClass .linkPreview .boxDescription .block .link {
+  width: 100%;
+  text-align: left;
+  margin-top: 5px;
+}
+.multiFilesActivity .isPreviewable .linkClass .EmbedHtml {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
+}
+.multiFilesActivity .isPreviewable .linkClass .EmbedHtml iframe {
+  flex: 1 0 auto;
+}
+.multiFilesActivity .MediaName {
+  height: 100%;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+.multiFilesActivity .MediaName > * {
+  position: relative;
+  flex: 1 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+  margin: 0;
+}
+.multiFilesActivity .MediaName > * > .content {
+  margin: auto;
+}
+.multiFilesActivity .MediaName > * > .content > * {
+  margin: auto;
+}
+.multiFilesActivity .MediaName a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.multiFilesActivity .MediaName .fileName {
+  font-size: 1.3em;
+  color: #fff;
+  font-weight: normal;
+}
+.multiFilesActivity .MediaName .fileName .fileTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.multiFilesActivity .MediaName .fileName .fileTitle .fileNameParentLink {
+  max-width: calc(100% - 50px);
+  margin: 0;
+  display: flex;
+}
+.multiFilesActivity .MediaName .fileName .fileTitle .fileNameParentLink a {
+  margin: auto;
+  text-decoration: none;
+}
+.multiFilesActivity .MediaName .fileName .fileTitle .fileNameParentLink a:hover {
+  text-decoration: underline;
+}
+.multiFilesActivity .MediaName .fileName .fileVersion {
+  margin: 0 5px;
+}
+.multiFilesActivity .MediaName .fileName .fileVersion:hover {
+  text-decoration: underline;
+}
+.multiFilesActivity .MediaName .uiIconArrowRight {
+  color: #fff;
+  width: 20px;
+  text-decoration: none;
+}
+.multiFilesActivity .MediaName .borderTop {
+  width: 80%;
+  margin: 0 auto;
+  flex: 0 auto;
+  padding: 0;
+  height: 0;
+  border-top: 1px solid #fff;
+}
+.multiFilesActivity .MediaName .fileBreadCrumbContent .fileBreadCrumbWrapper {
+  margin: auto;
+  height: 20px;
+}
+.multiFilesActivity .mediaContent {
+  display: flex;
+  min-height: 100%;
+  max-height: 100%;
+}
+.multiFilesActivity .mediaContent img {
+  margin: auto;
+  flex: 0 0 auto;
+}
+.multiFilesActivity .mediaContent + .MediaName {
+  opacity: 0;
+  transition-delay: 0.2s;
+}
+.multiFilesActivity .mediaContent + .MediaName > * {
+  transition-delay: 0.2s;
+}
+.multiFilesActivity .mediaContent + .MediaName > *:first-child {
+  transform: scale(0, 2);
+  transition-duration: 0.35s;
+  transform-origin: bottom;
+}
+.multiFilesActivity .mediaContent + .MediaName > *:last-child {
+  transform: scale(0, 2);
+  transition-duration: 0.35s;
+  transform-origin: top;
+}
+.multiFilesActivity .mediaContent + .MediaName .borderTop {
+  transform: scale(0, 1);
+  transition-delay: 0.2s;
+}
+.multiFilesActivity .mediaContent + .MediaName.LoadMore {
+  opacity: 1;
+  transition-delay: 0s;
+}
+.multiFilesActivity .isPreviewable:hover .mediaContent + .MediaName,
+.multiFilesActivity .isPreviewable .NoPreview + .MediaName {
+  opacity: 1;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+  transition-delay: 0s;
+}
+.multiFilesActivity .isPreviewable:hover .mediaContent + .MediaName > *,
+.multiFilesActivity .isPreviewable .NoPreview + .MediaName > * {
+  transform: scale(1);
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  transition-delay: 0s;
+}
+.multiFilesActivity .isPreviewable:hover .mediaContent + .MediaName .borderTop,
+.multiFilesActivity .isPreviewable .NoPreview + .MediaName .borderTop {
+  transform: scale(1);
+  transition-duration: 0.35s;
+  transition-delay: 0s;
+}
+.multiFilesActivity .previewable10 {
+  display: block;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+}
+.multiFilesActivity .previewable20 {
+  display: table-cell;
+  width: calc(50% - 5px);
+  height: 300px;
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+.multiFilesActivity .previewable21 {
+  display: block;
+  margin: 0 0 0 5px;
+  padding: 0;
+  width: calc(50% - 5px);
+  height: 300px;
+  float: right;
+}
+.multiFilesActivity .previewable30 {
+  display: table-cell;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  float: left;
+}
+.multiFilesActivity .previewable31 {
+  display: block;
+  width: calc(50% - 10px);
+  padding: 0;
+  margin: 0 0 5px 10px;
+  height: 145px;
+  max-height: 145px;
+  float: right;
+}
+.multiFilesActivity .previewable32 {
+  display: block;
+  width: calc(50% - 10px);
+  margin: 5px 0 0 10px;
+  padding: 0;
+  height: 145px;
+  max-height: 145px;
+  float: right;
+}
+.multiFilesActivity .LoadMore {
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  float: left;
+  height: 145px;
+  max-height: 145px;
+  line-height: 145px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  #UIPopupComposer .PopupContent .uiAction {
+    clear: both;
+    width: 100%;
+  }
+  #UIPopupComposer .PopupContent .limitMessage {
+    display: none;
+  }
+  #UIPopupComposer .PopupContent .uiAction button {
+    display: block;
+  }
+  #UIDocumentSelectorTab .selectionBox,
+  #UIFolderSelectorTab .selectionBox {
+    height: 50vh;
+    max-height: 50vh;
+  }
+  #UIDocumentSelectorTab .selectionBox .driveData,
+  #UIFolderSelectorTab .selectionBox .driveData {
+    width: 90px;
+  }
+  #UIDocumentSelectorTab .breadcrumbContainer .breadcrumb .normal,
+  #UIFolderSelectorTab .breadcrumbContainer .breadcrumb .normal {
+    display: none;
+  }
+  #UIDocumentSelectorTab .breadcrumbContainer .breadcrumb .backBTN,
+  #UIFolderSelectorTab .breadcrumbContainer .breadcrumb .backBTN {
+    display: inline-block;
+    padding-top: 2px;
+    padding-right: 5px;
+  }
+  #UIDocumentSelectorTab .breadcrumbContainer .breadcrumb .uiIconMiniArrowRight,
+  #UIFolderSelectorTab .breadcrumbContainer .breadcrumb .uiIconMiniArrowRight {
+    display: none;
+  }
+  #UIDocumentSelectorTab .breadcrumbContainer .searchBox,
+  #UIFolderSelectorTab .breadcrumbContainer .searchBox {
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+  #UIDocumentSelectorTab .breadcrumbContainer .searchBox > input,
+  #UIFolderSelectorTab .breadcrumbContainer .searchBox > input {
+    width: 98%;
+  }
+  .dropFileBox .dropMsg {
+    display: none;
+  }
+  .dropFileBox .or {
+    display: none;
+  }
+  .dropFileBox span {
+    display: block;
+    line-height: 37px;
+  }
+  #ComposerContainer .UIActivityComposerContainer .limitMessage {
+    display: block;
+  }
+  #ComposerContainer .UIActivityComposerContainer .limitMessage .sizeLimit,
+  #ComposerContainer .UIActivityComposerContainer .limitMessage .countLimit,
+  #ComposerContainer .UIActivityComposerContainer .limitMessage .selectFolder {
+    width: 100%;
+  }
+  #ComposerContainer .UIActivityComposerContainer .fileSize {
+    display: none;
+  }
+  #ComposerContainer .UIActivityComposerContainer .uploadContainer > div {
+    margin: 0 5px;
+  }
+  #ComposerContainer .UIActivityComposerContainer .uploadContainer .fileType {
+    display: none;
+  }
+  #ComposerContainer .UIActivityComposerContainer .uploadContainer .progress {
+    width: 40%;
+  }
+  #ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector .dropFileBox .uploadButton .text {
+    display: none;
+  }
+  #ComposerContainer .UIActivityComposerContainer .multiploadFilesSelector .dropFileBox .uploadButton .mobileText {
+    display: block;
+  }
+}
+@media (max-width: 767px) and (max-height: 1024px), (max-width: 1024px) and (max-height: 768px) {
+  .multiFilesActivity .previews {
+    height: 365px;
+    max-height: 365px;
+  }
+  .multiFilesActivity .previews .fileShare {
+    display: block;
+    height: 365px;
+    max-height: 365px;
+  }
+  .multiFilesActivity .previews .fileShare .previewable10 > div:first-child,
+  .multiFilesActivity .previews .fileShare .previewable20 > div:first-child,
+  .multiFilesActivity .previews .fileShare .previewable21 > div:first-child,
+  .multiFilesActivity .previews .fileShare .previewable30 > div:first-child {
+    line-height: initial;
+  }
+  .multiFilesActivity .previews .fileShare .previewable10 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .multiFilesActivity .previews .fileShare .previewable20 {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .previewable21 {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .previewable30 {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .previewable31 {
+    display: inline-block;
+    width: calc(50% - 2px);
+    height: 50%;
+    margin: 0 2px 0 0;
+    padding: 0;
+    float: left;
+  }
+  .multiFilesActivity .previews .fileShare .previewable32 {
+    display: inline-block;
+    width: calc(50% - 2px);
+    height: 50%;
+    margin: 0 0 0 2px;
+    float: right;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable > div:first-child {
+    max-height: 100%;
+    line-height: normal;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .MediaName {
+    opacity: 1;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .MediaName > * {
+    transform: scale(1);
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .MediaName > * > * {
+    transform: scale(1);
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName {
+    top: auto;
+    bottom: 0;
+    height: 40px;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName .infoFile,
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName .fileBreadCrumbContent,
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName .borderTop {
+    display: none;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName .infoFile {
+    font-size: 12px;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .NoPreview + .MediaName,
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName.LoadMore {
+    top: 0;
+    bottom: auto;
+    height: 100%;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable .NoPreview + .MediaName .infoFile,
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName.LoadMore .infoFile,
+  .multiFilesActivity .previews .fileShare .isPreviewable .NoPreview + .MediaName .fileBreadCrumbContent,
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName.LoadMore .fileBreadCrumbContent,
+  .multiFilesActivity .previews .fileShare .isPreviewable .NoPreview + .MediaName .borderTop,
+  .multiFilesActivity .previews .fileShare .isPreviewable .mediaContent + .MediaName.LoadMore .borderTop {
+    display: flex;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists.previewable10 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists.previewable20 {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0 0 5px 0 !important;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists.previewable21 {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists.previewable30 {
+    display: block;
+    width: 100%;
+    height: 220px;
+    margin: 0 0 5px 0 !important;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists.previewable31 {
+    display: inline-block;
+    width: calc(50% - 2px);
+    height: 50%;
+    margin: 0 2px 0 0;
+    padding: 0;
+    float: left;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists.previewable32 {
+    display: inline-block;
+    width: calc(50% - 2px);
+    height: 50%;
+    margin: 0 0 0 2px;
+    float: right;
+    padding: 0;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists .linkPreview.defaultPreview {
+    background-image: none !important;
+    flex-direction: column;
+  }
+  .multiFilesActivity .previews .fileShare .isPreviewable.linkExists .linkPreview.defaultPreview .defaultImage {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1 0 auto;
+  }
+}
+.uiBgd64x64FileDefault {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  margin-top: 2px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileDefault.png");
+}
+.uiBgd64x64FileDefault,
+.uiBgd64x64applicationoctet-stream {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileDefault.png");
+}
+.uiBgd64x64FileArchiveDefault,
+.uiBgd64x64applicationx-tar,
+.uiBgd64x64applicationx-gzip,
+.uiBgd64x64applicationx-bzip2,
+.uiBgd64x64applicationother-zip {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileArchiveZip.png");
+}
+.uiBgd64x64FileArchiveRar,
+.uiBgd64x64applicationrar {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileArchiveRar.png");
+}
+.uiBgd64x64FileArchiveZip,
+.uiBgd64x64FileZip,
+.uiBgd64x64applicationzip {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileArchiveZip.png");
+}
+.uiBgd64x64FileJar,
+.uiBgd64x64applicationjava-archive {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileJar.png");
+}
+.uiBgd64x64FileEar,
+.uiBgd64x64applicationear-java-archive {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileEar.png");
+}
+.uiBgd64x64FileWar,
+.uiBgd64x64applicationx-zip {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileWar.png");
+}
+.uiBgd64x64FileAudioDefault,
+.uiBgd64x64audiomidi,
+.uiBgd64x64audiox-aiff,
+.uiBgd64x64audiobasic,
+.uiBgd64x64audiox-m4a,
+.uiBgd64x64audiox-wav,
+.uiBgd64x64audioother {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileAudioDefault.png");
+}
+.uiBgd64x64FileMp3,
+.uiBgd64x64audiomp3 {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileMp3.png");
+}
+.uiBgd64x64FileWma,
+.uiBgd64x64audiox-ms-wma {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileAudioDefault.png");
+}
+.uiBgd64x64FileVideo,
+.uiBgd64x64videox-msvideo,
+.uiBgd64x64videoquicktime,
+.uiBgd64x64videox-sgi-movie,
+.uiBgd64x64videox-msvideo,
+.uiBgd64x64videompe {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileVideo.png");
+}
+.uiBgd64x64FileFlash,
+.uiBgd64x64applicationx-shockwave-flash,
+.uiBgd64x64videox-flv {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileFlash.png");
+}
+.uiBgd64x64FileWmv,
+.uiBgd64x64videox-ms-wmv {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileWmv.png");
+}
+.uiBgd64x64FileGdoc,
+.uiBgd64x64applicationvndgoogle-appsdocument {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileGdoc.png");
+}
+.uiBgd64x64FileWord,
+.uiBgd64x64applicationmsword,
+.uiBgd64x64applicationwordperfect,
+.uiBgd64x64applicationvndopenxmlformats-officedocumentwordprocessingmldocument,
+.uiBgd64x64FileDocx,
+.uiBgd64x64applicationvndms-worddocumentmacroenabled12,
+.uiBgd64x64applicationvndms-wordtemplatemacroenabled12,
+.uiBgd64x64applicationvndopenxmlformats-officedocumentwordprocessingmltemplate {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileWord.png");
+}
+.uiBgd64x64FileOpenOffice1,
+.uiBgd64x64FileOpenOffice1,
+.uiBgd64x64applicationvndoasisopendocumenttext,
+.uiBgd64x64applicationvndoasisopendocumentdatabase {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileOpenOffice1.png");
+}
+.uiBgd64x64applicationvndoasisopendocumentspreadsheet {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileGsheet.png");
+}
+.uiBgd64x64FileMpeg,
+.uiBgd64x64videompeg,
+.uiBgd64x64videompg,
+.uiBgd64x64videomp4 {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileMpeg.png");
+}
+.uiBgd64x64FileM4v,
+.uiBgd64x64videox-m4v {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileM4v.png");
+}
+.uiBgd64x64FileMkv,
+.uiBgd64x64videox-matroska {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileMkv.png");
+}
+.uiBgd64x64FileTxt,
+.uiBgd64x64textplain {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileTxt.png");
+}
+.uiBgd64x64FileLwp,
+.uiBgd64x64applicationlwp {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileLwp.png");
+}
+.uiBgd64x64FilePage,
+.uiBgd64x64applepages {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FilePage.png");
+}
+.uiBgd64x64FileMdb,
+.uiBgd64x64applicationmsaccess {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileMdb.png");
+}
+.uiBgd64x64FileOdf,
+.uiBgd64x64applicationvndoasisopendocumentformula {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileOdf.png");
+}
+.uiBgd64x64FileExe,
+.uiBgd64x64applicationexe {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileExe.png");
+}
+.uiBgd64x64FilePdf,
+.uiBgd64x64applicationpdf {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FilePdf.png");
+}
+.uiBgd64x64FileScript,
+.uiBgd64x64applicationpostscript {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileScript.png");
+}
+.uiBgd64x64FileRtf,
+.uiBgd64x64applicationrtf {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileRtf.png");
+}
+.uiBgd64x64FileGslides,
+.uiBgd64x64applicationvndgoogle-appspresentation {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileGslides.png");
+}
+.uiBgd64x64FileAppleKey,
+.uiBgd64x64textkey {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileKey.png");
+}
+.uiBgd64x64FileOpenOffice2,
+.uiBgd64x64applicationvndoasisopendocumentpresentation {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileOpenOffice2.png");
+}
+.uiBgd64x64FilePpt,
+.uiBgd64x64applicationppt,
+.uiBgd64x64applicationvndms-powerpoint,
+.uiBgd64x64applicationvndopenxmlformats-officedocumentpresentationmlpresentation,
+.uiBgd64x64applicationvndopenxmlformats-officedocumentpresentationmltemplate,
+.uiBgd64x64applicationvndopenxmlformats-officedocumentpresentationmlslideshow,
+.uiBgd64x64applicationvndms-powerpointaddinmacroenabled12,
+.uiBgd64x64applicationvndms-powerpointpresentationmacroenabled12,
+.uiBgd64x64applicationvndms-powerpointtemplatemacroenabled12,
+.uiBgd64x64applicationvndms-powerpointslideshowmacroenabled12 {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FilePpt.png");
+}
+.uiBgd64x64FilePrz,
+.uiBgd64x64applicationfreelance {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FilePrz.png");
+}
+.uiBgd64x64FileGsheet,
+.uiBgd64x64applicationvndgoogle-appsspreadsheet {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileGsheet.png");
+}
+.uiBgd64x64FileExcel,
+.uiBgd64x64applicationxls,
+.uiBgd64x64applicationxlt,
+.uiBgd64x64applicationvndms-excel,
+.uiBgd64x64applicationvndopenxmlformats-officedocumentspreadsheetmlsheet,
+.uiBgd64x64FileXls,
+.uiBgd64x64applicationvndopenxmlformats-officedocumentspreadsheetmltemplate,
+.uiBgd64x64applicationvndms-excelsheetmacroenabled12,
+.uiBgd64x64applicationvndms-exceltemplatemacroenabled12,
+.uiBgd64x64applicationvndms-exceladdinmacroenabled12,
+.uiBgd64x64applicationvndms-excelsheetbinarymacroenabled12 {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileExcel.png");
+}
+.uiBgd64x64FileOpenOffice3,
+.uiBgd64x64applicationvndoasisopendocumentspreadsheet-template,
+.uiBgd64x64applicationvndsunxmlcalc {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileOpenOffice3.png");
+}
+.uiBgd64x64FileHtml,
+.uiBgd64x64texthtml,
+.uiBgd64x64texthtm {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileHtml.png");
+}
+.uiBgd64x64FileXml,
+.uiBgd64x64textxml {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileXml.png");
+}
+.uiBgd64x64FileJs,
+.uiBgd64x64applicationx-javascript {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileJs.png");
+}
+.uiBgd64x64FileJson,
+.uiBgd64x64applicationjson {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileJson.png");
+}
+.uiBgd64x64FileCss,
+.uiBgd64x64textcss {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileCss.png");
+}
+.uiBgd64x64FileXsl,
+.uiBgd64x64textxsl,
+.uiBgd64x64textxslt {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileXsl.png");
+}
+.uiBgd64x64FileFont,
+.uiBgd64x64fonttff,
+.uiBgd64x64fontotf,
+.uiBgd64x64fontttc,
+.uiBgd64x64fonteot,
+.uiBgd64x64fontdfont,
+.uiBgd64x64fontttf,
+.uiBgd64x64fontwoff {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileFont.png");
+}
+.uiBgd64x64FileGdraw,
+.uiBgd64x64applicationvndgoogle-appsdrawing {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileGdraw.png");
+}
+.uiBgd64x64FileBmp,
+.uiBgd64x64imagebmp {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileBmp.png");
+}
+.uiBgd64x64FileIco,
+.uiBgd64x64imagex-icon {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileIco.png");
+}
+.uiBgd64x64FileGif,
+.uiBgd64x64imagegif {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileGif.png");
+}
+.uiBgd64x64FileOdg,
+.uiBgd64x64applicationvndoasisopendocumentgraphics {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileOdg.png");
+}
+.uiBgd64x64FilePng,
+.uiBgd64x64imagepng {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FilePng.png");
+}
+.uiBgd64x64FilePsd,
+.uiBgd64x64imagepsd,
+.uiBgd64x64applicationx-photoshop {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FilePsd.png");
+}
+.uiBgd64x64FileRaw,
+.uiBgd64x64applicationraw {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileRaw.png");
+}
+.uiBgd64x64FileTif,
+.uiBgd64x64imagetiff {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileTif.png");
+}
+.uiBgd64x64FileXcf,
+.uiBgd64x64imagexcf {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileXcf.png");
+}
+.uiBgd64x64FileIndd,
+.uiBgd64x64applicationx-indesign {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileIndd.png");
+}
+.uiBgd64x64FileAi,
+.uiBgd64x64applicationillustrator,
+.uiBgd64x64applicationeps {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileAi.png");
+}
+.uiBgd64x64FileSvg,
+.uiBgd64x64imagesvg-xml {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileSvg.png");
+}
+.uiBgd64x64FileJpg,
+.uiBgd64x64imagejpeg {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileJpg.png");
+}
+.uiBgd64x64FileBlog {
+  background-image: url("/eXoSkin/skin/images/themes/default/Icons/TypeIcons/EmailNotificationIcons/uiIcon64x64FileBlog.png");
+}
+.uiBgdFile {
+  background: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/Fileicons/file.png") no-repeat top center / 50%;
+}
+.uiBgdFileExcel {
+  background: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/Fileicons/excel.png") no-repeat top center / 50%;
+}
+.uiBgdFilePPT {
+  background: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/Fileicons/ppt.png") no-repeat top center / 50%;
+}
+.uiBgdFilePDF {
+  background: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/Fileicons/pdf.png") no-repeat top center / 50%;
+}
+.uiBgdFileWord {
+  background: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/Fileicons/word.png") no-repeat top center / 50%;
+}
+.uiBgdFileImage {
+  background: url("/eXoSkin/skin/images/themes/default/social/skin/Activity/Fileicons/image.png") no-repeat top center / 50%;
+}
+@media (max-width: 480px) {
+  div[class^='uiBgdFile'],
+  div[class*=' uiBgdFile'] {
+    background-position-y: center;
+  }
+}
+/******** Activity Composer **********/
+.activityComposer {
+  padding: 0 0 10px 0;
+}
+.activityComposer .openLink {
+  padding: 15px;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+.activityComposer .openLink a {
+  cursor: pointer;
+}
+.activityComposer .openLink a:hover {
+  text-decoration: underline;
+}
+.activityComposer .openLink .uiIconEdit {
+  padding-right: 5px ; /** orientation=lt */ ;
+  padding-left: 5px ; /** orientation=rt */ ;
+}
+.activityComposer .openLink .uiIconGoUp:before {
+  content: "\e76a";
+  font-size: 16px;
+}
+.composerActions .actionItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px 0 10px;
+  border: 1px solid #E1E8EE;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.composerActions .actionItem .actionItemDescription {
+  padding: 9px 10px;
+}
+.composerActions .actionItem .actionItemDescription .actionLabel {
+  font-weight: bold;
+  color: var(--allPagesBaseTextColor, #333333);
+  font-size: 16px;
+}
+.composerActions .actionItem .actionItemDescription .actionDescription > p {
+  color: #5f708a;
+  font-size: 12px;
+}
+.composerActions .actionItem:hover {
+  box-shadow: 0 0 8px #888888;
+  cursor: pointer;
+}
+

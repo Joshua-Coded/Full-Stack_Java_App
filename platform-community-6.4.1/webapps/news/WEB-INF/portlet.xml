@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+  <portlet>
+    <portlet-name>NewsComposer</portlet-name>
+    <display-name>News Composer</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+      <name>portlet-view-dispatched-file-path</name>
+      <value>/news-activity-composer-app/index.jsp</value>
+    </init-param>
+    <init-param>
+      <name>preload.resource.bundles</name>
+      <value>locale.portlet.news.News|locale.attachmentsSelector.attachments</value>
+    </init-param>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>News Composer</title>
+      <keywords>News Composer</keywords>
+    </portlet-info>
+  </portlet>
+
+  <portlet>
+    <portlet-name>News</portlet-name>
+    <display-name>News Application</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+      <name>portlet-view-dispatched-file-path</name>
+      <value>/news/news.html</value>
+    </init-param>
+    <init-param>
+      <name>preload.resource.bundles</name>
+      <value>locale.portlet.news.News|locale.social.Webui</value>
+    </init-param>
+    <expiration-cache>-1</expiration-cache>
+    <cache-scope>PUBLIC</cache-scope>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>News Application</title>
+      <keywords>News Application</keywords>
+    </portlet-info>
+  </portlet>
+
+  <portlet>
+    <portlet-name>NewsExtensions</portlet-name>
+    <display-name>News UI Extensions</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+      <name>portlet-view-dispatched-file-path</name>
+      <value>/news-extensions/newsExtensions.html</value>
+    </init-param>
+    <init-param>
+      <name>preload.resource.bundles</name>
+      <value>locale.portlet.news.News|locale.social.Webui</value>
+    </init-param>
+    <expiration-cache>-1</expiration-cache>
+    <cache-scope>PUBLIC</cache-scope>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>News UI Extensions</title>
+      <keywords>News UI Extensions</keywords>
+    </portlet-info>
+  </portlet>
+
+  <portlet>
+    <portlet-name>NewsDetail</portlet-name>
+    <display-name>News Details</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+      <name>portlet-view-dispatched-file-path</name>
+      <value>/news-details-app/index.jsp</value>
+    </init-param>
+    <init-param>
+      <name>preload.resource.bundles</name>
+      <value>locale.portlet.news.News|locale.attachmentsSelector.attachments</value>
+    </init-param>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>News Details</title>
+      <keywords>News Details</keywords>
+    </portlet-info>
+  </portlet>
+
+  <portlet>
+    <description>Allows to display published articles on pages. The news list view portlet must be configured by choosing a target and a template.</description>
+    <portlet-name>NewsListView</portlet-name>
+    <display-name>News List View</display-name>
+    <portlet-class>org.exoplatform.news.portlet.NewsListViewPortlet</portlet-class>
+    <init-param>
+      <name>portlet-view-dispatched-file-path</name>
+      <value>/WEB-INF/jsp/newsListView.jsp</value>
+    </init-param>
+    <init-param>
+      <name>preload.resource.bundles</name>
+      <value>locale.portlet.news.News</value>
+    </init-param>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>edit</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>News List View</title>
+      <keywords>News List View</keywords>
+    </portlet-info>
+  </portlet>
+
+    <portlet>
+        <portlet-name>newsPublishTargetsManagement</portlet-name>
+        <display-name xml:lang="EN">Manage news publication targets</display-name>
+        <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+        <init-param>
+            <name>portlet-view-dispatched-file-path</name>
+            <value>/news-publish-targets-management/newsPublishTargetsManagement.html</value>
+        </init-param>
+        <init-param>
+            <name>preload.resource.bundles</name>
+            <value>locale.portlet.news.News</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <cache-scope>PUBLIC</cache-scope>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <supported-locale>en</supported-locale>
+        <portlet-info>
+            <title>Manage news publication targets</title>
+            <keywords>Manage news publication targets</keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>admin</role-name>
+            <role-link>admin</role-link>
+        </security-role-ref>
+    </portlet>
+
+</portlet-app>

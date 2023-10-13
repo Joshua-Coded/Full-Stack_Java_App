@@ -1,0 +1,1601 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.selectBoxVuetifyParent {
+  position: relative;
+}
+.selectBoxVuetifyParent .v-menu__content {
+  top: 86% !important;
+  left: 0px !important; /** orientation=lt */ ;
+  left: 0px !important; /** orientation=rt */ ;
+  position: absolute !important;
+  width: 100%;
+  z-index: 1050 !important;
+}
+.selectBoxVuetifyParent .v-menu__content .v-list {
+  padding: 0;
+}
+#walletDialogsParent {
+  z-index: 1055;
+  position: relative;
+}
+#WalletApp .v-date-picker-title__year,
+#SpaceWalletApp .v-date-picker-title__year {
+  display: none !important;
+}
+.application-toolbar {
+  margin-bottom: 12px;
+  max-width: 100% !important;
+}
+.application-toolbar .tabs-content {
+  margin-top: 10px !important;
+}
+.application-toolbar.display-on-top {
+  position: relative;
+  z-index: 10;
+}
+.application-toolbar .v-toolbar__title {
+  line-height: 37px;
+}
+.application-toolbar .v-toolbar__content {
+  padding-right: 0 ; /** orientation=lt */ ;
+  padding-left: 0 ; /** orientation=rt */ ;
+}
+#WalletApp,
+#SpaceWalletApp,
+#RewardApp,
+#WalletAdminApp,
+.walletDialog {
+  background: transparent;
+}
+#WalletApp .applicationToolbar,
+#SpaceWalletApp .applicationToolbar,
+#RewardApp .applicationToolbar,
+#WalletAdminApp .applicationToolbar,
+.walletDialog .applicationToolbar {
+  border: 1px solid #ccc;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.17);
+}
+#WalletApp .rewardDetailSummary,
+#SpaceWalletApp .rewardDetailSummary,
+#RewardApp .rewardDetailSummary,
+#WalletAdminApp .rewardDetailSummary,
+.walletDialog .rewardDetailSummary {
+  max-width: 400px;
+  margin-left: auto ; /** orientation=lt */ ;
+  margin-right: 28px ; /** orientation=lt */ ;
+  margin-right: auto ; /** orientation=rt */ ;
+  margin-left: 28px ; /** orientation=rt */ ;
+}
+#WalletApp #accountListContainer,
+#SpaceWalletApp #accountListContainer,
+#RewardApp #accountListContainer,
+#WalletAdminApp #accountListContainer,
+.walletDialog #accountListContainer {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+#WalletApp #accountListContainer .layout,
+#SpaceWalletApp #accountListContainer .layout,
+#RewardApp #accountListContainer .layout,
+#WalletAdminApp #accountListContainer .layout,
+.walletDialog #accountListContainer .layout {
+  display: inline-flex;
+}
+#WalletApp #accountListContainer .accountItemContainer,
+#SpaceWalletApp #accountListContainer .accountItemContainer,
+#RewardApp #accountListContainer .accountItemContainer,
+#WalletAdminApp #accountListContainer .accountItemContainer,
+.walletDialog #accountListContainer .accountItemContainer {
+  max-width: 100%;
+  width: 410px;
+  margin: 0 auto 20px;
+}
+#WalletApp #accountListContainer .accountItemContainer > .v-card,
+#SpaceWalletApp #accountListContainer .accountItemContainer > .v-card,
+#RewardApp #accountListContainer .accountItemContainer > .v-card,
+#WalletAdminApp #accountListContainer .accountItemContainer > .v-card,
+.walletDialog #accountListContainer .accountItemContainer > .v-card {
+  margin: auto;
+}
+#WalletApp #accountListContainer .accountItemContainer .accountItemContent,
+#SpaceWalletApp #accountListContainer .accountItemContainer .accountItemContent,
+#RewardApp #accountListContainer .accountItemContainer .accountItemContent,
+#WalletAdminApp #accountListContainer .accountItemContainer .accountItemContent,
+.walletDialog #accountListContainer .accountItemContainer .accountItemContent {
+  height: calc(-10%);
+}
+#WalletApp .clickable,
+#SpaceWalletApp .clickable,
+#RewardApp .clickable,
+#WalletAdminApp .clickable,
+.walletDialog .clickable {
+  cursor: pointer;
+}
+#WalletApp #accountDetail,
+#SpaceWalletApp #accountDetail,
+#RewardApp #accountDetail,
+#WalletAdminApp #accountDetail,
+.walletDialog #accountDetail {
+  position: relative;
+}
+#WalletApp #accountDetail .accountDetailSummary,
+#SpaceWalletApp #accountDetail .accountDetailSummary,
+#RewardApp #accountDetail .accountDetailSummary,
+#WalletAdminApp #accountDetail .accountDetailSummary,
+.walletDialog #accountDetail .accountDetailSummary {
+  height: auto;
+  display: block;
+}
+#WalletApp #accountDetail .accountDetailSummary .rightIcon,
+#SpaceWalletApp #accountDetail .accountDetailSummary .rightIcon,
+#RewardApp #accountDetail .accountDetailSummary .rightIcon,
+#WalletAdminApp #accountDetail .accountDetailSummary .rightIcon,
+.walletDialog #accountDetail .accountDetailSummary .rightIcon {
+  position: absolute;
+  right: 0 ; /** orientation=lt */ ;
+  left: 0 ; /** orientation=rt */ ;
+  top: 9px;
+}
+#WalletApp #accountDetail .transactionDetailItem,
+#SpaceWalletApp #accountDetail .transactionDetailItem,
+#RewardApp #accountDetail .transactionDetailItem,
+#WalletAdminApp #accountDetail .transactionDetailItem,
+.walletDialog #accountDetail .transactionDetailItem,
+#WalletApp #accountDetail .transactionDetailContent,
+#SpaceWalletApp #accountDetail .transactionDetailContent,
+#RewardApp #accountDetail .transactionDetailContent,
+#WalletAdminApp #accountDetail .transactionDetailContent,
+.walletDialog #accountDetail .transactionDetailContent {
+  height: auto;
+  padding: 0 !important;
+}
+#WalletApp #accountDetail .transactionDetailItem > .v-list__tile,
+#SpaceWalletApp #accountDetail .transactionDetailItem > .v-list__tile,
+#RewardApp #accountDetail .transactionDetailItem > .v-list__tile,
+#WalletAdminApp #accountDetail .transactionDetailItem > .v-list__tile,
+.walletDialog #accountDetail .transactionDetailItem > .v-list__tile {
+  height: auto;
+}
+#WalletApp #accountDetail .v-list__tile__title,
+#SpaceWalletApp #accountDetail .v-list__tile__title,
+#RewardApp #accountDetail .v-list__tile__title,
+#WalletAdminApp #accountDetail .v-list__tile__title,
+.walletDialog #accountDetail .v-list__tile__title {
+  height: 29px;
+}
+#WalletApp #accountDetail .transactionDetailContent > .v-list__tile__title,
+#SpaceWalletApp #accountDetail .transactionDetailContent > .v-list__tile__title,
+#RewardApp #accountDetail .transactionDetailContent > .v-list__tile__title,
+#WalletAdminApp #accountDetail .transactionDetailContent > .v-list__tile__title,
+.walletDialog #accountDetail .transactionDetailContent > .v-list__tile__title {
+  height: auto;
+  min-height: 29px;
+  white-space: normal;
+}
+#WalletApp #accountDetailsDrawer,
+#SpaceWalletApp #accountDetailsDrawer,
+#RewardApp #accountDetailsDrawer,
+#WalletAdminApp #accountDetailsDrawer,
+.walletDialog #accountDetailsDrawer,
+#WalletApp #contractDetailsDrawer,
+#SpaceWalletApp #contractDetailsDrawer,
+#RewardApp #contractDetailsDrawer,
+#WalletAdminApp #contractDetailsDrawer,
+.walletDialog #contractDetailsDrawer,
+#WalletApp #rewardDetailsDrawer,
+#SpaceWalletApp #rewardDetailsDrawer,
+#RewardApp #rewardDetailsDrawer,
+#WalletAdminApp #rewardDetailsDrawer,
+.walletDialog #rewardDetailsDrawer {
+  z-index: 1050;
+  position: fixed !important;
+}
+#WalletApp .v-overlay,
+#SpaceWalletApp .v-overlay,
+#RewardApp .v-overlay,
+#WalletAdminApp .v-overlay,
+.walletDialog .v-overlay {
+  position: fixed !important;
+}
+#WalletApp .no-padding .v-toolbar__content,
+#SpaceWalletApp .no-padding .v-toolbar__content,
+#RewardApp .no-padding .v-toolbar__content,
+#WalletAdminApp .no-padding .v-toolbar__content,
+.walletDialog .no-padding .v-toolbar__content {
+  padding: 0;
+}
+#WalletApp .transactionDetailActions,
+#SpaceWalletApp .transactionDetailActions,
+#RewardApp .transactionDetailActions,
+#WalletAdminApp .transactionDetailActions,
+.walletDialog .transactionDetailActions {
+  box-sizing: border-box;
+  text-align: end;
+  margin-left: 5px ; /** orientation=lt */ ;
+  margin-right: 5px ; /** orientation=rt */ ;
+  align-items: flex-end;
+  width: auto;
+  overflow: visible;
+  height: 79px;
+  flex: none;
+}
+#WalletApp .transactionDetailActions div,
+#SpaceWalletApp .transactionDetailActions div,
+#RewardApp .transactionDetailActions div,
+#WalletAdminApp .transactionDetailActions div,
+.walletDialog .transactionDetailActions div {
+  width: auto;
+  margin-top: 12px;
+}
+#WalletApp #walletAppBody,
+#SpaceWalletApp #walletAppBody,
+#RewardApp #walletAppBody,
+#WalletAdminApp #walletAppBody,
+.walletDialog #walletAppBody {
+  min-height: 135px;
+}
+#WalletApp #walletAppMenu,
+#SpaceWalletApp #walletAppMenu,
+#RewardApp #walletAppMenu,
+#WalletAdminApp #walletAppMenu,
+.walletDialog #walletAppMenu {
+  top: 40px!important;
+  right: 20px !important; /** orientation=lt */ ;
+  left: auto !important; /** orientation=lt */ ;
+  left: 20px !important; /** orientation=rt */ ;
+  right: auto !important; /** orientation=rt */ ;
+  float: right !important; /** orientation=lt */ ;
+  float: left !important; /** orientation=rt */ ;
+}
+#WalletApp .walletAccountMenu,
+#SpaceWalletApp .walletAccountMenu,
+#RewardApp .walletAccountMenu,
+#WalletAdminApp .walletAccountMenu,
+.walletDialog .walletAccountMenu {
+  top: 40px!important;
+  right: 20px !important; /** orientation=lt */ ;
+  left: auto !important; /** orientation=lt */ ;
+  left: 20px !important; /** orientation=rt */ ;
+  right: auto !important; /** orientation=rt */ ;
+}
+#WalletApp .createNewToken,
+#SpaceWalletApp .createNewToken,
+#RewardApp .createNewToken,
+#WalletAdminApp .createNewToken,
+.walletDialog .createNewToken {
+  border-radius: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
+}
+#WalletApp .uiIconClose,
+#SpaceWalletApp .uiIconClose,
+#RewardApp .uiIconClose,
+#WalletAdminApp .uiIconClose,
+.walletDialog .uiIconClose {
+  line-height: 27px;
+}
+#WalletApp .v-icon.uiIconBlue,
+#SpaceWalletApp .v-icon.uiIconBlue,
+#RewardApp .v-icon.uiIconBlue,
+#WalletAdminApp .v-icon.uiIconBlue,
+.walletDialog .v-icon.uiIconBlue {
+  color: #476A9C;
+}
+#WalletApp .alert,
+#SpaceWalletApp .alert,
+#RewardApp .alert,
+#WalletAdminApp .alert,
+.walletDialog .alert {
+  max-width: 100%;
+  word-break: break-word;
+  white-space: normal;
+  z-index: auto;
+  box-sizing: border-box;
+  font-size: initial;
+  /* To fix links baseline positions */
+}
+#WalletApp .alert .popupWithLink,
+#SpaceWalletApp .alert .popupWithLink,
+#RewardApp .alert .popupWithLink,
+#WalletAdminApp .alert .popupWithLink,
+.walletDialog .alert .popupWithLink {
+  min-height: 33px;
+}
+#WalletApp .alert a,
+#SpaceWalletApp .alert a,
+#RewardApp .alert a,
+#WalletAdminApp .alert a,
+.walletDialog .alert a {
+  color: #385989;
+}
+#WalletApp .v-speed-dial i,
+#SpaceWalletApp .v-speed-dial i,
+#RewardApp .v-speed-dial i,
+#WalletAdminApp .v-speed-dial i,
+.walletDialog .v-speed-dial i {
+  height: auto !important;
+}
+#WalletApp .v-speed-dial .v-btn--floating,
+#SpaceWalletApp .v-speed-dial .v-btn--floating,
+#RewardApp .v-speed-dial .v-btn--floating,
+#WalletAdminApp .v-speed-dial .v-btn--floating,
+.walletDialog .v-speed-dial .v-btn--floating {
+  width: 28px;
+  height: 28px;
+}
+#WalletApp .walletAddress,
+#SpaceWalletApp .walletAddress,
+#RewardApp .walletAddress,
+#WalletAdminApp .walletAddress,
+.walletDialog .walletAddress {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#WalletApp .walletAddressCmp .copyToClipboardInput,
+#SpaceWalletApp .walletAddressCmp .copyToClipboardInput,
+#RewardApp .walletAddressCmp .copyToClipboardInput,
+#WalletAdminApp .walletAddressCmp .copyToClipboardInput,
+.walletDialog .walletAddressCmp .copyToClipboardInput {
+  position: fixed;
+  left: -9999px;
+}
+#WalletApp .walletAddressCmp .v-chip__content,
+#SpaceWalletApp .walletAddressCmp .v-chip__content,
+#RewardApp .walletAddressCmp .v-chip__content,
+#WalletAdminApp .walletAddressCmp .v-chip__content,
+.walletDialog .walletAddressCmp .v-chip__content {
+  padding-left: 0 ; /** orientation=lt */ ;
+  padding-right: 18px ; /** orientation=lt */ ;
+  padding-right: 0 ; /** orientation=rt */ ;
+  padding-left: 18px ; /** orientation=rt */ ;
+  position: relative;
+}
+#WalletApp .walletAddressCmp .walletAddressEdit,
+#SpaceWalletApp .walletAddressCmp .walletAddressEdit,
+#RewardApp .walletAddressCmp .walletAddressEdit,
+#WalletAdminApp .walletAddressCmp .walletAddressEdit,
+.walletDialog .walletAddressCmp .walletAddressEdit {
+  display: none;
+  position: absolute;
+  right: 5px ; /** orientation=lt */ ;
+  right: 5px ; /** orientation=rt */ ;
+}
+#WalletApp .walletAddressCmp:hover .walletAddressEdit,
+#SpaceWalletApp .walletAddressCmp:hover .walletAddressEdit,
+#RewardApp .walletAddressCmp:hover .walletAddressEdit,
+#WalletAdminApp .walletAddressCmp:hover .walletAddressEdit,
+.walletDialog .walletAddressCmp:hover .walletAddressEdit {
+  display: block;
+}
+#WalletApp .alert,
+#SpaceWalletApp .alert,
+#RewardApp .alert,
+#WalletAdminApp .alert,
+.walletDialog .alert {
+  line-height: 29px;
+  max-width: 100%;
+  text-align: center;
+}
+#WalletApp .alert i,
+#SpaceWalletApp .alert i,
+#RewardApp .alert i,
+#WalletAdminApp .alert i,
+.walletDialog .alert i {
+  margin-right: 0 ; /** orientation=lt */ ;
+  margin-left: 0 ; /** orientation=rt */ ;
+}
+#WalletApp .alert [class^="uiIcon"],
+#SpaceWalletApp .alert [class^="uiIcon"],
+#RewardApp .alert [class^="uiIcon"],
+#WalletAdminApp .alert [class^="uiIcon"],
+.walletDialog .alert [class^="uiIcon"] {
+  margin-right: 15px ; /** orientation=lt */ ;
+  margin-left: 15px ; /** orientation=rt */ ;
+}
+#WalletApp .walletBackupDetailedWarning,
+#SpaceWalletApp .walletBackupDetailedWarning,
+#RewardApp .walletBackupDetailedWarning,
+#WalletAdminApp .walletBackupDetailedWarning,
+.walletDialog .walletBackupDetailedWarning {
+  margin: 1% 10%;
+}
+#WalletApp #walletPrivateKey code,
+#SpaceWalletApp #walletPrivateKey code,
+#RewardApp #walletPrivateKey code,
+#WalletAdminApp #walletPrivateKey code,
+.walletDialog #walletPrivateKey code {
+  height: auto;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+#WalletApp #walletPrivateKey code:after,
+#SpaceWalletApp #walletPrivateKey code:after,
+#RewardApp #walletPrivateKey code:after,
+#WalletAdminApp #walletPrivateKey code:after,
+.walletDialog #walletPrivateKey code:after,
+#WalletApp #walletPrivateKey code:before,
+#SpaceWalletApp #walletPrivateKey code:before,
+#RewardApp #walletPrivateKey code:before,
+#WalletAdminApp #walletPrivateKey code:before,
+.walletDialog #walletPrivateKey code:before {
+  content: none;
+}
+#WalletApp #requestMessage,
+#SpaceWalletApp #requestMessage,
+#RewardApp #requestMessage,
+#WalletAdminApp #requestMessage,
+.walletDialog #requestMessage {
+  height: auto;
+  margin-top: 10px;
+}
+#WalletApp .v-text-field .v-label--active,
+#SpaceWalletApp .v-text-field .v-label--active,
+#RewardApp .v-text-field .v-label--active,
+#WalletAdminApp .v-text-field .v-label--active,
+.walletDialog .v-text-field .v-label--active {
+  top: -8px;
+  color: #000000;
+  font-size: 20px !important;
+  height: 26px;
+  line-height: 26px;
+}
+#WalletApp .buttomNavigation .v-btn,
+#SpaceWalletApp .buttomNavigation .v-btn,
+#RewardApp .buttomNavigation .v-btn,
+#WalletAdminApp .buttomNavigation .v-btn,
+.walletDialog .buttomNavigation .v-btn {
+  opacity: 1;
+  filter: none;
+}
+#WalletApp .buttomNavigation .bottomNavigationItem:hover,
+#SpaceWalletApp .buttomNavigation .bottomNavigationItem:hover,
+#RewardApp .buttomNavigation .bottomNavigationItem:hover,
+#WalletAdminApp .buttomNavigation .bottomNavigationItem:hover,
+.walletDialog .buttomNavigation .bottomNavigationItem:hover {
+  color: #476A9C !important;
+}
+#WalletApp .errorHeadline,
+#SpaceWalletApp .errorHeadline,
+#RewardApp .errorHeadline,
+#WalletAdminApp .errorHeadline,
+.walletDialog .errorHeadline {
+  line-height: 48px!important;
+}
+#WalletApp .flex-center,
+#SpaceWalletApp .flex-center,
+#RewardApp .flex-center,
+#WalletAdminApp .flex-center,
+.walletDialog .flex-center {
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+#WalletApp .flex-center > *,
+#SpaceWalletApp .flex-center > *,
+#RewardApp .flex-center > *,
+#WalletAdminApp .flex-center > *,
+.walletDialog .flex-center > * {
+  width: 100%;
+  white-space: normal;
+}
+#WalletApp #walletBrowserSetup,
+#SpaceWalletApp #walletBrowserSetup,
+#RewardApp #walletBrowserSetup,
+#WalletAdminApp #walletBrowserSetup,
+.walletDialog #walletBrowserSetup {
+  padding: 5px;
+  max-width: 100%;
+  margin: auto;
+}
+#WalletApp #walletBrowserSetup .v-btn,
+#SpaceWalletApp #walletBrowserSetup .v-btn,
+#RewardApp #walletBrowserSetup .v-btn,
+#WalletAdminApp #walletBrowserSetup .v-btn,
+.walletDialog #walletBrowserSetup .v-btn {
+  text-transform: none !important;
+  font-size: 16px;
+  height: 40px;
+}
+#WalletApp #walletBrowserSetup .v-input__slot,
+#SpaceWalletApp #walletBrowserSetup .v-input__slot,
+#RewardApp #walletBrowserSetup .v-input__slot,
+#WalletAdminApp #walletBrowserSetup .v-input__slot,
+.walletDialog #walletBrowserSetup .v-input__slot {
+  border-color: rgba(0, 0, 0, 0.25) !important;
+  width: initial !important;
+  min-height: 40px;
+}
+#WalletApp #walletBrowserSetup .v-text-field__slot,
+#SpaceWalletApp #walletBrowserSetup .v-text-field__slot,
+#RewardApp #walletBrowserSetup .v-text-field__slot,
+#WalletAdminApp #walletBrowserSetup .v-text-field__slot,
+.walletDialog #walletBrowserSetup .v-text-field__slot {
+  height: 40px;
+}
+#WalletApp #walletBrowserSetup .title,
+#SpaceWalletApp #walletBrowserSetup .title,
+#RewardApp #walletBrowserSetup .title,
+#WalletAdminApp #walletBrowserSetup .title,
+.walletDialog #walletBrowserSetup .title {
+  font-weight: bold;
+  color: var(--allPagesDarkGrey, #4d5466);
+}
+#WalletApp #walletBrowserSetup .subtitle,
+#SpaceWalletApp #walletBrowserSetup .subtitle,
+#RewardApp #walletBrowserSetup .subtitle,
+#WalletAdminApp #walletBrowserSetup .subtitle,
+.walletDialog #walletBrowserSetup .subtitle {
+  font-size: 14px;
+  color: #5f708a;
+}
+#WalletApp #walletBrowserSetup .walletInformation,
+#SpaceWalletApp #walletBrowserSetup .walletInformation,
+#RewardApp #walletBrowserSetup .walletInformation,
+#WalletAdminApp #walletBrowserSetup .walletInformation,
+.walletDialog #walletBrowserSetup .walletInformation {
+  text-align: start;
+  font-weight: bold;
+}
+#WalletApp #walletBrowserSetup .styleTitle,
+#SpaceWalletApp #walletBrowserSetup .styleTitle,
+#RewardApp #walletBrowserSetup .styleTitle,
+#WalletAdminApp #walletBrowserSetup .styleTitle,
+.walletDialog #walletBrowserSetup .styleTitle {
+  text-align: start;
+}
+#WalletApp #walletBrowserSetup .styleTitle > a,
+#SpaceWalletApp #walletBrowserSetup .styleTitle > a,
+#RewardApp #walletBrowserSetup .styleTitle > a,
+#WalletAdminApp #walletBrowserSetup .styleTitle > a,
+.walletDialog #walletBrowserSetup .styleTitle > a {
+  font-weight: bold;
+}
+#WalletApp #walletBrowserSetup .walletSetup,
+#SpaceWalletApp #walletBrowserSetup .walletSetup,
+#RewardApp #walletBrowserSetup .walletSetup,
+#WalletAdminApp #walletBrowserSetup .walletSetup,
+.walletDialog #walletBrowserSetup .walletSetup {
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-left: 15%;
+}
+#WalletApp #walletBrowserSetup ul li,
+#SpaceWalletApp #walletBrowserSetup ul li,
+#RewardApp #walletBrowserSetup ul li,
+#WalletAdminApp #walletBrowserSetup ul li,
+.walletDialog #walletBrowserSetup ul li {
+  list-style: disc;
+}
+#WalletApp #walletWelcomeScreen,
+#SpaceWalletApp #walletWelcomeScreen,
+#RewardApp #walletWelcomeScreen,
+#WalletAdminApp #walletWelcomeScreen,
+.walletDialog #walletWelcomeScreen {
+  padding: 5px;
+  max-width: 100%;
+  margin: auto;
+}
+#WalletApp #walletWelcomeScreen .v-btn,
+#SpaceWalletApp #walletWelcomeScreen .v-btn,
+#RewardApp #walletWelcomeScreen .v-btn,
+#WalletAdminApp #walletWelcomeScreen .v-btn,
+.walletDialog #walletWelcomeScreen .v-btn {
+  text-transform: capitalize !important;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+}
+#WalletApp #walletWelcomeScreen .disabledButton,
+#SpaceWalletApp #walletWelcomeScreen .disabledButton,
+#RewardApp #walletWelcomeScreen .disabledButton,
+#WalletAdminApp #walletWelcomeScreen .disabledButton,
+.walletDialog #walletWelcomeScreen .disabledButton {
+  background-color: #e0e0e0 !important;
+  pointer-events: auto !important;
+}
+#WalletApp #walletWelcomeScreen .title,
+#SpaceWalletApp #walletWelcomeScreen .title,
+#RewardApp #walletWelcomeScreen .title,
+#WalletAdminApp #walletWelcomeScreen .title,
+.walletDialog #walletWelcomeScreen .title {
+  font-weight: bold;
+  font-size: 18px !important;
+}
+#WalletApp #walletWelcomeScreen .subtitle,
+#SpaceWalletApp #walletWelcomeScreen .subtitle,
+#RewardApp #walletWelcomeScreen .subtitle,
+#WalletAdminApp #walletWelcomeScreen .subtitle,
+.walletDialog #walletWelcomeScreen .subtitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+#WalletApp #walletWelcomeScreen .walletInformation,
+#SpaceWalletApp #walletWelcomeScreen .walletInformation,
+#RewardApp #walletWelcomeScreen .walletInformation,
+#WalletAdminApp #walletWelcomeScreen .walletInformation,
+.walletDialog #walletWelcomeScreen .walletInformation {
+  text-align: start;
+  font-weight: bold;
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+}
+#WalletApp #walletWelcomeScreen .styleTitle,
+#SpaceWalletApp #walletWelcomeScreen .styleTitle,
+#RewardApp #walletWelcomeScreen .styleTitle,
+#WalletAdminApp #walletWelcomeScreen .styleTitle,
+.walletDialog #walletWelcomeScreen .styleTitle {
+  color: var(--allPagesDarkGrey, #4d5466);
+  text-align: start;
+}
+#WalletApp #walletWelcomeScreen .styleTitle > a,
+#SpaceWalletApp #walletWelcomeScreen .styleTitle > a,
+#RewardApp #walletWelcomeScreen .styleTitle > a,
+#WalletAdminApp #walletWelcomeScreen .styleTitle > a,
+.walletDialog #walletWelcomeScreen .styleTitle > a {
+  font-weight: bold;
+}
+#WalletApp #walletWelcomeScreen ul,
+#SpaceWalletApp #walletWelcomeScreen ul,
+#RewardApp #walletWelcomeScreen ul,
+#WalletAdminApp #walletWelcomeScreen ul,
+.walletDialog #walletWelcomeScreen ul {
+  list-style-type: none;
+}
+#WalletApp #walletWelcomeScreen li:before,
+#SpaceWalletApp #walletWelcomeScreen li:before,
+#RewardApp #walletWelcomeScreen li:before,
+#WalletAdminApp #walletWelcomeScreen li:before,
+.walletDialog #walletWelcomeScreen li:before {
+  content: '- ';
+}
+#WalletApp .backToWelcomeScreen,
+#SpaceWalletApp .backToWelcomeScreen,
+#RewardApp .backToWelcomeScreen,
+#WalletAdminApp .backToWelcomeScreen,
+.walletDialog .backToWelcomeScreen {
+  top: 16px !important;
+  left: 20px !important; /** orientation=lt */ ;
+  right: auto !important; /** orientation=lt */ ;
+  float: left !important; /** orientation=lt */ ;
+  left: auto !important; /** orientation=rt */ ;
+  right: 20px !important; /** orientation=rt */ ;
+  float: right !important; /** orientation=rt */ ;
+  position: absolute;
+}
+#WalletApp .backToWelcomeScreen .uiArrowBAckIcon,
+#SpaceWalletApp .backToWelcomeScreen .uiArrowBAckIcon,
+#RewardApp .backToWelcomeScreen .uiArrowBAckIcon,
+#WalletAdminApp .backToWelcomeScreen .uiArrowBAckIcon,
+.walletDialog .backToWelcomeScreen .uiArrowBAckIcon {
+  color: var(--allPagesDarkGrey, #4d5466) !important;
+  font-size: 24px;
+}
+#WalletApp #walletMetamaskSetup,
+#SpaceWalletApp #walletMetamaskSetup,
+#RewardApp #walletMetamaskSetup,
+#WalletAdminApp #walletMetamaskSetup,
+.walletDialog #walletMetamaskSetup {
+  padding: 1px;
+}
+#WalletApp #walletMetamaskSetup .alert,
+#SpaceWalletApp #walletMetamaskSetup .alert,
+#RewardApp #walletMetamaskSetup .alert,
+#WalletAdminApp #walletMetamaskSetup .alert,
+.walletDialog #walletMetamaskSetup .alert {
+  margin: 20px auto 0;
+  width: auto;
+  max-width: fit-content;
+}
+#WalletApp #etherTooLowWarningParent,
+#SpaceWalletApp #etherTooLowWarningParent,
+#RewardApp #etherTooLowWarningParent,
+#WalletAdminApp #etherTooLowWarningParent,
+.walletDialog #etherTooLowWarningParent {
+  position: relative;
+}
+#WalletApp #etherTooLowWarningParent .etherTooLowWarning,
+#SpaceWalletApp #etherTooLowWarningParent .etherTooLowWarning,
+#RewardApp #etherTooLowWarningParent .etherTooLowWarning,
+#WalletAdminApp #etherTooLowWarningParent .etherTooLowWarning,
+.walletDialog #etherTooLowWarningParent .etherTooLowWarning {
+  top: -30px !important;
+  left: -30px !important; /** orientation=lt */ ;
+  right: -30px !important; /** orientation=rt */ ;
+  width: max-content;
+  width: -moz-max-content;
+}
+#WalletApp .inlineIconButton,
+#SpaceWalletApp .inlineIconButton,
+#RewardApp .inlineIconButton,
+#WalletAdminApp .inlineIconButton,
+.walletDialog .inlineIconButton {
+  margin: 0 5px 2px;
+  width: 18px;
+  height: 18px;
+}
+#WalletApp .inlineIconButton .uiIconWarning,
+#SpaceWalletApp .inlineIconButton .uiIconWarning,
+#RewardApp .inlineIconButton .uiIconWarning,
+#WalletAdminApp .inlineIconButton .uiIconWarning,
+.walletDialog .inlineIconButton .uiIconWarning {
+  margin: 0 0 2px;
+  font-size: 15px;
+}
+#WalletApp .requestFundsLink,
+#SpaceWalletApp .requestFundsLink,
+#RewardApp .requestFundsLink,
+#WalletAdminApp .requestFundsLink,
+.walletDialog .requestFundsLink {
+  text-decoration: underline;
+}
+#WalletApp .accountItem,
+#SpaceWalletApp .accountItem,
+#RewardApp .accountItem,
+#WalletAdminApp .accountItem,
+.walletDialog .accountItem {
+  cursor: pointer;
+}
+#WalletApp .transactionsList,
+#SpaceWalletApp .transactionsList,
+#RewardApp .transactionsList,
+#WalletAdminApp .transactionsList,
+.walletDialog .transactionsList {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#WalletApp .transactionsList .v-expansion-panel__header,
+#SpaceWalletApp .transactionsList .v-expansion-panel__header,
+#RewardApp .transactionsList .v-expansion-panel__header,
+#WalletAdminApp .transactionsList .v-expansion-panel__header,
+.walletDialog .transactionsList .v-expansion-panel__header {
+  padding: 0 5px 0 0;
+}
+#WalletApp .transactionsList .v-expansion-panel,
+#SpaceWalletApp .transactionsList .v-expansion-panel,
+#RewardApp .transactionsList .v-expansion-panel,
+#WalletAdminApp .transactionsList .v-expansion-panel,
+.walletDialog .transactionsList .v-expansion-panel {
+  box-shadow: none;
+}
+#WalletApp .transactionsList .v-expansion-panel__container:first-child,
+#SpaceWalletApp .transactionsList .v-expansion-panel__container:first-child,
+#RewardApp .transactionsList .v-expansion-panel__container:first-child,
+#WalletAdminApp .transactionsList .v-expansion-panel__container:first-child,
+.walletDialog .transactionsList .v-expansion-panel__container:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+#WalletApp .transactionsList .v-expansion-panel-content,
+#SpaceWalletApp .transactionsList .v-expansion-panel-content,
+#RewardApp .transactionsList .v-expansion-panel-content,
+#WalletAdminApp .transactionsList .v-expansion-panel-content,
+.walletDialog .transactionsList .v-expansion-panel-content {
+  box-sizing: border-box;
+}
+#WalletApp .transactionsList .v-expansion-panel-content__wrap,
+#SpaceWalletApp .transactionsList .v-expansion-panel-content__wrap,
+#RewardApp .transactionsList .v-expansion-panel-content__wrap,
+#WalletAdminApp .transactionsList .v-expansion-panel-content__wrap,
+.walletDialog .transactionsList .v-expansion-panel-content__wrap {
+  padding: 0 !important;
+}
+#WalletApp .transactionsList .v-list,
+#SpaceWalletApp .transactionsList .v-list,
+#RewardApp .transactionsList .v-list,
+#WalletAdminApp .transactionsList .v-list,
+.walletDialog .transactionsList .v-list {
+  max-width: 100%;
+  display: block;
+}
+#WalletApp .transactionsList .v-list .v-list-item__content,
+#SpaceWalletApp .transactionsList .v-list .v-list-item__content,
+#RewardApp .transactionsList .v-list .v-list-item__content,
+#WalletAdminApp .transactionsList .v-list .v-list-item__content,
+.walletDialog .transactionsList .v-list .v-list-item__content {
+  display: list-item;
+}
+#WalletApp .transactionsList .transactions,
+#SpaceWalletApp .transactionsList .transactions,
+#RewardApp .transactionsList .transactions,
+#WalletAdminApp .transactionsList .transactions,
+.walletDialog .transactionsList .transactions {
+  width: 94% ;
+}
+#WalletApp .transactionsList .v-bottom-nav .v-btn .v-btn__content span,
+#SpaceWalletApp .transactionsList .v-bottom-nav .v-btn .v-btn__content span,
+#RewardApp .transactionsList .v-bottom-nav .v-btn .v-btn__content span,
+#WalletAdminApp .transactionsList .v-bottom-nav .v-btn .v-btn__content span,
+.walletDialog .transactionsList .v-bottom-nav .v-btn .v-btn__content span {
+  padding: 0 10px;
+}
+#WalletApp .transactionsList .loadMoreTransaction,
+#SpaceWalletApp .transactionsList .loadMoreTransaction,
+#RewardApp .transactionsList .loadMoreTransaction,
+#WalletAdminApp .transactionsList .loadMoreTransaction,
+.walletDialog .transactionsList .loadMoreTransaction {
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+  width: 97%;
+  height: 60px;
+}
+#WalletApp .additionalToolbar,
+#SpaceWalletApp .additionalToolbar,
+#RewardApp .additionalToolbar,
+#WalletAdminApp .additionalToolbar,
+.walletDialog .additionalToolbar {
+  width: 100%;
+  height: auto !important;
+}
+#WalletApp .additionalToolbar > div,
+#SpaceWalletApp .additionalToolbar > div,
+#RewardApp .additionalToolbar > div,
+#WalletAdminApp .additionalToolbar > div,
+.walletDialog .additionalToolbar > div {
+  height: auto !important;
+  padding: 0;
+}
+#WalletApp .additionalToolbar .alert,
+#SpaceWalletApp .additionalToolbar .alert,
+#RewardApp .additionalToolbar .alert,
+#WalletAdminApp .additionalToolbar .alert,
+.walletDialog .additionalToolbar .alert {
+  max-width: 100%;
+  margin: 20px auto 0;
+}
+#WalletApp .dynamic-height .v-list__tile,
+#SpaceWalletApp .dynamic-height .v-list__tile,
+#RewardApp .dynamic-height .v-list__tile,
+#WalletAdminApp .dynamic-height .v-list__tile,
+.walletDialog .dynamic-height .v-list__tile {
+  height: auto;
+  min-height: 40px;
+}
+#WalletApp .dynamic-height .v-list__tile .v-list__tile__content.align-end,
+#SpaceWalletApp .dynamic-height .v-list__tile .v-list__tile__content.align-end,
+#RewardApp .dynamic-height .v-list__tile .v-list__tile__content.align-end,
+#WalletAdminApp .dynamic-height .v-list__tile .v-list__tile__content.align-end,
+.walletDialog .dynamic-height .v-list__tile .v-list__tile__content.align-end {
+  max-width: calc(100% - 110px);
+}
+#WalletApp .no-wrap,
+#SpaceWalletApp .no-wrap,
+#RewardApp .no-wrap,
+#WalletAdminApp .no-wrap,
+.walletDialog .no-wrap {
+  white-space: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#WalletApp .no-wrap > *,
+#SpaceWalletApp .no-wrap > *,
+#RewardApp .no-wrap > *,
+#WalletAdminApp .no-wrap > *,
+.walletDialog .no-wrap > * {
+  display: inline-block;
+}
+#WalletApp #walletsSetupWarnings .v-snack__content,
+#SpaceWalletApp #walletsSetupWarnings .v-snack__content,
+#RewardApp #walletsSetupWarnings .v-snack__content,
+#WalletAdminApp #walletsSetupWarnings .v-snack__content,
+.walletDialog #walletsSetupWarnings .v-snack__content {
+  white-space: pre-wrap;
+  flex-direction: column;
+  height: auto;
+  padding-top: 20px;
+  position: relative;
+}
+#WalletApp #walletsSetupWarnings .v-snack__content .uiIconClose,
+#SpaceWalletApp #walletsSetupWarnings .v-snack__content .uiIconClose,
+#RewardApp #walletsSetupWarnings .v-snack__content .uiIconClose,
+#WalletAdminApp #walletsSetupWarnings .v-snack__content .uiIconClose,
+.walletDialog #walletsSetupWarnings .v-snack__content .uiIconClose {
+  position: absolute;
+  top: -3px;
+  right: 8px ; /** orientation=lt */ ;
+  left: 8px ; /** orientation=rt */ ;
+}
+#WalletApp #walletsSetupWarnings .v-snack__content > div,
+#SpaceWalletApp #walletsSetupWarnings .v-snack__content > div,
+#RewardApp #walletsSetupWarnings .v-snack__content > div,
+#WalletAdminApp #walletsSetupWarnings .v-snack__content > div,
+.walletDialog #walletsSetupWarnings .v-snack__content > div {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2px;
+}
+#WalletApp .fade-enter-active,
+#SpaceWalletApp .fade-enter-active,
+#RewardApp .fade-enter-active,
+#WalletAdminApp .fade-enter-active,
+.walletDialog .fade-enter-active,
+#WalletApp .fade-leave-active,
+#SpaceWalletApp .fade-leave-active,
+#RewardApp .fade-leave-active,
+#WalletAdminApp .fade-leave-active,
+.walletDialog .fade-leave-active {
+  transition: opacity 1s;
+}
+#WalletApp .fade-enter,
+#SpaceWalletApp .fade-enter,
+#RewardApp .fade-enter,
+#WalletAdminApp .fade-enter,
+.walletDialog .fade-enter,
+#WalletApp .fade-leave-to,
+#SpaceWalletApp .fade-leave-to,
+#RewardApp .fade-leave-to,
+#WalletAdminApp .fade-leave-to,
+.walletDialog .fade-leave-to {
+  opacity: 0;
+}
+#WalletApp .walletAddressLabel,
+#SpaceWalletApp .walletAddressLabel,
+#RewardApp .walletAddressLabel,
+#WalletAdminApp .walletAddressLabel,
+.walletDialog .walletAddressLabel {
+  max-width: 100px;
+}
+#WalletApp .walletAddressLabelInput,
+#SpaceWalletApp .walletAddressLabelInput,
+#RewardApp .walletAddressLabelInput,
+#WalletAdminApp .walletAddressLabelInput,
+.walletDialog .walletAddressLabelInput {
+  width: 100px;
+}
+#WalletApp .autoHeight,
+#SpaceWalletApp .autoHeight,
+#RewardApp .autoHeight,
+#WalletAdminApp .autoHeight,
+.walletDialog .autoHeight {
+  height: auto;
+}
+#WalletApp .periodicityButtons button,
+#SpaceWalletApp .periodicityButtons button,
+#RewardApp .periodicityButtons button,
+#WalletAdminApp .periodicityButtons button,
+.walletDialog .periodicityButtons button,
+#WalletApp .walletFilterButtons button,
+#SpaceWalletApp .walletFilterButtons button,
+#RewardApp .walletFilterButtons button,
+#WalletAdminApp .walletFilterButtons button,
+.walletDialog .walletFilterButtons button {
+  padding: 0 13px;
+}
+#WalletApp .periodicityButtons button.v-btn--active,
+#SpaceWalletApp .periodicityButtons button.v-btn--active,
+#RewardApp .periodicityButtons button.v-btn--active,
+#WalletAdminApp .periodicityButtons button.v-btn--active,
+.walletDialog .periodicityButtons button.v-btn--active,
+#WalletApp .walletFilterButtons button.v-btn--active,
+#SpaceWalletApp .walletFilterButtons button.v-btn--active,
+#RewardApp .walletFilterButtons button.v-btn--active,
+#WalletAdminApp .walletFilterButtons button.v-btn--active,
+.walletDialog .walletFilterButtons button.v-btn--active {
+  opacity: 1;
+}
+#WalletApp .deleteText,
+#SpaceWalletApp .deleteText,
+#RewardApp .deleteText,
+#WalletAdminApp .deleteText,
+.walletDialog .deleteText {
+  color: #bc4343 !important;
+}
+.contactAutoCompleteContent {
+  top: 55px !important;
+  left: 0 !important; /** orientation=lt */ ;
+  right: 0 !important; /** orientation=rt */ ;
+  position: absolute;
+  width: 100%;
+  z-index: 1050 !important;
+}
+.contactAutoCompleteContent.bigContactAutoComplete {
+  top: 62px !important;
+}
+.autocompleteSelectedItem {
+  cursor: pointer !important;
+  margin: 0 3px 3px 0 !important;
+  padding: 2px 6px !important;
+  background: var(--allPagesPrimaryColor, #476a9c) !important;
+  color: #fff !important;
+  border: 1px solid var(--allPagesPrimaryColor, #476a9c) !important;
+  border-radius: 3px !important;
+  font-size: 15px !important;
+}
+.autocompleteSelectedItem > .v-chip__content {
+  height: auto !important;
+  padding: 0 !important;
+}
+.contactAutoComplete {
+  position: relative;
+}
+.contactAutoComplete .v-list {
+  padding: 0 !important;
+}
+.contactAutoComplete .v-list__tile {
+  height: 30px;
+  transition: unset;
+  transform: none;
+}
+.contactAutoComplete .v-list__tile:hover {
+  background-color: var(--allPagesPrimaryColor, #476a9c);
+  color: #fff;
+  transition: unset;
+  transform: none;
+}
+.contactAutoComplete .v-list__tile__title {
+  transition: unset;
+  transform: none;
+}
+.contactAutoComplete .v-list__tile__avatar {
+  min-width: 25px;
+}
+#WalletApp .chartHistory,
+#SpaceWalletApp .chartHistory {
+  margin: 0 7.5%;
+}
+#WalletApp .periodicityLabel,
+#SpaceWalletApp .periodicityLabel {
+  text-transform: capitalize;
+  margin: 0 -1%;
+}
+#WalletApp .walletSummaryBalance,
+#SpaceWalletApp .walletSummaryBalance {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  margin: 4%;
+}
+#WalletApp .walletSummaryBalance .title,
+#SpaceWalletApp .walletSummaryBalance .title,
+#WalletApp .walletSummaryBalance .headline,
+#SpaceWalletApp .walletSummaryBalance .headline {
+  color: var(--allPagesBaseColorMedium, #808080);
+}
+#WalletApp .walletSummaryBalance .tokenBalance,
+#SpaceWalletApp .walletSummaryBalance .tokenBalance {
+  color: var(--allPagesTertiaryColor, #476a9c);
+}
+#WalletApp .walletSummaryBalance .rewardBalance,
+#SpaceWalletApp .walletSummaryBalance .rewardBalance,
+#WalletApp .walletSummaryBalance .lastTransactionBalance,
+#SpaceWalletApp .walletSummaryBalance .lastTransactionBalance {
+  color: #000000;
+}
+#WalletApp .walletSummaryBalance .v-card__title,
+#SpaceWalletApp .walletSummaryBalance .v-card__title {
+  padding: 7px!important;
+  display: block;
+}
+#WalletApp .walletSummaryBalance .container,
+#SpaceWalletApp .walletSummaryBalance .container {
+  padding: 0;
+}
+#WalletApp .walletSummaryBalance .amount,
+#SpaceWalletApp .walletSummaryBalance .amount {
+  line-height: 40px;
+}
+#WalletApp .walletSummaryBalance .btn,
+#SpaceWalletApp .walletSummaryBalance .btn {
+  text-transform: capitalize;
+}
+#WalletApp .walletSummaryActions,
+#SpaceWalletApp .walletSummaryActions {
+  margin-top: 5%;
+}
+#WalletApp .walletSummaryActions .v-dialog__container,
+#SpaceWalletApp .walletSummaryActions .v-dialog__container,
+#WalletApp .walletSummaryActions .v-dialog__activator,
+#SpaceWalletApp .walletSummaryActions .v-dialog__activator {
+  width: 90%;
+  box-sizing: border-box;
+}
+#WalletApp .walletSummaryActions .walletSummaryAction,
+#SpaceWalletApp .walletSummaryActions .walletSummaryAction {
+  min-height: 57px;
+}
+#WalletApp .transactionHistoryChart,
+#SpaceWalletApp .transactionHistoryChart {
+  height: 450px;
+  width: 90%;
+  max-height: 450px;
+  padding: 10px 8px 10px 10px;
+  box-sizing: border-box;
+  margin: 0 5%;
+}
+#WalletApp .year canvas,
+#SpaceWalletApp .year canvas {
+  width: 99.5% !important;
+  max-height: 480px !important;
+}
+#WalletApp .month canvas,
+#SpaceWalletApp .month canvas {
+  width: 98% !important;
+  height: 460px !important;
+  max-height: 460px !important;
+}
+#WalletApp #rewardDetailsDrawer .title,
+#SpaceWalletApp #rewardDetailsDrawer .title {
+  color: rgba(0, 0, 0, 0.87);
+}
+#WalletApp .walletRewardSetup,
+#SpaceWalletApp .walletRewardSetup {
+  width: 100% ;
+}
+#WalletAdminApp .selectBoxVuetify .v-select__selections,
+#RewardApp .selectBoxVuetify .v-select__selections {
+  line-height: 17px;
+}
+#WalletAdminApp .input-text-center,
+#RewardApp .input-text-center,
+#WalletAdminApp .input-text-center input,
+#RewardApp .input-text-center input {
+  text-align: center;
+}
+#WalletAdminApp .dateSelector,
+#RewardApp .dateSelector {
+  width: 850px;
+  max-width: 100%;
+}
+#WalletAdminApp .dateSelectorInput,
+#RewardApp .dateSelectorInput {
+  width: 850px;
+  max-width: 100%;
+  margin: auto;
+}
+#WalletAdminApp .dateSelectorInput input,
+#RewardApp .dateSelectorInput input {
+  text-align: center;
+  cursor: pointer;
+}
+#WalletAdminApp #selectedRewardSettingTimeZone,
+#RewardApp #selectedRewardSettingTimeZone {
+  width: 450px;
+  max-width: 100%;
+}
+#WalletAdminApp #general {
+  padding-bottom: 100px;
+}
+#WalletAdminApp .deploymentStep {
+  display: inline;
+}
+#WalletAdminApp .walletDisplay {
+  padding: 20px;
+}
+#RewardApp #addTeamButton {
+  position: absolute;
+}
+#RewardApp .teamCardWarning .v-list__tile {
+  height: auto;
+}
+#RewardApp .teamCardWarning .alert-warning {
+  line-height: 19px;
+  margin: 0;
+  padding: 5px 10px;
+}
+#RewardApp .rewardWalletConfiguration > * {
+  display: inline-block;
+}
+#RewardApp .rewardWalletConfiguration > .v-input {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#RewardApp .rewardWalletConfiguration > input {
+  text-align: center;
+}
+#RewardApp .rewardPoolForm > * {
+  box-sizing: border-box;
+}
+.fixLinkHeight {
+  min-height: 31px;
+}
+#walletBalancePortlet .big-number {
+  font-size: 2.4rem !important;
+  line-height: 2.5rem;
+  color: var(--allPagesDarkGrey, #4d5466);
+}
+#WalletOverview .walletOverviewCurrencySymbol {
+  height: 65px;
+  display: block;
+}
+#WalletOverview .walletOverviewBalance {
+  line-height: 62px;
+  display: block;
+}
+.walletTitle {
+  font-weight: bold;
+}
+.symbol {
+  color: #bc4343;
+}
+.balance {
+  color: var(--allPagesBaseColorMedium, #808080);
+}
+.gasPrice .symbol {
+  color: #bc4343;
+  font-weight: bold ;
+}
+.gasPrice .transactionFee {
+  color: var(--allPagesBaseColorMedium, #808080);
+}
+.amountLabel {
+  color: #000000;
+}
+.summaryBalanceLabels {
+  font-size: 16px;
+}
+.uiArrowBAckIcon {
+  cursor: pointer;
+  color: var(--allPagesBtnDisableColor, #c6c6c6) !important;
+  margin-left: -4px;
+  top: 4px;
+}
+.uiArrowBAckIcon:before {
+  content: "\e913";
+  font-family: "PLF-FONT-ICONS" !important;
+  font-style: normal;
+  font-size: 22px;
+}
+/* Override uiPopup !important attributes */
+@media (max-width: 959px) {
+  #WalletApp,
+  #SpaceWalletApp {
+    margin-bottom: 55px;
+  }
+  #WalletAdminApp .createNewToken {
+    width: 100% !important;
+    margin: 0 !important;
+    transform: translate(0px, 0px) !important;
+  }
+}
+.uiIconAppSpaceWallet:before,
+.uiIconWalletMyWallet:before,
+.uiIconAppwallet:before,
+.uiIconAppWallet:before,
+.uiIconExt-wallet:before {
+  content: "\e9ba" !important;
+}
+.uiIconSendFunds:before {
+  content: none !important;
+}
+.adminWallet .v-btn {
+  text-transform: none !important;
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+.adminWallet .labels {
+  color: rgba(0, 0, 0, 0.25);
+  font-weight: bold !important;
+  font-size: 15px;
+}
+.adminWallet .fundsLabels {
+  font-size: 15px;
+}
+.adminWallet .ethereumAddress {
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+  font-size: 15px;
+}
+.ethereumAddressTitle {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+.infoMenu .walletTextField {
+  width: 15%;
+}
+.infoMenu .walletTextField .v-input__control > .v-input__slot:before {
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+.infoMenu .spacer {
+  width: 50%;
+}
+.infoMenu .dropDownFilter {
+  width: 17%;
+}
+.infoMenu .dropDownFilter .menuList {
+  margin: auto;
+  width: 75%;
+}
+.options {
+  cursor: pointer;
+}
+.actionsButton {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+.walletBackup .copyToClipboardInput {
+  position: absolute;
+  left: -999em;
+}
+.walletBackup .walletAddressCmp .copyToClipboardInput {
+  position: absolute;
+  left: -999em;
+}
+.walletBackup .backupWalletText {
+  color: var(--allPagesDarkGrey, #4d5466);
+}
+.walletManagePassword .v-list-item__title {
+  white-space: normal !important;
+}
+.walletManagePasswordDrawer .managePasswordLabels .v-label {
+  text-transform: capitalize;
+}
+.walletManagePasswordDrawer .v-input--reverse .v-input__slot {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.walletSetting .v-list-item__subtitle {
+  white-space: normal !important;
+}
+.walletSetting .manageKey .v-list-item__content {
+  margin-top: -10% !important;
+}
+.walletSetting .manageKey .v-list-item__action {
+  align-items: center;
+  width: 30% !important;
+}
+.walletSetting .manageKey .copyToClipboardInput {
+  position: absolute;
+  left: -999em;
+}
+.walletSetting .manageKey .walletAddressCmp {
+  width: 70%;
+}
+.walletSetting .deleteWallet .deleteText {
+  color: #bc4343 !important;
+}
+.walletAlert {
+  position: fixed !important;
+  top: auto !important;
+  left: 15px !important;
+  bottom: 15px !important;
+}
+.half-opacity {
+  opacity: 0.5;
+}
+.whiteBackground {
+  background-color: var(--allPagesLightWhite, #ffffff);
+}
+@media (min-width: 1201px) and (max-width: 1300px) {
+  #walletBalancePortlet .big-number {
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 1200px) {
+  #walletBalancePortlet .big-number {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 599px) {
+  #walletBalancePortlet .big-number {
+    margin-top: 0;
+  }
+}
+@media (max-width: 380px) {
+  #WalletApp .fixedItems,
+  #SpaceWalletApp .fixedItems {
+    position: absolute;
+    right: 0 !important; /** orientation=lt */ ;
+    left: 0 !important; /** orientation=rt */ ;
+    box-sizing: border-box;
+  }
+  #WalletApp .summaryCard,
+  #SpaceWalletApp .summaryCard,
+  #WalletApp .summaryBalance,
+  #SpaceWalletApp .summaryBalance {
+    width: 100%;
+  }
+  #WalletApp .WalletChart,
+  #SpaceWalletApp .WalletChart,
+  #WalletApp .WalletSummary,
+  #SpaceWalletApp .WalletSummary {
+    max-width: 100%;
+  }
+}
+@media (min-width: 380px) and (max-width: 768px) {
+  #WalletApp .fixedItems,
+  #SpaceWalletApp .fixedItems {
+    position: absolute;
+    right: 0 !important; /** orientation=lt */ ;
+    left: 0 !important; /** orientation=rt */ ;
+    box-sizing: border-box;
+  }
+  #WalletApp .summaryCard,
+  #SpaceWalletApp .summaryCard {
+    max-width: max-content;
+  }
+  #WalletApp .summaryBalance,
+  #SpaceWalletApp .summaryBalance {
+    width: 100%;
+  }
+  #WalletApp .WalletChart,
+  #SpaceWalletApp .WalletChart,
+  #WalletApp .WalletSummary,
+  #SpaceWalletApp .WalletSummary {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  #WalletApp .fixedItems,
+  #SpaceWalletApp .fixedItems {
+    position: absolute;
+    right: 0 !important; /** orientation=lt */ ;
+    left: 0 !important; /** orientation=rt */ ;
+    box-sizing: border-box;
+  }
+  #WalletApp .summaryCard,
+  #SpaceWalletApp .summaryCard,
+  #WalletApp .summaryBalance,
+  #SpaceWalletApp .summaryBalance {
+    max-width: max-content;
+  }
+  #WalletApp .WalletChart,
+  #SpaceWalletApp .WalletChart,
+  #WalletApp .WalletSummary,
+  #SpaceWalletApp .WalletSummary {
+    width: 100%;
+  }
+}
+

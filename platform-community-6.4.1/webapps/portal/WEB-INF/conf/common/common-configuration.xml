@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+
+    Copyright (C) 2009 eXo Platform SAS.
+    
+    This is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 2.1 of
+    the License, or (at your option) any later version.
+    
+    This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+    
+    You should have received a copy of the GNU Lesser General Public
+    License along with this software; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+
+<configuration
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
+    xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+
+   <component>
+      <key>org.exoplatform.services.listener.ListenerService</key>
+      <type>org.exoplatform.services.listener.ListenerService</type>
+   </component>
+
+  <component>
+    <key>org.infinispan.transaction.lookup.TransactionManagerLookup</key>
+    <type>org.exoplatform.services.transaction.infinispan.JBossStandaloneJTAManagerLookup</type>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.transaction.TransactionService</key>
+    <type>org.exoplatform.services.transaction.infinispan.JBossTransactionsService</type>
+    <init-params>
+      <value-param>
+        <name>timeout</name>
+        <value>${gatein.jcr.transaction.timeout:420}</value>
+      </value-param>
+    </init-params>
+  </component>
+
+  <component>
+    <type>org.exoplatform.services.scheduler.QueueTasks</type>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.scheduler.JobSchedulerService</key>
+    <type>org.exoplatform.services.scheduler.impl.JobSchedulerServiceImpl</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.services.scheduler.impl.QuartzSheduler</type>
+    <init-params>
+      <!--Configure Main Scheduler Properties -->
+      <value-param>
+        <name>org.quartz.scheduler.instanceName</name>
+        <value>${exo.quartz.scheduler.instanceName}</value>
+      </value-param>
+      <value-param>
+        <name>org.quartz.scheduler.instanceId</name>
+        <value>${exo.quartz.scheduler.instanceId}</value>
+      </value-param>
+      <!--Configure ThreadPool -->
+      <value-param>
+        <name>org.quartz.threadPool.class</name>
+        <value>${exo.quartz.threadPool.class}</value>
+      </value-param>
+      <value-param>
+        <name>org.quartz.threadPool.threadPriority</name>
+        <value>${exo.quartz.threadPool.threadPriority}</value>
+      </value-param>
+      <value-param>
+        <name>org.quartz.threadPool.threadCount</name>
+        <value>${exo.quartz.threadPool.threadCount}</value>
+      </value-param>
+      <!-- Configure JobStore -->
+      <value-param>
+        <name>org.quartz.jobStore.misfireThreshold</name>
+        <value>${exo.quartz.jobStore.misfireThreshold}</value>
+      </value-param>
+      <value-param>
+        <name>org.quartz.jobStore.class</name>
+        <value>org.quartz.simpl.RAMJobStore</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.useProperties</name>
+        <value>${exo.quartz.jobStore.useProperties}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.isClustered</name>
+        <value>true</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.class</name>
+        <value>${exo.quartz.jobStore.class}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.driverDelegateClass</name>
+        <value>${exo.quartz.jobStore.driverDelegateClass}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.dataSource</name>
+        <value>${exo.quartz.jobStore.dataSource}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.tablePrefix</name>
+        <value>${exo.quartz.jobStore.tablePrefix}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.maxMisfiresToHandleAtATime</name>
+        <value>${exo.quartz.jobStore.maxMisfiresToHandleAtATime}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.dontSetAutoCommitFalse</name>
+        <value>${exo.quartz.jobStore.dontSetAutoCommitFalse}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.lockHandler.class</name>
+        <value>${exo.quartz.jobStore.lockHandler.class}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.driverDelegateInitString</name>
+        <value>${exo.quartz.jobStore.driverDelegateInitString}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.txIsolationLevelSerializable</name>
+        <value>${exo.quartz.jobStore.txIsolationLevelSerializable}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.selectWithLockSQL</name>
+        <value>${exo.quartz.jobStore.selectWithLockSQL}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.acquireTriggersWithinLock</name>
+        <value>${exo.quartz.jobStore.acquireTriggersWithinLock}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>org.quartz.jobStore.clusterCheckinInterval</name>
+        <value>${exo.quartz.jobStore.clusterCheckinInterval}</value>
+      </value-param>
+      <!-- Configure Datasources -->
+      <value-param profiles="cluster">
+        <name>org.quartz.dataSource.quartzDS.jndiURL</name>
+        <value>${exo.quartz.dataSource.quartzDS.jndiURL}</value>
+      </value-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.naming.InitialContextInitializer</key>
+    <type>org.exoplatform.commons.InitialContextInitializer2</type>
+    <init-params>
+      <properties-param>
+        <name>default-properties</name>
+        <description>Default initial context properties</description>
+      </properties-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.resources.LocaleConfigService</key>
+    <type>org.exoplatform.services.resources.impl.LocaleConfigServiceImpl</type>
+    <init-params>
+      <value-param>
+        <name>locale.config.file</name>
+        <value>war:/conf/common/locales-config.xml</value>
+      </value-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.resources.ResourceBundleService</key>
+    <type>org.exoplatform.services.resources.impl.SimpleResourceBundleService</type>
+    <init-params>
+      <values-param>
+        <name>classpath.resources</name>
+        <description>The resources that start with the following package name should be load from file system
+        </description>
+        <value>locale.portlet</value>
+      </values-param>
+      <values-param>
+        <name>init.resources</name>
+        <description>Initiate the following resources during the first launch</description>
+        <value>locale.portal.expression</value>
+        <value>locale.portal.services</value>
+        <value>locale.portal.webui</value>
+        <value>locale.portal.custom</value>
+        <value>locale.portal.login</value>
+        <value>locale.navigation.portal.global</value>
+        <value>locale.navigation.group.platform.administrators</value>
+        <value>locale.navigation.group.platform.users</value>
+        <value>locale.navigation.group.platform.guests</value>
+        <value>locale.navigation.group.organization.management.executive-board</value>
+        <value>locale.portal.HamburgerMenu</value>
+      </values-param>
+      <values-param>
+        <name>portal.resource.names</name>
+        <value>locale.navigation.portal.global</value>
+      </values-param>
+      <values-param>
+        <name>portal.resource.names</name>
+        <description>The properties files of the portal , those file will be merged
+          into one ResoruceBundle properties
+        </description>
+        <value>locale.portal.expression</value>
+        <value>locale.portal.services</value>
+        <value>locale.portal.webui</value>
+        <value>locale.portal.custom</value>
+        <value>locale.portal.login</value>
+      </values-param>
+      <values-param>
+        <name>application.resource.bundle</name>
+        <value>locale.portal.templates</value>
+      </values-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.resources.ResourceBundleManager</key>
+    <type>org.exoplatform.services.resources.ResourceBundleManager</type>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.cache.CacheService</key>
+    <jmx-name>cache:type=CacheService</jmx-name>
+    <type>org.exoplatform.services.cache.impl.CacheServiceImpl</type>
+    <init-params>
+      <object-param>
+        <name>cache.config.default</name>
+        <description>The default cache configuration</description>
+        <object type="org.exoplatform.services.cache.ExoCacheConfig">
+          <field name="name">
+            <string>default</string>
+          </field>
+          <field name="maxSize">
+            <int>${exo.cache.default.MaxNodes:300}</int>
+          </field>
+          <field name="liveTime">
+            <long>${exo.cache.default.TimeToLive:600}</long>
+          </field>
+          <field name="implementation">
+            <string>org.exoplatform.services.cache.concurrent.ConcurrentFIFOExoCache</string>
+          </field>
+        </object>
+      </object-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.cache.ExoCacheFactory</key>
+    <type>org.exoplatform.services.cache.impl.infinispan.ExoCacheFactoryImpl</type>
+    <init-params>
+      <value-param>
+        <name>cache.config.template</name>
+        <value>${exo.cache.config.template:jar:/conf/cache/infinispan/local/cache-config.xml}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>cache.config.template</name>
+        <value>${exo.cache.config.template:jar:/conf/cache/infinispan/cluster/cache-config.xml}</value>
+      </value-param>
+      <value-param profiles="cluster">
+        <name>cache.async.config.template</name>
+        <value>${exo.cache.async.config.template:jar:/conf/cache/infinispan/cluster/cache-async-config.xml}</value>
+      </value-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.portal.resource.SkinService</key>
+    <type>org.exoplatform.portal.resource.SkinService</type>
+    <init-params>
+      <value-param>
+        <name>skin.default</name>
+        <value>${exo.skin.default:Enterprise}</value>
+      </value-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.services.portletcontainer.bundle.ResourceBundleDelegate</key>
+    <type>org.exoplatform.portal.application.ResourceBundleDelegateImpl</type>
+  </component>
+
+  <component>
+    <key>org.exoplatform.management.RestManagementProvider</key>
+    <type>org.exoplatform.management.RestManagementProvider</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.services.rest.ext.service.RestServicesListApplication</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.groovyscript.text.TemplateStatisticService</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.groovyscript.text.TemplateService</type>
+    <init-params>
+      <value-param>
+        <name>templates.collect.statistics</name>
+        <value>${exo.statistics.groovy.template.enabled:true}</value>
+      </value-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.web.security.proxy.ProxyFilterService</key>
+    <type>org.exoplatform.web.security.proxy.ProxyFilterService</type>
+    <init-params>
+      <values-param>
+        <!-- The white list -->
+        <name>white-list</name>
+        <!-- We accept anything not black listed -->
+        <value>*</value>
+      </values-param>
+      <values-param>
+        <name>black-list</name>
+        <value>*.evil.org</value>
+      </values-param>
+    </init-params>
+  </component>
+
+  <component>
+    <key>org.exoplatform.web.security.AuthenticationRegistry</key>
+    <type>org.exoplatform.web.security.AuthenticationRegistryImpl</type>
+  </component>
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.cache.ExoCacheFactory</target-component>
+    <component-plugin>
+      <name>addCreator</name>
+      <set-method>addCreator</set-method>
+      <type>org.exoplatform.services.cache.impl.infinispan.ExoCacheCreatorPlugin</type>
+      <description>add Exo Cache Creator</description>
+      <init-params>
+        <object-param>
+          <name>Generic-insp-cacheCreator</name>
+          <description>The generic cache creator</description>
+            <object type="org.exoplatform.services.cache.impl.infinispan.generic.GenericExoCacheCreator">
+              <field name="implementations">
+                <collection type="java.util.HashSet">
+                  <value>
+                    <string>NONE</string>
+                  </value>
+                  <value>
+                    <string>LRU</string>
+                  </value>
+                  <value>
+                    <string>UNORDERED</string>
+                  </value>
+                  <value>
+                    <string>MANUAL</string>
+                  </value>
+                  <value>
+                    <string>LIRS</string>
+                  </value>
+                </collection>
+              </field>
+              <field name="defaultStrategy"><string>${exo.cache.eviction.defaultStrategy:LIRS}</string></field>
+              <field name="defaultMaxIdle"><long>${exo.cache.expiration.defaultMaxIdle:-1}</long></field>
+              <field name="defaultWakeUpInterval"><long>${exo.cache.expiration.defaultWakeUpInterval:5000}</long></field>
+            </object>
+          </object-param>
+       </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+</configuration>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T12:34:24Z
+Implementation-Title: eXo Agenda - Application
+Implementation-URL: https://projects.exoplatform.org/agenda-parent/agend
+ a-webapps
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.3.1
+SCM-Revision: 36af333aeb9561ddddd12db1ffed93aea012b5f3
+SCM-URL: scm:git:git://github.com/exoplatform/agenda.git/agenda-webapps
+Specification-Title: eXo Agenda - Application
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

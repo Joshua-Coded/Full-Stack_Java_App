@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T11:21:59Z
+Implementation-Title: eXo Add-on:: Wallet - Reward Application
+Implementation-URL: https://projects.exoplatform.org/addons-parent-pom/w
+ allet/wallet-webapps-reward
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.4.1-exo
+SCM-Revision: e4a556e601a7f6fa8652369252a8ebbfe4f292e5
+SCM-URL: scm:git:git://github.com/meeds-io/wallet.git/wallet-webapps-rew
+ ard
+Specification-Title: eXo Add-on:: Wallet - Reward Application
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

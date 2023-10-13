@@ -1,0 +1,41 @@
+<%
+/*
+* Copyright (C) 2022 eXo Platform SAS.
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+*/
+%>
+<li class="$READ clearfix" data-id="$NOTIFICATION_ID" data-link="$FILE_URL">
+  <div class="media">
+    <div class="avatarXSmall pull-left">
+      <img src="$AVATAR" alt="$CALL_OWNER" title="$CALL_OWNER"/>
+    </div>
+    <div class="media-body">
+        <% String DESCRIPTION = RECORDING_STATUS.equals("ok") ? _ctx.appRes("Notification.webconferencing.callrecording.success") : _ctx.appRes("Notification.webconferencing.callrecording.failed"); %>
+        <div class="status">$DESCRIPTION </div>
+
+            <div class="contentSmall" data-link="$FILE_URL">
+            <%if (RECORDING_STATUS.equals("ok")) { %>
+                <div class="content"><i class="uiIcon uiIconTick uiIconBlue"></i>
+                                             	<span>$FILE_NAME</span></div>
+            <%} %>
+                <div class="lastUpdatedTime">$LAST_UPDATED_TIME</div>
+            </div>
+
+
+        </div>
+    </div>
+    <span class="remove-item" data-rest=""><i class="uiIconClose uiIconLightGray"></i></span>
+</li>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_3.xsd http://www.exoplatform.org/xml/ns/kernel_1_3.xsd"
+  xmlns="http://www.exoplatform.org/xml/ns/kernel_1_3.xsd">
+  <external-component-plugins>
+      <target-component>org.exoplatform.commons.api.notification.service.setting.PluginSettingService</target-component>
+      <component-plugin>
+        <name>notification.groups</name>
+        <set-method>registerGroupConfig</set-method>
+        <type>org.exoplatform.commons.api.notification.plugin.GroupProviderPlugin</type>
+        <description>Agenda group</description>
+        <init-params>
+          <object-param>
+            <name>group.agenda</name>
+            <description>The information of group agenda</description>
+            <object type="org.exoplatform.commons.api.notification.plugin.config.GroupConfig">
+              <field name="id">
+                <string>agenda</string>
+              </field>
+              <field name="resourceBundleKey">
+                <string>UINotification.label.group.Agenda</string>
+              </field>
+              <field name="order">
+                <string>400</string>
+              </field>
+            </object>
+          </object-param>
+        </init-params>
+      </component-plugin>
+  </external-component-plugins>
+    
+  <external-component-plugins>
+      <target-component>org.exoplatform.commons.api.notification.service.setting.PluginContainer</target-component>
+
+      <!-- New event notification plugin -->
+      <component-plugin>
+        <name>notification.plugins</name>
+        <set-method>addPlugin</set-method>
+        <type>org.exoplatform.agenda.notification.plugin.AgendaNotificationPlugin</type>
+        <init-params>
+          <value-param>
+            <name>agenda.notification.plugin.key</name>
+            <value>EventAddedNotificationPlugin</value>
+          </value-param>
+          <object-param>
+            <name>template.EventAddedNotificationPlugin</name>
+            <description>The template of EventAddedNotificationPlugin</description>
+            <object type="org.exoplatform.commons.api.notification.plugin.config.PluginConfig">
+              <field name="pluginId">
+                <string>EventAddedNotificationPlugin</string>
+              </field>
+              <field name="resourceBundleKey">
+                <string>UINotification.label.EventAddedNotificationPlugin</string>
+              </field>
+              <field name="order">
+                <string>6</string>
+              </field>
+              <field name="defaultConfig">
+                <collection type="java.util.ArrayList">
+                  <value>
+                    <string>Instantly</string>
+                  </value>
+                </collection>
+              </field>
+              <field name="groupId">
+                <string>agenda</string>
+              </field>
+              <field name="bundlePath">
+                <string>locale.notification.AgendaNotification</string>
+              </field>
+            </object>
+          </object-param>
+      </init-params>
+      </component-plugin>
+
+    <!-- Modified Event notification plugin-->
+    <component-plugin>
+      <name>notification.plugins</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.agenda.notification.plugin.AgendaNotificationPlugin</type>
+      <init-params>
+        <value-param>
+          <name>agenda.notification.plugin.key</name>
+          <value>EventModifiedNotificationPlugin</value>
+        </value-param>
+        <object-param>
+          <name>template.EventModifiedNotificationPlugin</name>
+          <description>The template of EventModifiedNotificationPlugin</description>
+          <object type="org.exoplatform.commons.api.notification.plugin.config.PluginConfig">
+            <field name="pluginId">
+              <string>EventModifiedNotificationPlugin</string>
+            </field>
+            <field name="resourceBundleKey">
+              <string>UINotification.label.EventModifiedNotificationPlugin</string>
+            </field>
+            <field name="order">
+              <string>6</string>
+            </field>
+            <field name="defaultConfig">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>Instantly</string>
+                </value>
+              </collection>
+            </field>
+            <field name="groupId">
+              <string>agenda</string>
+            </field>
+            <field name="bundlePath">
+              <string>locale.notification.AgendaNotification</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+
+    <!-- Canceled Event notification plugin-->
+    <component-plugin>
+      <name>notification.plugins</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.agenda.notification.plugin.AgendaNotificationPlugin</type>
+      <init-params>
+        <value-param>
+          <name>agenda.notification.plugin.key</name>
+          <value>EventCanceledNotificationPlugin</value>
+        </value-param>
+        <object-param>
+          <name>template.EventCanceledNotificationPlugin</name>
+          <description>The template of EventCanceledNotificationPlugin</description>
+          <object type="org.exoplatform.commons.api.notification.plugin.config.PluginConfig">
+            <field name="pluginId">
+              <string>EventCanceledNotificationPlugin</string>
+            </field>
+            <field name="resourceBundleKey">
+              <string>UINotification.label.EventCanceledNotificationPlugin</string>
+            </field>
+            <field name="order">
+              <string>6</string>
+            </field>
+            <field name="defaultConfig">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>Instantly</string>
+                </value>
+              </collection>
+            </field>
+            <field name="groupId">
+              <string>agenda</string>
+            </field>
+            <field name="bundlePath">
+              <string>locale.notification.AgendaNotification</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+
+    <!-- New Event Reminder notification plugin -->
+    <component-plugin>
+      <name>notification.plugins</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.agenda.notification.plugin.EventReminderNotificationPlugin</type>
+      <init-params>
+        <value-param>
+          <name>agenda.notification.plugin.key</name>
+          <value>EventReminderNotificationPlugin</value>
+        </value-param>
+        <object-param>
+          <name>template.EventReminderNotificationPlugin</name>
+          <description>The template of EventReminderNotificationPlugin</description>
+          <object type="org.exoplatform.commons.api.notification.plugin.config.PluginConfig">
+            <field name="pluginId">
+              <string>EventReminderNotificationPlugin</string>
+            </field>
+            <field name="resourceBundleKey">
+              <string>UINotification.label.EventReminderNotificationPlugin</string>
+            </field>
+            <field name="order">
+              <string>6</string>
+            </field>
+            <field name="defaultConfig">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>Instantly</string>
+                </value>
+              </collection>
+            </field>
+            <field name="groupId">
+              <string>agenda</string>
+            </field>
+            <field name="bundlePath">
+              <string>locale.notification.AgendaNotification</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+
+    <!--  Participants Reply notification plugin -->
+    <component-plugin>
+      <name>notification.plugins</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.agenda.notification.plugin.EventReplyNotificationPlugin</type>
+      <init-params>
+        <value-param>
+          <name>agenda.notification.plugin.key</name>
+          <value>EventReplyNotificationPlugin</value>
+        </value-param>
+        <object-param>
+          <name>template.EventReplyNotificationPlugin</name>
+          <description>The template of EventReplyNotificationPlugin</description>
+          <object type="org.exoplatform.commons.api.notification.plugin.config.PluginConfig">
+            <field name="pluginId">
+              <string>EventReplyNotificationPlugin</string>
+            </field>
+            <field name="resourceBundleKey">
+              <string>UINotification.label.EventReplyNotificationPlugin</string>
+            </field>
+            <field name="order">
+              <string>6</string>
+            </field>
+            <field name="defaultConfig">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>Instantly</string>
+                </value>
+              </collection>
+            </field>
+            <field name="groupId">
+              <string>agenda</string>
+            </field>
+            <field name="bundlePath">
+              <string>locale.notification.AgendaNotification</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+
+    <!--  Date Poll notification plugin -->
+    <component-plugin>
+      <name>notification.plugins</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.agenda.notification.plugin.DatePollNotificationPlugin</type>
+      <init-params>
+        <value-param>
+          <name>agenda.notification.plugin.key</name>
+          <value>DatePollNotificationPlugin</value>
+        </value-param>
+        <object-param>
+          <name>template.DatePollNotificationPlugin</name>
+          <description>The template of DatePollNotificationPlugin</description>
+          <object type="org.exoplatform.commons.api.notification.plugin.config.PluginConfig">
+            <field name="pluginId">
+              <string>DatePollNotificationPlugin</string>
+            </field>
+            <field name="resourceBundleKey">
+              <string>UINotification.label.DatePollNotificationPlugin</string>
+            </field>
+            <field name="order">
+              <string>6</string>
+            </field>
+            <field name="defaultConfig">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>Instantly</string>
+                </value>
+              </collection>
+            </field>
+            <field name="groupId">
+              <string>agenda</string>
+            </field>
+            <field name="bundlePath">
+              <string>locale.notification.AgendaNotification</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+
+    <!--  Vote for a date notification plugin -->
+    <component-plugin>
+      <name>notification.plugins</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.agenda.notification.plugin.EventVoteNotificationPlugin</type>
+      <init-params>
+        <value-param>
+          <name>agenda.notification.plugin.key</name>
+          <value>VoteNotificationPlugin</value>
+        </value-param>
+        <object-param>
+          <name>template.VoteNotificationPlugin</name>
+          <description>The template of VoteNotificationPlugin</description>
+          <object type="org.exoplatform.commons.api.notification.plugin.config.PluginConfig">
+            <field name="pluginId">
+              <string>VoteNotificationPlugin</string>
+            </field>
+            <field name="resourceBundleKey">
+              <string>UINotification.label.VoteNotificationPlugin</string>
+            </field>
+            <field name="order">
+              <string>6</string>
+            </field>
+            <field name="defaultConfig">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>Instantly</string>
+                </value>
+              </collection>
+            </field>
+            <field name="groupId">
+              <string>agenda</string>
+            </field>
+            <field name="bundlePath">
+              <string>locale.notification.AgendaNotification</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.commons.api.notification.channel.ChannelManager</target-component>
+    <component-plugin>
+      <name>web.channel.agenda.template</name>
+      <set-method>registerTemplateProvider</set-method>
+      <type>org.exoplatform.agenda.notification.provider.WebTemplateProvider</type>
+      <init-params>
+        <value-param>
+          <name>channel-id</name>
+          <value>WEB_CHANNEL</value>
+        </value-param>
+      </init-params>
+    </component-plugin>
+    <component-plugin>
+      <name>mail.channel.agenda.template</name>
+      <set-method>registerTemplateProvider</set-method>
+      <type>org.exoplatform.agenda.notification.provider.MailTemplateProvider</type>
+      <init-params>
+        <value-param>
+          <name>channel-id</name>
+          <value>MAIL_CHANNEL</value>
+        </value-param>
+      </init-params>
+    </component-plugin>
+    <component-plugin>
+      <name>push.channel.agenda.template</name>
+      <set-method>registerTemplateProvider</set-method>
+      <type>org.exoplatform.agenda.notification.provider.MobilePushTemplateProvider</type>
+      <init-params>
+        <value-param>
+          <name>channel-id</name>
+          <value>PUSH_CHANNEL</value>
+        </value-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T12:21:37Z
+Implementation-Title: eXo Web Conferencing :: Extension Webapp
+Implementation-URL: https://projects.exoplatform.org/addons-parent-pom/w
+ eb-conferencing/web-conferencing-webapp
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.4.1
+SCM-Revision: 7f2ccb88480b0dec14d2a1c5135d64c2c523b5db
+SCM-URL: scm:git:git://github.com/exoplatform/web-conferencing.git/web-c
+ onferencing-webapp
+Specification-Title: eXo Web Conferencing :: Extension Webapp
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

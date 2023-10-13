@@ -1,0 +1,476 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.spacesAdministration .avatar {
+  width: 30px;
+  border-radius: 10%;
+}
+.spacesAdministration .uiTabInPage .nav-tabs {
+  padding: 10px 10px 0px 10px;
+}
+.spacesAdministration .uiTabInPage .tab-content {
+  padding: 20px 10px;
+}
+.spacesAdministration .manageSpaces .table th,
+.spacesAdministration .spacesPermissions .table th {
+  border-right: 1px solid var(--allPagesBorderColor, #e1e8ee);
+}
+.spacesAdministration .manageSpaces .table tr > td:nth-of-type(1),
+.spacesAdministration .spacesPermissions .table tr > td:nth-of-type(1) {
+  width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spacesAdministration .manageSpaces .table tr > td:nth-of-type(2),
+.spacesAdministration .spacesPermissions .table tr > td:nth-of-type(2) {
+  width: 60%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.spacesAdministration .manageSpaces .table tr > td:nth-of-type(3),
+.spacesAdministration .spacesPermissions .table tr > td:nth-of-type(3) {
+  width: 15%;
+}
+.spacesAdministration .manageSpaces .table td .title,
+.spacesAdministration .spacesPermissions .table td .title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.spacesAdministration .bindingReports .inProgress span {
+  color: grey;
+  font-style: italic;
+}
+.spacesAdministration .bindingReports .nameGroupBinding {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch {
+  margin-bottom: 16px!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch i {
+  color: grey!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .layout {
+  height: 40px!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .v-input__prepend-inner {
+  margin-top: 6px!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .v-text-field {
+  padding-top: 0!important;
+  margin-top: 0!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .v-text-field__slot {
+  height: 48px!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .v-input__slot {
+  height: 36px!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .filter {
+  max-width: 11%!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .filter .btn.dropdown-toggle {
+  border: 1px solid #e1e8ee !important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .filter .dropdown-menu {
+  padding-left: 0!important;
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .filter .dropdown-menu a {
+  color: var(--allPagesDarkGrey, #4d5466);
+}
+.spacesAdministration .bindingReports .reportsFilterSearch .filter .dropdown-menu a:hover {
+  color: white;
+}
+.spacesAdministration .bindingReports .v-data-footer .v-data-footer__select .v-select__slot {
+  height: 30px!important;
+}
+.spacesAdministration .bindingReports .v-data-footer .v-data-footer__select .v-text-field {
+  padding-top: 0!important;
+}
+.spacesAdministration .bindingReports .v-data-footer .v-data-footer__select .v-select__selections {
+  height: 100%!important;
+}
+.spacesAdministration .bindingReports .v-data-footer .v-data-footer__select .v-input__append-inner {
+  margin-top: 0!important;
+}
+.spacesAdministration .manageSpaces .uiSearchInput {
+  margin: 0px 0px 12px 4px;
+  float: right;
+}
+.spacesAdministration .manageSpaces .uiSearchInput .showInputSearch {
+  border: 1px solid var(--allPagesBorderColor, #e1e8ee);
+  width: 380px;
+}
+.spacesAdministration .manageSpaces .uiIconSpaceBinding.uiIconGroup.bound {
+  color: #0fb895;
+}
+.spacesAdministration .modal-mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spacesAdministration .modal-mask,
+.spacesAdministration .modal-mask.uiPopupWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.spacesAdministration .modal-mask .modal-content {
+  width: 600px;
+  position: relative;
+  user-select: none;
+}
+.spacesAdministration .modal-mask .modal-content .popupTitle {
+  cursor: auto;
+}
+.spacesAdministration .manageSpaces .v-overlay {
+  z-index: 1055!important;
+  position: fixed !important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer {
+  z-index: 1055!important;
+  position: fixed !important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer v-navigation-drawer__content {
+  overflow-y: hidden!important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .title {
+  height: 6.7vh;
+  min-height: 52px;
+  border-bottom: 1px solid rgba(13, 13, 13, 0.05);
+  box-sizing: border-box;
+  padding: 0px!important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .title span {
+  color: #4d5466;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  padding-left: 4%;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .content .spaceName span {
+  color: #476A9C;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  padding-left: 0;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .content span {
+  color: #4d5466;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  padding-left: 4%;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .content .selectize-input {
+  max-height: inherit;
+  min-height: 80px;
+  height: max-content;
+  padding: 8px;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .content .selectize-input .item {
+  padding-right: 35px !important;
+  background: #ccddef;
+  color: #568dc9;
+  border: 1px solid #568dc9;
+  border-radius: 15px;
+  margin: 4px 10px 4px 4px;
+  font-size: 13px;
+  max-width: -webkit-fill-available;
+  word-wrap: break-word;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .content .selectize-input .item a {
+  color: #ccddef;
+  background-color: #568dc9;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 16px;
+  height: 17px;
+  top: 3px;
+  right: 10px;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer {
+  height: 100vh;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .title .treeGroupSearch {
+  padding-top: 0;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .title .treeGroupSearch .v-input__control {
+  min-height: 40px;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .title .treeGroupSearch button {
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .content {
+  display: grid!important;
+  overflow: auto!important;
+  max-height: 84vh;
+  box-sizing: border-box !important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .content .v-treeview-node__root.bound,
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .content .v-treeview-node__content.bound {
+  color: grey!important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .content button:disabled {
+  color: grey!important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .boundGroups {
+  padding-left: 1%;
+  overflow-y: auto;
+  max-height: 57vh!important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .delete {
+  margin-right: 7%;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .delete .uiIconLightGray {
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+  font-size: 12px;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .closeIcon {
+  color: var(--allPagesBorderColor, #e1e8ee) !important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .close {
+  margin-right: 2%;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .uiIconEcmsGoBack {
+  color: #4d5466;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .leftIcon {
+  margin-left: 18% !important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .drawerActions {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 7vh;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid rgba(13, 13, 13, 0.05);
+  padding-top: 4px!important;
+  padding-bottom: 12px!important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .drawerActions .btn-primary {
+  color: #ffffff !important;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .drawerActions .btn-primary:hover {
+  background-color: #476A9C;
+}
+.spacesAdministration .manageSpaces #GroupBindingDrawer .drawerActions .btn:focus {
+  outline: none!important;
+}
+.spacesAdministration .manageSpaces .bindingModal {
+  z-index: 1055!important;
+}
+.spacesAdministration .manageSpaces .bindingModal .modal-content {
+  right: 9%;
+  bottom: 9% !important;
+}
+.spacesAdministration .manageSpaces .bindingModal .modal-content .popupHeader {
+  margin-bottom: auto;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+.spacesAdministration .manageSpaces .bindingModal .modal-content .popupContent p {
+  margin-bottom: 60px;
+}
+.spacesAdministration .manageSpaces .bindingModal .modal-content .popupContent .uiAction.uiActionBorder {
+  padding-bottom: 8px!important;
+}
+.spacesAdministration .manageSpaces .bindingModal .modal-content .popupContent .uiAction.uiActionBorder .btn.btn-primary,
+.spacesAdministration .manageSpaces .bindingModal .modal-content .popupContent .uiAction.uiActionBorder .btn {
+  position: relative;
+  left: 27%;
+  font-weight: normal!important;
+}
+.spacesAdministration .manageSpaces .bindingModal .modal-content .popupContent .uiAction.uiActionBorder .btn {
+  min-width: 13%;
+}
+@media (max-width: 767px) {
+  .spacesAdministration .manageSpaces .bindingModal .closeBindingModal {
+    left: 37%;
+  }
+  .spacesAdministration .manageSpaces .bindingModal .uiAction.uiActionBorder .btn.btn-primary,
+  .spacesAdministration .manageSpaces .bindingModal .uiAction.uiActionBorder .btn {
+    left: 22%;
+  }
+}
+@media (max-height: 667px) {
+  .spacesAdministration .manageSpaces #GroupBindingDrawer .boundGroups {
+    max-height: 48vh!important;
+  }
+  .spacesAdministration .manageSpaces #GroupBindingDrawer .secondDrawer .content {
+    max-height: 82vh;
+  }
+}
+

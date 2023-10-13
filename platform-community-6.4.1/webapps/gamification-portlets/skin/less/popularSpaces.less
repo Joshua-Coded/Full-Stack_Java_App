@@ -1,0 +1,137 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+@import "variables.less";
+@import "mixins.less";
+
+#popularSpacesApplication {
+  
+  .popularSpacesCheck:not(.outlined) {
+    background-color: @successColor;
+    color: #fff;
+  }
+
+  .popularSpacesCheck.outlined {
+    background-color: transparent;
+    color: @successColor;
+
+    &:before {
+      background-color: transparent;
+    }
+  }
+
+  .popularSpacesClose:not(.outlined) {
+    background-color: @errorColor;
+    color: #fff;
+  }
+
+  .popularSpacesClose.outlined {
+    background-color: transparent;
+    color: @errorColor;
+
+    &:before {
+      background-color: transparent;
+    }
+  }
+
+  .popularSpacesAction i {
+    max-height: 20px;
+    max-width: 20px;
+  }
+
+  .emptySpacesLeaderboardIcon {
+    font-size: 140px;
+    color: @skeletonColor;
+    font-family: sans-serif;
+  }
+  .joinSpaceButton:not(.skeleton-text), .acceptToJoinSpaceButton:not(.skeleton-text), .spaceButtonMenu:not(.skeleton-text) {
+    border: 1px solid @btnPrimaryBorder !important;
+    color: @btnPrimaryBorder !important;
+    i {
+      color: @btnPrimaryBorder !important;
+    }
+  }
+  .refuseToJoinSpaceButton {
+    border: 1px solid @errorColor !important;
+    color: @errorColor !important;
+
+    .v-btn__content {
+      max-width: 100%;
+      span {
+        width: auto;
+        max-width: calc( 100% - 28px );
+        min-width: auto;
+        display: inline-block !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+    }
+  }
+  .acceptToJoinSpaceButtonParent {
+    white-space: nowrap;
+    .acceptToJoinSpaceButton {
+      max-width: 85%;
+      width: 85%;
+      border-right: 0 ~'; /** orientation=lt */ ';
+      border-bottom-right-radius: 0 ~'!important; /** orientation=lt */ ';
+      border-top-right-radius: 0 ~'!important; /** orientation=lt */ ';
+      border-left: 0 ~'; /** orientation=rt */ ';
+      border-bottom-left-radius: 0 ~'!important; /** orientation=rt */ ';
+      border-top-left-radius: 0 ~'!important; /** orientation=rt */ ';
+
+      .v-btn__content {
+        max-width: 100%;
+        span {
+          width: auto;
+          max-width: calc( 100% - 28px );
+          min-width: auto;
+          display: inline-block !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+      }
+    }
+    .spaceButtonMenu {
+      max-width: 15%;
+      width: 15%;
+      padding: 2px 0;
+      height: auto;
+      border-left: 0 ~'; /** orientation=lt */ ';
+      margin-left: -11px ~'; /** orientation=lt */ ';
+      border-bottom-left-radius: 0 ~'!important; /** orientation=lt */ ';
+      border-top-left-radius: 0 ~'!important; /** orientation=lt */ ';
+      border-right: 0 ~'; /** orientation=rt */ ';
+      margin-right: -11px ~'; /** orientation=rt */ ';
+      border-bottom-right-radius: 0 ~'!important; /** orientation=rt */ ';
+      border-top-right-radius: 0 ~'!important; /** orientation=rt */ ';
+
+      i {
+        margin: 0;
+      }
+    }
+  }
+  .secondButtonDisplayed {
+    display: grid;
+  }
+
+  .col {
+    padding: 0px;
+
+    .joinSpaceButton {
+      padding: 2px 6px;
+    }
+  }
+}

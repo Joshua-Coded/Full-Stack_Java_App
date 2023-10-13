@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
+   xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+
+  <component>
+    <type>org.exoplatform.commons.resource.ResourceBundleREST</type>
+  </component>
+
+  <component>
+    <key>org.exoplatform.commons.api.event.EventManager</key>
+    <type>org.exoplatform.commons.event.impl.EventManagerImpl</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.commons.info.ProductInformations</type>
+    <init-params>
+      <value-param>
+        <name>product.versions.declaration.file</name>
+        <value>jar:/conf/platform.properties</value>
+      </value-param>
+    </init-params>
+  </component>
+
+  <component>
+     <type>org.exoplatform.services.user.UserStateService</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.services.user.UserStateServiceREST</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.commons.info.PlatformInformationRESTService</type>
+  </component>
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.organization.OrganizationService</target-component>
+    <component-plugin>
+      <name>commons.user.setting.event.listener</name>
+      <set-method>addListenerPlugin</set-method>
+      <type>org.exoplatform.settings.listeners.impl.CommonsUserSettingEventListenerImpl</type>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

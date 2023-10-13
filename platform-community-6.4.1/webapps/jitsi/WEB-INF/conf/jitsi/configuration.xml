@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+
+  Copyright (C) 2017 eXo Platform SAS.
+  
+  This is free software; you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License as
+  published by the Free Software Foundation; either version 2.1 of
+  the License, or (at your option) any later version.
+  
+  This software is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  Lesser General Public License for more details.
+  
+  You should have received a copy of the GNU Lesser General Public
+  License along with this software; if not, write to the Free
+  Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+  02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_3.xsd http://www.exoplatform.org/xml/ns/kernel_1_3.xsd"
+  xmlns="http://www.exoplatform.org/xml/ns/kernel_1_3.xsd">
+
+  <component>
+    <key>org.exoplatform.webconferencing.jitsi.rest.JitsiContextResource</key>
+    <type>org.exoplatform.webconferencing.jitsi.rest.JitsiContextResource</type>
+  </component>
+  <!-- Jitsi provider plugin -->
+  <external-component-plugins>
+    <target-component>org.exoplatform.webconferencing.WebConferencingService</target-component>
+    <component-plugin>
+      <name>add.callprovider</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.webconferencing.jitsi.JitsiProvider</type>
+      <description>Jitsi provider for Web Conferencing.</description>
+      <init-params>
+        <properties-param>
+          <name>provider-configuration</name>
+          <property name="active" value="${webconferencing.jitsi.active:true}" />
+          <property name="service-url" value="${webconferencing.jitsi.url:https://dev03.exoplatform.org:8843}" />
+          <!-- property name="service-url" value="${webconferencing.jitsi.url:http://devhost.exoplatform.org:8001}" / -->
+          <property name="internal-auth-secret"
+            value="${webconferencing.jitsi.internal.secret:mQzPudDBpSAqUwM0FY2r86gNAd6be5tN1xqwdFDOb4Us1DT4Ti}" />
+          <property name="external-auth-secret"
+            value="${webconferencing.jitsi.external.secret:mQzPudDBpSAqUwM0FY2r86gNAd6be5tN1xqwdFDOb4Us1DT4Tx}" />
+        </properties-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+  <!-- Add Jitsi portlet to portal pages with a toolbar -->
+  <external-component-plugins>
+    <target-component>org.exoplatform.commons.addons.AddOnService</target-component>
+    <component-plugin>
+      <name>addPlugin</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.commons.addons.AddOnPluginImpl</type>
+      <description>add application Config</description>
+      <init-params>
+        <value-param>
+          <name>priority</name>
+          <value>10</value>
+        </value-param>
+        <value-param>
+          <name>containerName</name>
+          <value>middle-topNavigation-container</value>
+        </value-param>
+        <object-param>
+          <name>JitsiPortlet</name>
+          <description>Jitsi portlet</description>
+          <object type="org.exoplatform.portal.config.serialize.PortletApplication">
+            <field name="state">
+              <object type="org.exoplatform.portal.config.model.TransientApplicationState">
+                <field name="contentId">
+                  <string>jitsi/JitsiPortlet</string>
+                </field>
+              </object>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+  <!-- i18n resources for Jitsi -->
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.resources.ResourceBundleService</target-component>
+    <component-plugin>
+      <name>ResourceBundle Plugin</name>
+      <set-method>addResourceBundle</set-method>
+      <type>org.exoplatform.services.resources.impl.BaseResourceBundlePlugin</type>
+      <init-params>
+        <values-param>
+          <name>init.resources</name>
+          <description>Store the following resources into the db for the first launch</description>
+          <value>locale.jitsi.Jitsi</value>
+        </values-param>
+        <values-param>
+          <name>portal.resource.names</name>
+          <description>The properties files of the portal , those file will be merged into one ResoruceBundle
+            properties</description>
+          <value>locale.jitsi.Jitsi</value>
+        </values-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.web.filter.ExtensibleFilter</target-component>
+    <component-plugin>
+      <name>Webconferencing session filter plugin</name>
+      <set-method>addFilterDefinitions</set-method>
+      <type>org.exoplatform.web.filter.FilterDefinitionPlugin</type>
+      <init-params>
+        <object-param>
+          <name>Webconferencing session filter plugin</name>
+          <object type="org.exoplatform.web.filter.FilterDefinition">
+            <field name="filter">
+              <object type="org.exoplatform.webconferencing.jitsi.rest.filter.WebconferencingSessionFilter" />
+            </field>
+            <field name="patterns">
+              <collection type="java.util.ArrayList" item-type="java.lang.String">
+                <value>
+                  <string>/rest/jitsi/.*</string>
+                </value>
+              </collection>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+</configuration>

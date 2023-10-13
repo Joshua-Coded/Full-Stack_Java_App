@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_resources_1_4 http://www.exoplatform.org/xml/ns/gatein_resources_1_4"
+	xmlns="http://www.exoplatform.org/xml/ns/gatein_resources_1_4">
+	
+	<module>
+		<name>commons-cometd</name>		
+		<as>cometd</as>		
+		<script>
+			<path>/javascript/eXo/commons/commons-Cometd.js</path>
+		</script>
+		<depends>
+			<module>base</module>
+			<as>gtnbase</as>
+		</depends>
+	</module>
+	
+	<module>
+		<name>commons-cometd3</name>		
+		<as>cCometD</as>
+		<script>
+			<path>/javascript/eXo/commons/commons-cometd3.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+		</depends>
+		<depends>
+			<module>jquery_cometd</module>
+		</depends>
+	</module>
+
+	<module>
+		<name>cometd</name>
+		<script>
+			<adapter>
+				(function() {
+				<include>/js/cometd/cometd.min.js</include>
+				return org.cometd;
+				})();
+			</adapter>
+		</script>
+	</module>
+
+	<module>
+		<name>jquery_cometd</name>
+		<script>
+			<path>/js/jquery/jquery.cometd.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+			<as>jQuery</as>
+		</depends>
+		<depends>
+			<module>cometd</module>
+		</depends>
+	</module>
+
+</gatein-resources>

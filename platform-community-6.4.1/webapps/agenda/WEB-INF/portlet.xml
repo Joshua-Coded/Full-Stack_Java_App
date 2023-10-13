@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+   <portlet>
+    <portlet-name>Agenda</portlet-name>
+    <display-name xml:lang="EN">Agenda Application</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+    <name>portlet-view-dispatched-file-path</name>
+    <value>/html/agenda.html</value>
+    </init-param>
+    <expiration-cache>-1</expiration-cache>
+    <cache-scope>PUBLIC</cache-scope>
+    <supports>
+    <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <resource-bundle>locale.portlet.Agenda</resource-bundle>
+    <portlet-info>
+      <title>Agenda Application</title>
+      <keywords>Agenda Application</keywords>
+    </portlet-info>
+   </portlet>
+
+   <portlet>
+    <portlet-name>AgendaTimeline</portlet-name>
+    <display-name xml:lang="EN">Agenda Timeline</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+    <name>portlet-view-dispatched-file-path</name>
+    <value>/html/agenda-timeline.html</value>
+    </init-param>
+    <expiration-cache>-1</expiration-cache>
+    <cache-scope>PUBLIC</cache-scope>
+    <supports>
+    <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <resource-bundle>locale.portlet.Agenda</resource-bundle>
+    <portlet-info>
+      <title>Agenda Timeline</title>
+      <keywords>Agenda Timeline</keywords>
+    </portlet-info>
+   </portlet>
+
+   <portlet>
+    <portlet-name>AgendaSettings</portlet-name>
+    <display-name xml:lang="EN">Agenda Settings Application</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+    <name>portlet-view-dispatched-file-path</name>
+    <value>/html/agendaSettings.html</value>
+    </init-param>
+    <expiration-cache>-1</expiration-cache>
+    <cache-scope>PUBLIC</cache-scope>
+    <supports>
+    <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <resource-bundle>locale.portlet.Agenda</resource-bundle>
+    <portlet-info>
+      <title>Agenda Settings Application</title>
+      <keywords>Agenda Settings Application</keywords>
+    </portlet-info>
+   </portlet>
+
+  <portlet>
+    <portlet-name>agendaAdminSettings</portlet-name>
+    <display-name xml:lang="EN">Agenda Admin Settings</display-name>
+    <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+      <name>portlet-view-dispatched-file-path</name>
+      <value>/html/agenda-admin-settings.html</value>
+    </init-param>
+    <expiration-cache>-1</expiration-cache>
+    <cache-scope>PUBLIC</cache-scope>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <resource-bundle>locale.portlet.Agenda</resource-bundle>
+    <portlet-info>
+      <title>Agenda Admin Settings</title>
+      <keywords>Agenda Admin Settings</keywords>
+    </portlet-info>
+  </portlet>
+
+</portlet-app>

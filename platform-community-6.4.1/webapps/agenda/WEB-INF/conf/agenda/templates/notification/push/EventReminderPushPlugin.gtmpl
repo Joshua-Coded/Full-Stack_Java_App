@@ -1,0 +1,13 @@
+<% eventTitle = _ctx.escapeHTML(eventTitle); %>
+<div>
+    <div class="contentSmall" data-link="<%= eventURL %>">
+        <div class="status">
+            <%
+            String eventTitle = "<span class=\"user-name text-bold\">"+ eventTitle +"</span>";
+            %>
+            <%= eventTitle %>
+        </div>
+        <div><%= startDate %> - <%= endDate %></div>
+        <div class="lastUpdatedTime"><%= LAST_UPDATED_TIME %></div>
+    </div>
+</div>

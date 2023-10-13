@@ -1,0 +1,107 @@
+<%
+import java.util.HashMap;
+import org.exoplatform.commons.api.settings.ExoFeatureService;
+
+def rcontext = _ctx.getRequestContext() ;
+
+/* Loading Service Worker configuration script at top of the head */
+%>
+    <link rel="apple-touch-icon" href="/digital-workplace/skin/images/eXo.png">
+
+<%
+  def featureService = uicomponent.getApplicationComponent(ExoFeatureService.class);
+  if (featureService.isActiveFeature('PWAServiceWorker')) {
+%>
+    <script type="text/javascript">
+      function registerServiceWorker() {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/portal/service-worker.js',{
+            scope: '/',
+          }).then(function(reg){
+            reg.update();
+          }).catch(function(e) {
+            console.debug('Error registering service worker!', e);
+          });
+        } else {
+          console.debug("Navigator doesn't support serviceWorker!");
+        }
+      }
+      registerServiceWorker();
+    </script>
+<%
+  } else {
+%>
+    <script type="text/javascript">
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations()
+          .then(function(registrations) {
+            if (registrations && registrations.length) {
+              for(const registration of registrations) {
+                registration.unregister()
+              }
+            }
+          });
+      }
+    </script>
+<%
+  }
+%>
+<%
+/* Loading needed Fonts files in top of the page as a 'preload' resource to include it in response when using HTTP/2 */
+%>
+  <!-- Fonts Preload -->
+  <link rel="preload" href="/eXoSkin/skin/fonts/vuetify/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/eXoSkin/skin/fonts/vuetify/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/eXoSkin/skin/fonts/vuetify/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/eXoSkin/skin/fonts/vuetify/materialdesignicons-webfont.woff2?v=5.9.55" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/eXoSkin/skin/fonts/Ionic/ionicons.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/eXoSkin/skin/fonts/PLF-FONT-ICONS.ttf?-m9uidt" as="font" type="font/ttf" crossorigin>
+<%
+// Loading needed stylesheets in top of the page as a 'preload' resource to include it in response
+%>
+  <link rel="preload" as="style" type="text/css" href="<%=uicomponent.getBrandingUrl()%>">
+<%
+// Loading needed stylesheets in top of the page as a 'preload' resource to include it in response
+def portalSkins = uicomponent.getPortalSkins();
+def portletSkins = uicomponent.getPortletSkins();
+def customSkins = uicomponent.getCustomSkins();
+   for (skinConfig in portalSkins) {
+     def url = skinConfig.createURL(rcontext.controllerContext);
+     url.setOrientation(orientation); %>
+  <link rel="preload" href= "$url" as="style" type="text/css" />
+<% }
+   for (portletSkin in portletSkins) {
+     def url = portletSkin.createURL(rcontext.controllerContext);
+     url.setOrientation(orientation); %>
+  <link rel="preload" href= "$url" as="style" type="text/css" />
+<% }
+
+   def portletAdditionalStylesheets = uicomponent.getPortletStylesheets();
+   for (portletStylesheet in portletAdditionalStylesheets) { %>
+  <link rel="preload" href= "$portletStylesheet" as="style" type="text/css" />
+<% }
+
+   for (customSkin in customSkins) {
+     def url = customSkin.createURL(rcontext.controllerContext);
+     url.setOrientation(orientation); %>
+  <link rel="preload" href= "$url" as="style" type="text/css" />
+<% }
+def jsManager = rcontext.getJavascriptManager();
+
+def jsConfig = uicomponent.getJSConfig();
+def jsConfigPaths = jsConfig.get("paths");
+
+def scriptsIdsMap = jsManager.getPageScripts();
+def scriptsIds = scriptsIdsMap.keySet();
+def scriptPaths = new HashMap();
+for (scriptsId in scriptsIds) {
+  def isRemote = scriptsIdsMap.get(scriptsId) || !jsConfigPaths.has(scriptsId);
+  def scriptPath = isRemote ? scriptsId : (jsConfigPaths.get(scriptsId) + ".js");
+  scriptPaths.put(scriptPath, isRemote);
+}
+
+for (scriptPath in scriptPaths.keySet()) {
+  def isRemote = scriptPaths.get(scriptPath);
+%>
+  <link rel="preload" href= "$scriptPath" as="script" type="text/javascript" <%=isRemote ? "crossorigin" : "" %>/>
+<% } %>

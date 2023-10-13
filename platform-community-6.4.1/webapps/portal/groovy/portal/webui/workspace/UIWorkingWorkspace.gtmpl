@@ -1,0 +1,3 @@
+<div id="UIWorkingWorkspace" class="UIWorkingWorkspace" style="z-index: 0; position: relative;">
+  <%uicomponent.renderChildren()%>
+</div>

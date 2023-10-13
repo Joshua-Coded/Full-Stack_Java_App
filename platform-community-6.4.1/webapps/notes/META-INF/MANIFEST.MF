@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T11:29:30Z
+Implementation-Title: eXo PLF:: Notes Webapp
+Implementation-URL: https://projects.exoplatform.org/addons-parent-pom/n
+ otes/notes-webapp
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.2.1-exo
+SCM-Revision: dd275d2d311d5e4387b9471709ddde4f3f4a8df2
+SCM-URL: scm:git:git://github.com/meeds-io/notes.git/notes-webapp
+Specification-Title: eXo PLF:: Notes Webapp
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

@@ -1,0 +1,17 @@
+<%
+def notificationDescription = "";
+switch(CONTEXT) {
+ case "POST NEWS":
+   notificationDescription =  _ctx.appRes("news.notification.description",CONTENT_AUTHOR,CONTENT_TITLE,CONTENT_SPACE);
+   break;
+ case "MENTION IN NEWS":
+   notificationDescription =  _ctx.appRes("news.notification.description.mention.in.news",CONTENT_TITLE);
+   break;
+ case "PUBLISH NEWS":
+   notificationDescription =  _ctx.appRes("news.notification.description.publish.news",CURRENT_USER, CONTENT_TITLE);
+   break;
+ default:
+   break;
+}
+%>
+$notificationDescription

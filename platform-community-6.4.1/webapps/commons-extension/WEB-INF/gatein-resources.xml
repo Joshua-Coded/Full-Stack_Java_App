@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_resources_1_4 http://www.exoplatform.org/xml/ns/gatein_resources_1_4"
+	xmlns="http://www.exoplatform.org/xml/ns/gatein_resources_1_4">
+  <portlet>
+    <name>NotificationsAdminJuzuPortlet</name>
+    <module>
+      <script>
+        <path>/javascript/eXo/admin/notificationsAdmin.js</path>
+      </script>
+      <depends>
+        <module>juzu-ajax</module>
+      </depends>
+      <depends>
+        <module>jquery</module>
+        <as>gj</as>
+      </depends>
+    </module>
+  </portlet>
+
+	<module>
+		<name>commons-document</name>
+		<as>doc</as>
+		<script>
+			<path>/javascript/eXo/commons/commons-Document.js</path>
+		</script>
+		<depends>
+			<module>commons-CssIconFile</module>
+			<as>CssIconFile</as>
+		</depends>
+		<depends>
+			<module>bts_tooltip</module>
+		</depends>
+		<depends>
+			<module>jquery</module>
+			<as>jQuery</as>
+		</depends>
+		<depends>
+			<module>base</module>
+			<as>gtnbase</as>
+		</depends>
+	</module>
+
+	<module>
+		<name>commons-CssIconFile</name>
+		<as>ckeditor</as>
+		<script>
+			<path>/javascript/eXo/commons/CssClassIconFile.js</path>
+		</script>
+	</module>
+
+	<module>
+		<name>commons-editor</name>
+		<as>ckeditor</as>
+		<script>
+			<adapter>
+				(function() {
+				var oldJQuery = window.jQuery;
+				window.jQuery = $;
+				window.CKEDITOR_BASEPATH = '/commons-extension/ckeditor/';
+				<include>/ckeditor/ckeditor.js</include>
+				// force compatible version in any case to make sure the editor will initialize
+				CKEDITOR.env.isCompatible = true;
+        CKEDITOR.disableAutoInline = true;
+        // Force to update plugin resources each eXo version
+        CKEDITOR.timestamp = eXo.env.client.assetsVersion;
+				<include>/ckeditor/adapters/jquery.js</include>
+				<include>/ckeditor/lang/en.js</include>
+				<include>/ckeditor/styles.js</include>
+				window.jQuery = oldJQuery;
+				return $;
+				})();
+			</adapter>
+		</script>
+		<depends>
+			<module>jquery</module>
+			<as>$</as>
+		</depends>
+		<depends>
+			<module>suggester</module>
+		</depends>
+		<depends>
+			<module>tagSuggester</module>
+		</depends>
+	</module>
+
+	<module>
+		<name>UISpaceSwitcher</name>
+		<script>
+			<path>/javascript/eXo/commons/UISpaceSwitcher.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+			<as>jQuery</as>
+		</depends>
+	</module>
+
+	<module>
+		<name>xss-utils</name>
+		<as>XSSUtils</as>
+		<script>
+			<path>/javascript/eXo/commons/XSSUtils.js</path>
+		</script>
+	</module>
+
+	<module>
+		<name>juzu-ajax</name>
+		<as>jzAjax</as>
+		<script>
+			<path>/juzu/ajax/script.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+			<as>jQuery</as>
+		</depends>
+	</module>
+
+	<module>
+		<name>common-utils</name>
+		<as>common_utils</as>
+		<script>
+			<path>/javascript/eXo/commons/Utils.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+			<as>jQuery</as>
+		</depends>
+	</module>
+
+    <module>
+        <name>mask-layer</name>
+        <as>mask_layer</as>
+        <script>
+            <path>/javascript/eXo/commons/MaskLayerControl.js</path>
+        </script>
+        <depends>
+            <module>jquery</module>
+            <as>gj</as>
+        </depends>
+    </module>
+
+  <module>
+    <name>tagSuggester</name>
+    <script>
+      <path>/javascript/eXo/suggester/tag.suggester.js</path>
+    </script>
+    <depends>
+      <module>jquery</module>
+    </depends>
+    <depends>
+      <module>jqueryAtWho</module>
+    </depends>
+  </module>
+
+	<module>
+		<name>suggester</name>
+		<script>
+			<path>/javascript/eXo/suggester/suggester.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+		</depends>
+		<depends>
+			<module>selectize2</module>
+		</depends>
+		<depends>
+			<module>jqueryAtWho</module>
+		</depends>
+	</module>
+
+	<module>
+		<name>selectize2</name>
+		<script>
+			<adapter>
+				(function($) {
+				var oldJQuery = this.jQuery;
+				this.jQuery = $;
+
+				<include>/javascript/eXo/suggester/selectize.js</include>
+
+				var selectize = this.Selectize;
+				this.jQuery = oldJQuery;
+				return selectize;
+				})($);
+			</adapter>
+		</script>
+		<depends>
+			<module>jquery</module>
+		</depends>
+	</module>
+	<module>
+		<name>jqueryCaret</name>
+		<script>
+			<path>/javascript/eXo/suggester/jquery.caret.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+			<as>jQuery</as>
+		</depends>
+	</module>
+	<module>
+		<name>jqueryAtWho</name>
+		<script>
+			<path>/javascript/eXo/suggester/jquery.atwho.js</path>
+		</script>
+		<depends>
+			<module>jquery</module>
+			<as>jQuery</as>
+		</depends>
+		<depends>
+			<module>jqueryCaret</module>
+		</depends>
+	</module>
+    <module>
+        <name>jquery-touch</name>
+        <as>jqueryTouch</as>
+        <script>
+            <adapter>
+                (function($) {
+                var _$ = window.jQuery; window.jQuery = $;
+                <include>/javascript/toe.min.js</include>
+                window.jQuery = _$;
+                })($);
+            </adapter>
+        </script>
+        <depends>
+            <module>jquery</module>
+        </depends>
+    </module>
+	<module>
+		<name>es6promise</name>
+		<script>
+		  <path>/javascript/es6-promise.js</path>
+		</script>
+	</module>
+  <module>
+      <name>vue</name>
+      <script>
+          <minify>false</minify>
+          <path>/javascript/vue.min.js</path>
+      </script>
+  </module>
+  <module>
+      <name>vueI18n</name>
+      <as>VueI18n</as>
+      <script>
+          <minify>false</minify>
+          <adapter>
+            (function() {
+              <include>/javascript/vue-i18n.min.js</include>
+              return VueI18n;
+            })();
+          </adapter>
+      </script>
+      <depends>
+          <module>vue</module>
+      </depends>
+  </module>
+  <module>
+      <name>eXoVueI18n</name>
+      <as>exoi18n</as>
+      <script>
+          <path>/javascript/exo-i18n.js</path>
+      </script>
+      <depends>
+          <module>vueI18n</module>
+      </depends>
+      <depends>
+          <module>fetchPolyfill</module>
+      </depends>
+  </module>
+  <module>
+      <name>vueCustomElement</name>
+      <script>
+          <path>/javascript/vue-custom-element.min.js</path>
+      </script>
+      <depends>
+          <module>vue</module>
+      </depends>
+  </module>
+  <module>
+      <name>filedrop</name>
+      <script>
+          <path>/javascript/jquery.filedrop.js</path>
+      </script>
+      <depends>
+          <module>jquery</module>
+      </depends>
+  </module>
+  <module>
+      <name>customEventPolyfill</name>
+      <script>
+          <path>/javascript/custom-event-polyfill.js</path>
+      </script>
+  </module>
+  <module>
+      <name>iePolyfills</name>
+      <script>
+          <path>/javascript/ie-polyfills.js</path>
+      </script>
+  </module>
+  <module>
+      <name>promisePolyfill</name>
+      <script>
+          <path>/javascript/promise.min.js</path>
+      </script>
+  </module>
+  <module>
+      <name>fetchPolyfill</name>
+      <script>
+          <path>/javascript/fetch.js</path>
+      </script>
+      <depends>
+          <module>promisePolyfill</module>
+      </depends>
+  </module>
+
+  <module>
+    <name>vuetify</name>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/vuetify.min.js</path>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+  </module>
+
+  <module>
+    <name>jQueryUI</name>
+    <as>JQueryUI</as>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/jquery-ui-1.18.12.min.js</path>
+    </script>
+    <depends>
+      <module>jquery</module>
+      <as>jQuery</as>
+    </depends>
+  </module>
+
+  <module>
+    <name>vueChart</name>
+    <as>VueChart</as>
+    <script>
+      <minify>false</minify>
+      <adapter>
+        (function() {
+          <include>/javascript/vue-chartjs.min.js</include>
+          return VueChartJs;
+        })();
+      </adapter>
+    </script>
+    <depends>
+      <module>chart</module>
+      <as>Chart</as>
+    </depends>
+  </module>
+
+  <module>
+    <name>chart</name>
+    <as>Chart</as>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/Chart.bundle.min.js</path>
+    </script>
+  </module>
+  <module>
+    <name>platform-responsive</name>
+    <as>platformResponsive</as>
+    <script>
+      <path>/javascript/eXo/responsive/responsive.js</path>
+    </script>
+    <depends>
+      <module>jquery</module>
+      <as>$</as>
+    </depends>
+    <depends>
+      <module>common-utils</module>
+      <as>common_utils</as>
+    </depends>
+    <depends>
+      <module>jq_perfect_scrollbar</module>
+    </depends>
+  </module>
+  <module>
+    <name>autoLinker</name>
+    <script>
+      <minify>false</minify>
+      <adapter>
+        (function() {
+          <include>/javascript/autolinker.min.js</include>
+          return Autolinker;
+        })();
+      </adapter>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+  </module>
+  <module>
+    <name>autoLinkerVue</name>
+    <script>
+      <minify>false</minify>
+      <adapter>
+        (function() {
+          <include>/javascript/autolinker.min.js</include>
+          Vue.directive('autolinker',(el, binding) => el.innerHTML = Autolinker.link(binding.value, {sanitizeHtml: true}));
+        })();
+      </adapter>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+    <depends>
+      <module>autoLinker</module>
+    </depends>
+  </module>
+  <module>
+    <name>purify</name>
+    <script>
+      <minify>false</minify>
+      <adapter>
+        (function() {
+        <include>/javascript/purify.min.js</include>
+        return DOMPurify;
+        })();
+      </adapter>
+      </script>
+  </module>
+  <module>
+    <name>ExtendedDomPurify</name>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/eXo/commons/ExtendedDomPurify.js</path>
+    </script>
+    <depends>
+      <module>autoLinker</module>
+    </depends>
+    <depends>
+      <module>purify</module>
+    </depends>
+  </module>
+  <module>
+    <name>purifyVue</name>
+    <script>
+      <minify>false</minify>
+      <adapter>
+          (function() {
+          Vue.directive('sanitized-html', function (el, binding) {
+          el.innerHTML = ExtendedDomPurify.purify(binding.value);
+          })
+          })();
+      </adapter>
+    </script>
+    <depends>
+      <module>ExtendedDomPurify</module>
+    </depends>
+    <depends>
+      <module>vue</module>
+    </depends>
+  </module>
+</gatein-resources>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2003-2011 eXo Platform SAS.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<configuration
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
+   xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+
+  <component>
+    <key>org.exoplatform.news.storage.NewsStorage</key>
+    <type>org.exoplatform.news.storage.jcr.JcrNewsStorage</type>
+  </component>
+  
+  <component>
+    <key>org.exoplatform.news.service.NewsService</key>
+    <type>org.exoplatform.news.service.impl.NewsServiceImpl</type>
+  </component>
+  
+  <component>
+    <key>org.exoplatform.news.service.NewsTargetingService</key>
+    <type>org.exoplatform.news.service.impl.NewsTargetingServiceImpl</type>
+  </component>
+
+  <component>
+    <key>org.exoplatform.news.storage.NewsAttachmentsStorage</key>
+    <type>org.exoplatform.news.storage.jcr.JcrNewsAttachmentsStorage</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.news.rest.NewsRestResourcesV1</type>
+  </component>
+
+  <component>
+    <type>org.exoplatform.news.rest.NewsTargetingRestResourcesV1</type>
+  </component>
+
+  <component>
+    <key>org.exoplatform.news.connector.NewsSearchConnector</key>
+    <type>org.exoplatform.news.connector.NewsSearchConnector</type>
+    <init-params>
+      <properties-param>
+        <name>constructor.params</name>
+        <property name="searchType" value="News"/>
+        <property name="displayName" value="News"/>
+      </properties-param>
+    </init-params>
+  </component>
+  
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.jcr.RepositoryService</target-component>
+    <component-plugin>
+      <name>add.news.nodeType</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.services.jcr.impl.AddNodeTypePlugin</type>
+      <init-params>
+        <values-param>
+          <name>autoCreatedInNewRepository</name>
+          <description>Node types configuration file for News</description>
+          <value>war:/conf/news/jcr/news-nodetypes.xml</value>
+        </values-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.resources.ResourceBundleService</target-component>
+    <component-plugin>
+      <name>Document Composer Plugin Resource Bundle</name>
+      <set-method>addResourceBundle</set-method>
+      <type>org.exoplatform.services.resources.impl.BaseResourceBundlePlugin</type>
+      <init-params>
+        <values-param>
+          <name>classpath.resources</name>
+          <value>locale.portlet.news.News</value>
+        </values-param>
+        <values-param>
+          <name>portal.resource.names</name>
+          <value>locale.portlet.news.News</value>
+          <value>locale.navigation.group.platform.web-contributors</value>
+        </values-param>
+        <values-param>
+          <name>init.resources</name>
+          <value>locale.navigation.group.platform.web-contributors</value>
+        </values-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.wcm.extensions.publication.PublicationManager</target-component>
+    <component-plugin>
+      <name>AddLifecycle</name>
+      <set-method>addLifecycle</set-method>
+      <type>org.exoplatform.services.wcm.extensions.publication.lifecycle.StatesLifecyclePlugin</type>
+      <description>Configures</description>
+      <priority>1</priority>
+      <init-params>
+        <object-param>
+          <name>lifecycles</name>
+          <object type="org.exoplatform.services.wcm.extensions.publication.lifecycle.impl.LifecyclesConfig">
+            <field name="lifecycles">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <object type="org.exoplatform.services.wcm.extensions.publication.lifecycle.impl.LifecyclesConfig$Lifecycle">
+                    <field name="name">
+                      <string>newsLifecycle</string>
+                    </field>
+                    <field name="publicationPlugin">
+                      <string>Authoring publication</string>
+                    </field>
+                    <field name="states">
+                      <collection type="java.util.ArrayList">
+                        <value>
+                          <object type="org.exoplatform.services.wcm.extensions.publication.lifecycle.impl.LifecyclesConfig$State">
+                            <field name="state">
+                              <string>draft</string>
+                            </field>
+                            <field name="membership">
+                              <string>redactor:/platform/web-contributors</string>
+                            </field>
+                          </object>
+                        </value>
+                        <value>
+                          <object type="org.exoplatform.services.wcm.extensions.publication.lifecycle.impl.LifecyclesConfig$State">
+                            <field name="state">
+                              <string>pending</string>
+                            </field>
+                            <field name="membership">
+                              <string>redactor:/platform/web-contributors</string>
+                            </field>
+                          </object>
+                        </value>
+                        <value>
+                          <object type="org.exoplatform.services.wcm.extensions.publication.lifecycle.impl.LifecyclesConfig$State">
+                            <field name="state">
+                              <string>approved</string>
+                            </field>
+                            <field name="membership">
+                              <string>redactor:/platform/web-contributors</string>
+                            </field>
+                          </object>
+                        </value>
+                        <value>
+                          <object type="org.exoplatform.services.wcm.extensions.publication.lifecycle.impl.LifecyclesConfig$State">
+                            <field name="state">
+                              <string>staged</string>
+                            </field>
+                            <field name="membership">
+                              <string>redactor:/platform/web-contributors</string>
+                            </field>
+                          </object>
+                        </value>
+                        <value>
+                          <object type="org.exoplatform.services.wcm.extensions.publication.lifecycle.impl.LifecyclesConfig$State">
+                            <field name="state">
+                              <string>published</string>
+                            </field>
+                            <field name="membership">
+                              <string>redactor:/platform/web-contributors</string>
+                            </field>
+                          </object>
+                        </value>
+                      </collection>
+                    </field>
+                  </object>
+                </value>
+              </collection>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

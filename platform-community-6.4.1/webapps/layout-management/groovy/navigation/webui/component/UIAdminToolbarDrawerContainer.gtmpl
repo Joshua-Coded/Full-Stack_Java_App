@@ -1,0 +1,185 @@
+<%  
+  import org.exoplatform.web.application.JavascriptManager;
+  import org.exoplatform.portal.webui.util.Util;
+  import org.exoplatform.portal.application.PortalRequestContext ;
+
+  def rcontext = _ctx.getRequestContext();
+   
+  JavascriptManager jsmanager = rcontext.getJavascriptManager();
+  String addPageLabel = _ctx.appRes("UIAdminToolbarPortlet.action.AddPage");  
+  String editPageLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Layout");
+  String editSiteLayout = _ctx.appRes("UIAdminToolbarPortlet.action.siteLayout");
+  String editNavigation = _ctx.appRes("UIAdminToolbarPortlet.action.EditNavigation");
+  String quickEditLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Content");
+  String editorLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Editor");
+  String seoLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Properties");
+  String siteLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Site");
+  String addSiteLabel = _ctx.appRes("UIAdminToolbarPortlet.action.AddSite");
+  String editAdministration = _ctx.appRes("UIAdminToolbarPortlet.TopbarTooltip");
+  String editTooltip = _ctx.appRes("UIAdminToolbarPortlet.TopbarTooltip");
+
+
+  PortalRequestContext context = Util.getPortalRequestContext();
+
+  String quiEditClass = "quickEditUnchecked";
+  Boolean quickEdit = (Boolean) context.getRequest().getSession().getAttribute(uicomponent.TURN_ON_QUICK_EDIT);
+  if(quickEdit != null && quickEdit) {
+    quiEditClass = "quickEditChecked"
+  }
+
+  boolean userCouldEditNavigation = uicomponent.hasEditPermissionOnNavigation() && !uicomponent.isUserNavigation();
+  boolean userCouldEditPage = uicomponent.hasEditPermissionOnPage();
+  boolean userCouldEditPortal = uicomponent.hasEditPermissionOnPortal();
+%>
+<div class="uiAdminToolbarPortlet uiDropdownWithIcon VuetifyApp" id="$uicomponent.id">
+<div id="DrawerEditAdministration">
+  <button
+    type="button"
+    class="editAdministrationBtn v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
+    title="<%=editTooltip%>"
+    @click="closeDrawer()">
+    <span class="v-btn__content">
+      <i aria-hidden="true" class="v-icon notranslate uiIcon uiEditAdminIcon material-icons icon-large-size icon-default-color theme--light"></i>
+    </span>
+  </button>
+   <v-navigation-drawer
+      class="editDrawer hidden"
+      v-model="editDrawer"
+      <%= isRT ? "left" : "right" %>
+      absolute
+      temporary
+      max-width="100vw"
+      max-height="100vh"
+      height="100vh">
+      <v-list-item class="editAdminHeader">
+        <v-list-item-content>
+          <span class="editAdminTitle">$editAdministration</span>
+        </v-list-item-content>
+        <v-list-item-action @click="closeDrawer()">
+          <i class="uiCloseIcon"></i>
+        </v-list-item-action>
+      </v-list-item>
+      <ul class="editAdministrationMenu">
+        <% if(userCouldEditPage) { %>
+        <% if(uicomponent.getSEOClass() != null) { %>
+        <li class="editonLineItem">
+          <a href="javascript:void(0);" onclick="<%=uicomponent.event("ChangeEditing")%>" class="editOnline">
+            <span>$quickEditLabel</span>
+            <i class="quickEditSwitcher $quiEditClass"></i>
+          </a>
+        </li>
+        <li class="divider">&nbsp;</li>
+        <% } %>
+        <li class="editItemsTitle">
+          <a href="#" tabindex="-1">
+            <i class="uiPageIcon"></i>
+            <span><%=_ctx.appRes("UIAdminToolbarPortlet.action.Page")%></span>
+          </a>
+          <ul class="editSubItemList">
+          <%
+            String editPageRequest = "javascript:ajaxGet(eXo.env.server.createPortalURL('" + uicomponent.getUIPageId() + "', 'EditCurrentPage', true))";
+          %>
+            <li class="editSubItemListItem">
+              <a href="javascript:void(0);" onclick="$editPageRequest">
+                $editPageLabel
+              </a>
+            </li>
+            <% if (uicomponent.getSEOClass() != null) { %>
+              <li class="editSubItemListItem seoItem">
+                <div class="seoImgBlock">
+                <%uicomponent.renderChild(uicomponent.getSEOClass());%>
+                </div>
+              </li>
+            <% } %>
+            <li class="editSubItemListItem">
+              <a href="javascript:void(0);" onclick="ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'PageCreationWizard', true))">
+                $addPageLabel
+              </a>
+            </li>
+          </ul>
+        </li>
+        <% } %>
+        <% if(userCouldEditPortal || userCouldEditNavigation) { %>
+        <li class="editItemsTitle">
+          <a href="#" tabindex="-1">
+            <i class="uiSiteIcon"></i>
+            <span>$siteLabel</span>
+          </a>
+          <ul class="editSubItemList">
+            <% if(userCouldEditPortal){ %>
+            <li class="editSubItemListItem">
+              <a href="javascript:void(0);" onclick="ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'EditInline', true))">
+                $editSiteLayout
+              </a>
+            </li>
+            <% } %>
+            <% if(userCouldEditNavigation){ %>
+            <li class="editSubItemListItem editNavigationItem">
+              <a href="javascript:void(0);" onclick="<%=uicomponent.event("EditNavigation", null);%>">
+                $editNavigation
+              </a>
+            </li>
+            <% } %>
+            <% if(userCouldEditPortal){ %>
+            <li class="editSubItemListItem">
+              <a href="javascript:void(0);" onclick="javascript:ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'CreatePortal', true))">
+                $addSiteLabel
+              </a>
+            </li>
+            <% } %>
+          </ul>
+        </li>
+        <% } %>
+      </ul>
+    </v-navigation-drawer>
+  </div>
+
+  <script type="text/javascript" defer>
+  require(['SHARED/vuetify', 'SHARED/jquery', 'SHARED/vue'], function(vuetify, jq){
+    new Vue({
+      el: '#DrawerEditAdministration',
+      vuetify: new Vuetify(),
+      data () {
+        return {
+          editDrawer: null,
+        }
+      },
+      watch: {
+        editDrawer() {
+          if (this.editDrawer) {
+            jq('body').addClass('hide-scroll');
+          } else {
+            jq('body').removeClass('hide-scroll');
+          }
+          window.setTimeout(() => {
+            jq('#DrawerEditAdministration .v-overlay').click(() => {
+              this.editDrawer = false;
+            });
+          }, 200);
+        },
+      },
+      created() {
+        jq(document).on('keydown', (event) => {
+          if (event.key === 'Escape') {
+            this.editDrawer = false;
+          }
+        });
+        jq('#DrawerEditAdministration .editDrawer').removeClass('hidden');
+      },
+      mounted() {
+        this.\$root.\$emit('application-loaded');
+        jq(document).on('click','.editNavigationItem',function(e) {
+          jq('body').addClass('hiddenDrawer');
+        });
+      },
+      methods: {
+        closeDrawer() {
+          this.editDrawer = !this.editDrawer;
+        }
+      }
+    });
+  });
+  </script>
+</div>
+
+<%uicomponent.renderChildren();%>

@@ -1,0 +1,14 @@
+<%
+  def rcontext = _ctx.getRequestContext() ;
+  def jsManager = rcontext.getJavascriptManager();
+  uicomponent.renderChildren();
+%>
+</div>
+   <% /* Include extensible templates configured by Kernel configuration to be imported in Page Header */ %>
+   <% _ctx.includeTemplates("UIPortalApplication-End-Body") %>
+
+  <script type="text/javascript">
+    <%=jsManager.getJavaScripts()%>
+  </script>
+</body>
+</html>

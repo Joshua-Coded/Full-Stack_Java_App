@@ -1,0 +1,334 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*--------------- HomePage Containers Structure ---------------------------*/
+#digitalWorkplaceHomePage #SliderContainer .newsSlider .sliderNewsItems {
+  width: 100%;
+  height: 220px !important;
+}
+#digitalWorkplaceHomePage #digitalWorkplaceHomePageChildren {
+  margin: 20px;
+}
+#digitalWorkplaceHomePage #digitalWorkplaceHomePageChildren > * {
+  max-width: 100%;
+}
+#digitalWorkplaceHomePage #MiddleContainer #MiddleContainerChildren {
+  display: flex;
+}
+#digitalWorkplaceHomePage #MiddleContainer #MiddleContainerChildren > :first-child {
+  flex-basis: auto;
+  flex-grow: 1;
+  max-width: calc( 100% - 390px );
+}
+#digitalWorkplaceHomePage #MiddleContainer #MiddleContainerChildren > :nth-child(2) {
+  flex: 0 1 370px;
+  margin-left: 20px ; /** orientation=lt */ ;
+  margin-right: 20px ; /** orientation=rt */ ;
+}
+#digitalWorkplaceHomePage #UserProfileContainer {
+  max-height: 404px;
+}
+#digitalWorkplaceHomePage #UserProfileContainer #UserProfileContainerChildren {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-left: auto ; /** orientation=lt */ ;
+  margin-right: auto ; /** orientation=rt */ ;
+}
+#digitalWorkplaceHomePage #UserProfileContainer #UserProfileContainerChildren > :first-child {
+  flex-basis: auto;
+  flex-grow: 1;
+}
+#digitalWorkplaceHomePage #UserProfileContainer #UserProfileContainerChildren > :nth-child(2) {
+  flex: 0 1 26%;
+  margin-top: 10px;
+}
+#digitalWorkplaceHomePage #PerkstoreWalletContainer {
+  height: 94px;
+}
+#digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren {
+  display: flex;
+  flex-direction: row;
+}
+#digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :first-child {
+  flex: 1 1 auto;
+  min-width: 48%;
+}
+#digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :nth-child(2) {
+  flex: 1 1 48%;
+  min-width: 48%;
+  margin-left: 2% ; /** orientation=lt */ ;
+  margin-right: 2% ; /** orientation=rt */ ;
+}
+#digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+#digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren > * {
+  min-height: 100%;
+  flex: 1 1 auto;
+  min-width: 32%;
+  background: #fff !important;
+  overflow: hidden;
+  max-width: 100%;
+}
+#digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren > :nth-child(2),
+#digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren > :nth-child(3) {
+  margin-left: 20px ; /** orientation=lt */ ;
+  margin-right: 20px ; /** orientation=rt */ ;
+}
+#digitalWorkplaceHomePage .UICLVPortlet,
+#digitalWorkplaceHomePage .UICLVFolderMode {
+  border: 0 !important;
+}
+#digitalWorkplaceHomePage #profile-stats-portlet {
+  margin: 0 !important;
+}
+#digitalWorkplaceHomePage #latestNewsDetails .container,
+#digitalWorkplaceHomePage #profile-stats-portlet .container,
+#digitalWorkplaceHomePage #perkstoreOrderPortlet .container,
+#digitalWorkplaceHomePage #walletBalancePortlet .container,
+#digitalWorkplaceHomePage #tasks .container {
+  margin: 0;
+  max-width: initial;
+}
+#digitalWorkplaceHomePage #latestNewsDetails {
+  background: #fff !important;
+}
+#digitalWorkplaceHomePage #DocumentsContainer .v-slide-group__next,
+#digitalWorkplaceHomePage #DocumentsContainer .v-slide-group__prev {
+  flex: 0 1 25px;
+  min-width: 25px;
+}
+#digitalWorkplaceHomePage #DocumentsContainer .v-slide-group__next > i,
+#digitalWorkplaceHomePage #DocumentsContainer .v-slide-group__prev > i {
+  color: var(--allPagesPrimaryColor, #476a9c);
+}
+#digitalWorkplaceHomePage #DocumentsContainer .v-tabs-slider-wrapper {
+  height: 3px!important;
+}
+#digitalWorkplaceHomePage #DocumentsContainer .v-tab {
+  box-sizing: border-box;
+}
+#digitalWorkplaceHomePage #DocumentsContainer .v-tab > .tabsTitle {
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+}
+#digitalWorkplaceHomePage #DocumentsContainer .v-tab--active > .tabsTitle {
+  color: var(--allPagesPrimaryColor, #476a9c);
+}
+#digitalWorkplaceHomePage #DocumentsContainer .tabsTitle {
+  font-size: 1rem!important;
+  font-weight: 400;
+  letter-spacing: .009375em!important;
+  line-height: 1.75rem;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1024px) {
+  #digitalWorkplaceHomePage #LatestNewsContainer .news-list-view-app {
+    height: 404px;
+  }
+  #digitalWorkplaceHomePage #latestNewsDetails {
+    height: 404px;
+  }
+}
+@media (min-width: 1024px) {
+  #digitalWorkplaceHomePage #UserProfileContainerChildren {
+    min-width: 370px;
+  }
+  #digitalWorkplaceHomePage #UserProfileContainerChildren #ProfileStatsContainer:only-child #profile-stats-portlet .profileCard {
+    min-height: 404px;
+  }
+}
+@media (max-width: 1024px) {
+  #digitalWorkplaceHomePage #MiddleContainer {
+    margin-top: 10px;
+  }
+  #digitalWorkplaceHomePage #MiddleContainer #MiddleContainerChildren {
+    flex-direction: column;
+  }
+  #digitalWorkplaceHomePage #MiddleContainer #MiddleContainerChildren > :first-child {
+    max-width: 100%;
+  }
+  #digitalWorkplaceHomePage #MiddleContainer #MiddleContainerChildren > :nth-child(2) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-height: none;
+  }
+  #digitalWorkplaceHomePage #UserProfileContainer #UserProfileContainerChildren {
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  #digitalWorkplaceHomePage #UserProfileContainer #UserProfileContainerChildren > :nth-child(2) {
+    margin-top: 0;
+    margin-left: 20px ; /** orientation=lt */ ;
+    margin-right: 0  !important; /** orientation=lt */ ;
+    margin-right: 20px ; /** orientation=rt */ ;
+    margin-left: 0  !important; /** orientation=rt */ ;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer {
+    min-height: 100%;
+    height: auto;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren {
+    flex-direction: column;
+    height: 300px;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :first-child {
+    min-height: 50%;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :first-child .big-number {
+    margin: 17px 0 38px !important;
+    display: block;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :nth-child(2) {
+    min-height: 50%;
+    margin-left: 0 ; /** orientation=lt */ ;
+    margin-right: 0 ; /** orientation=rt */ ;
+    margin-top: 20px;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :nth-child(2) .big-number {
+    margin: 12px 0 34px !important;
+    display: block;
+  }
+  #digitalWorkplaceHomePage #BottomContainer {
+    margin-top: 10px;
+  }
+  #digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren {
+    flex-wrap: wrap;
+  }
+  #digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren > :nth-child(3) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    min-width: 100%;
+    margin-top: 20px;
+  }
+  #digitalWorkplaceHomePage #DocumentsContainer .v-slide-group__wrapper {
+    padding-left: 18px ; /** orientation=lt */ ;
+    padding-right: 18px ; /** orientation=rt */ ;
+  }
+}
+@media (max-width: 767px) {
+  .VuetifyApp .v-btn:not(.v-btn--round).v-size--small {
+    margin-top: 0 !important;
+  }
+  #digitalWorkplaceHomePage #UserProfileContainer #UserProfileContainerChildren {
+    flex-direction: column;
+  }
+  #digitalWorkplaceHomePage #UserProfileContainer #UserProfileContainerChildren > :nth-child(2) {
+    margin-top: 10px;
+    margin-left: 0 ; /** orientation=lt */ ;
+    margin-right: 0 ; /** orientation=rt */ ;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren {
+    flex-direction: row;
+    height: 94px;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :first-child {
+    min-height: 100%;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :first-child .big-number {
+    margin: 0 !important;
+    display: block;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :nth-child(2) {
+    min-height: 100%;
+    margin-left: 10px ; /** orientation=lt */ ;
+    margin-right: 10px ; /** orientation=rt */ ;
+    margin-top: 0;
+  }
+  #digitalWorkplaceHomePage #PerkstoreWalletContainer #PerkstoreWalletContainerChildren > :nth-child(2) .big-number {
+    margin: 0 !important;
+    display: block;
+  }
+  #digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren {
+    flex-direction: column;
+  }
+  #digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren > * {
+    min-width: auto !important;
+  }
+  #digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren > :nth-child(2),
+  #digitalWorkplaceHomePage #BottomContainer #BottomContainerChildren > :nth-child(3) {
+    margin-left: 0 !important; /** orientation=lt */ ;
+    margin-right: 0 !important; /** orientation=lt */ ;
+    margin-right: 0 !important; /** orientation=rt */ ;
+    margin-left: 0 !important; /** orientation=rt */ ;
+    margin-top: 10px;
+  }
+}
+

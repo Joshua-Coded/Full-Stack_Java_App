@@ -1,0 +1,84 @@
+//put your custom CSS variables here (see variables.less for possible custom CSS variables)
+
+@primaryColor: #476A9C;
+@primaryBackground: #f0f0f0;
+@secondaryColor: #476a9c;
+@secondaryColorDarken1: darken(@secondaryColor, 15%);
+@tertiaryColor: #476A9C;
+
+@greyColor: #e1e8ee;
+@borderColor: @greyColor;
+
+@greyColorLighten1: #5f708a;
+@offlineColor: @greyColorLighten1;
+@quoteBorder: @greyColorLighten1;
+@toolbarLightIconColor: @greyColorLighten1;
+@greyColorLighten1Opacity1: fade(@greyColorLighten1, 13%);
+
+@primaryColorLight: lighten(@primaryColor, 10%);
+@primaryColorLighter: lighten(@primaryColor, 18.5%);
+@primaryColorLighterGradientEnd: darken(@primaryColorLighter, 15%);
+@primaryDarkerColor: darken(@primaryColor, 10.5%);
+@primaryDarkColor: darken(@primaryColor, 15%);
+@primaryDarkColorGradientEnd: darken(@primaryColor, 5%);
+@primaryDarkerColorGradientEnd: darken(@primaryColor, 15%);
+
+@primaryHoverBackgroundColor: darken(desaturate(spin(@primaryColor, 3.7152), 13.9064), 11.9608);
+@btnPrimaryDisableBackground: lighten(desaturate(spin(@primaryColor, 0.0714), 0.6494), 22.7451);
+
+@welcomePagesBackground: @secondaryColor;
+
+@textColor: #333333;
+
+
+@allPagesPrimaryColor: ~"--allPagesPrimaryColor";
+@allPagesPrimaryColorLight: ~"--allPagesPrimaryColorLight";
+@allPagesPrimaryColorLighter: ~"--allPagesPrimaryColorLighter";
+@allPagesPrimaryColorLighterGradientEnd: ~"--allPagesPrimaryColorLighterGradientEnd";
+@allPagesPrimaryDarkerColor: ~"--allPagesPrimaryDarkerColor";
+@allPagesPrimaryDarkerColorGradientEnd: ~"--allPagesPrimaryDarkerColorGradientEnd";
+@allPagesPrimaryDarkColor: ~"--allPagesPrimaryDarkColor";
+@allPagesPrimaryDarkColorGradientEnd: ~"--allPagesPrimaryDarkColorGradientEnd";
+@allPagesPrimaryBackground: ~"--allPagesPrimaryBackground";
+@allPagesPrimaryDisableBackground: ~"--allPagesBtnPrimaryDisableBackground";
+@allPagesBtnPrimaryHoverBackgroundColor: ~"--allPagesBtnPrimaryHoverBackgroundColor";
+@allPagesSecondaryColor: ~"--allPagesSecondaryColor";
+@allPagesSecondaryColorDarken1: ~"--allPagesSecondaryColorDarken1";
+@allPagesTertiaryColor: ~"--allPagesTertiaryColor";
+@allPagesUiSwitchOnColor: ~"--allPagesUiSwitchOnColor";
+@allPagesGreyColor: ~"--allPagesGreyColor";
+@allPagesQuoteBorder: ~"--allPagesQuoteBorder";
+@allPagesWelcomePagesBackground: ~"--allPagesWelcomePagesBackground";
+@allPagesBorderColor: ~"--allPagesBorderColor";
+@allPagesOfflineColor: ~"--allPagesOfflineColor";
+@allPagesToolbarLightIconColor: ~"--allPagesToolbarLightIconColor";
+@allPagesGreyColorLighten1: ~"--allPagesGreyColorLighten1";
+@allPagesGreyColorLighten1Opacity1: ~"--allPagesGreyColorLighten1Opacity1";
+@allPagesBaseTextColor: ~"--allPagesBaseTextColor";
+
+:root {
+    @{allPagesPrimaryColor}: @primaryColor;
+    @{allPagesPrimaryColorLight}: @primaryColorLight;
+    @{allPagesPrimaryColorLighter}: @primaryColorLighter;
+    @{allPagesPrimaryColorLighterGradientEnd}: @primaryColorLighterGradientEnd;
+    @{allPagesPrimaryDarkerColor}: @primaryDarkerColor;
+    @{allPagesPrimaryDarkerColorGradientEnd}: @primaryDarkerColorGradientEnd;
+    @{allPagesPrimaryDarkColor}: @primaryDarkColor;
+    @{allPagesPrimaryDarkColorGradientEnd}: @primaryDarkColorGradientEnd;
+    @{allPagesBtnPrimaryHoverBackgroundColor}: @primaryHoverBackgroundColor;
+    @{allPagesPrimaryBackground}: @primaryBackground;
+    @{allPagesPrimaryDisableBackground}: @btnPrimaryDisableBackground;
+    @{allPagesSecondaryColor}: @secondaryColor;
+    @{allPagesSecondaryColorDarken1}: @secondaryColorDarken1;
+    @{allPagesTertiaryColor}: @tertiaryColor;
+    @{allPagesUiSwitchOnColor}: @primaryColor;
+    @{allPagesGreyColor}: @greyColor;
+    @{allPagesQuoteBorder}: @quoteBorder;
+    @{allPagesBorderColor}: @borderColor;
+    @{allPagesWelcomePagesBackground}: @welcomePagesBackground;
+    @{allPagesOfflineColor}: @offlineColor;
+    @{allPagesToolbarLightIconColor}: @toolbarLightIconColor;
+    @{allPagesGreyColorLighten1}: @greyColorLighten1;
+    @{allPagesGreyColorLighten1Opacity1}: @greyColorLighten1Opacity1;
+    @{allPagesBaseTextColor}: @textColor;
+}

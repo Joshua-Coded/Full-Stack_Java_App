@@ -1,0 +1,11 @@
+<%
+  def userName = _ctx.getRequestContext().getRemoteUser();
+  def featureService = uicomponent.getApplicationComponent(org.exoplatform.commons.api.settings.ExoFeatureService.class);
+  def InPageNavigationEnabled = featureService.isFeatureActiveForUser("InPageNavigation", userName);
+%>
+<script type="text/javascript" id="portalInPageScript">
+  eXo.env.client.InPageNavigationEnabled = <%=InPageNavigationEnabled%>;
+  <% if (InPageNavigationEnabled) { %>
+    require(["SHARED/inPageNavigation"], inPageNavigation => inPageNavigation.init());
+  <% } %>
+</script>

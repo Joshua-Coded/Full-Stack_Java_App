@@ -1,0 +1,1547 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+#PerkStoreApp,
+.searchPerkStoreProductCard {
+  min-height: calc( 100vh - 60px);
+}
+#PerkStoreApp .orders-list,
+.searchPerkStoreProductCard .orders-list {
+  background: white;
+}
+#PerkStoreApp .orders-list .toolbarOrders,
+.searchPerkStoreProductCard .orders-list .toolbarOrders {
+  align-items: center;
+}
+#PerkStoreApp .orders-list .toolbarOrders .boxTitle,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .boxTitle {
+  width: max-content;
+}
+#PerkStoreApp .orders-list .toolbarOrders .boxTitle .titleOrders,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .boxTitle .titleOrders {
+  padding: 15px;
+}
+#PerkStoreApp .orders-list .toolbarOrders .spacer,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .spacer {
+  width: auto;
+}
+#PerkStoreApp .orders-list .toolbarOrders .filterOrders,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .filterOrders {
+  width: max-content;
+}
+#PerkStoreApp .orders-list .toolbarOrders .orderMenu,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .orderMenu {
+  width: max-content;
+}
+#PerkStoreApp .orders-list .toolbarOrders .download,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .download {
+  width: max-content;
+  position: absolute;
+  right: 0 !important; /** orientation=lt */ ;
+  left: 0 !important; /** orientation=rt */ ;
+}
+#PerkStoreApp .orders-list .toolbarOrders .filterList,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .filterList {
+  width: max-content;
+  margin: 0 1%;
+}
+#PerkStoreApp .orders-list .toolbarOrders .filterList .btn,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .filterList .btn {
+  border: 1px solid var(--allPagesTertiaryColor, #476a9c) !important;
+  color: var(--allPagesTertiaryColor, #476a9c) !important;
+}
+#PerkStoreApp .orders-list .toolbarOrders .filterList .filterOrdersSetting .uiIconFilterSetting,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .filterList .filterOrdersSetting .uiIconFilterSetting {
+  font-family: "PLF-FONT-ICONS" !important;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--allPagesTertiaryColor, #476a9c);
+}
+#PerkStoreApp .orders-list .toolbarOrders .filterList .filterOrdersSetting .uiIconFilterSetting:before,
+.searchPerkStoreProductCard .orders-list .toolbarOrders .filterList .filterOrdersSetting .uiIconFilterSetting:before {
+  content: "\eaf2";
+}
+#PerkStoreApp .spacer.spacerProduct,
+.searchPerkStoreProductCard .spacer.spacerProduct {
+  flex-grow: 15 !important;
+}
+#PerkStoreApp .product-list,
+.searchPerkStoreProductCard .product-list {
+  background: white;
+  align-items: center;
+}
+#PerkStoreApp .product-list .toolbarListProduct,
+.searchPerkStoreProductCard .product-list .toolbarListProduct {
+  padding: 0px 16px;
+}
+#PerkStoreApp .product-list .toolbarListProduct .filterDropDown,
+.searchPerkStoreProductCard .product-list .toolbarListProduct .filterDropDown {
+  padding-top: 7px;
+}
+#PerkStoreApp .product-list .toolbarListProduct .filterDropDown .dropdownList,
+.searchPerkStoreProductCard .product-list .toolbarListProduct .filterDropDown .dropdownList {
+  min-width: max-content;
+}
+#PerkStoreApp .product-list .toolbarProduct .addProduct,
+.searchPerkStoreProductCard .product-list .toolbarProduct .addProduct {
+  width: 31%;
+}
+#PerkStoreApp .product-list .toolbarProduct .spacer,
+.searchPerkStoreProductCard .product-list .toolbarProduct .spacer {
+  width: auto ;
+}
+#PerkStoreApp .product-list .toolbarProduct .filter,
+.searchPerkStoreProductCard .product-list .toolbarProduct .filter {
+  width: 36% ;
+  margin: 0 1% ;
+}
+#PerkStoreApp .product-list .toolbarProduct .filter .filter_menu,
+.searchPerkStoreProductCard .product-list .toolbarProduct .filter .filter_menu {
+  width: 75px;
+}
+#PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .menuList,
+.searchPerkStoreProductCard .product-list .toolbarProduct .filter .filter_menu .menuList {
+  margin: auto;
+  width: 75%;
+}
+#PerkStoreApp .product-list .toolbarProduct .settingsIconAdmin,
+.searchPerkStoreProductCard .product-list .toolbarProduct .settingsIconAdmin {
+  width: 3%;
+  position: absolute;
+  right: 0 !important; /** orientation=lt */ ;
+  left: 0 !important; /** orientation=rt */ ;
+}
+#PerkStoreApp .v-menu__content,
+.searchPerkStoreProductCard .v-menu__content {
+  max-width: none !important;
+  z-index: 2000 !important;
+}
+#PerkStoreApp .v-menu__content.v-autocomplete__content,
+.searchPerkStoreProductCard .v-menu__content.v-autocomplete__content {
+  left: 12px !important; /** orientation=lt */ ;
+  right: 12px !important; /** orientation=rt */ ;
+}
+#PerkStoreApp .perkStoreTextField .v-input__control > .v-input__slot:before,
+.searchPerkStoreProductCard .perkStoreTextField .v-input__control > .v-input__slot:before {
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+#PerkStoreApp #productFilterMenu,
+.searchPerkStoreProductCard #productFilterMenu {
+  position: relative;
+}
+#PerkStoreApp #productFilterMenu .v-menu__content,
+.searchPerkStoreProductCard #productFilterMenu .v-menu__content {
+  top: 25px !important;
+}
+#PerkStoreApp .sub-text .v-input,
+.searchPerkStoreProductCard .sub-text .v-input {
+  padding-top: 0;
+  height: auto;
+  margin: auto;
+}
+#PerkStoreApp .sub-text label,
+.searchPerkStoreProductCard .sub-text label {
+  height: auto;
+  margin: auto 2px auto 20px;
+}
+#PerkStoreApp .sub-text .flex,
+.searchPerkStoreProductCard .sub-text .flex {
+  margin: auto;
+}
+#PerkStoreApp .no-wrap,
+.searchPerkStoreProductCard .no-wrap {
+  white-space: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#PerkStoreApp .flex,
+.searchPerkStoreProductCard .flex {
+  box-sizing: border-box;
+}
+#PerkStoreApp select.small,
+.searchPerkStoreProductCard select.small,
+#PerkStoreApp input.small,
+.searchPerkStoreProductCard input.small {
+  min-width: 50px;
+  width: auto;
+  height: 32px;
+}
+#PerkStoreApp label,
+.searchPerkStoreProductCard label {
+  margin-bottom: 0;
+}
+#PerkStoreApp .primary--text,
+.searchPerkStoreProductCard .primary--text {
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+}
+#PerkStoreApp .primary:not([disabled]),
+.searchPerkStoreProductCard .primary:not([disabled]) {
+  background-color: var(--allPagesPrimaryColor, #476a9c) !important;
+  color: #fff;
+}
+#PerkStoreApp .primary[disabled],
+.searchPerkStoreProductCard .primary[disabled] {
+  pointer-events: auto;
+  background-color: var(--allPagesBtnPrimaryDisableBackground, #8da6ca) !important;
+  color: #fff !important;
+  opacity: 1;
+}
+#PerkStoreApp .primary[disabled] i,
+.searchPerkStoreProductCard .primary[disabled] i {
+  color: #fff !important;
+}
+#PerkStoreApp .v-input input,
+.searchPerkStoreProductCard .v-input input {
+  margin-bottom: 0;
+  border: 0;
+  box-shadow: none;
+}
+#PerkStoreApp .application--wrap,
+.searchPerkStoreProductCard .application--wrap {
+  min-height: auto;
+}
+#PerkStoreApp .v-autocomplete label,
+.searchPerkStoreProductCard .v-autocomplete label {
+  z-index: 1002;
+}
+#PerkStoreApp .application-toolbar .tabs-content,
+.searchPerkStoreProductCard .application-toolbar .tabs-content {
+  margin-top: 10px !important;
+}
+#PerkStoreApp .application-toolbar.display-on-top,
+.searchPerkStoreProductCard .application-toolbar.display-on-top {
+  position: relative;
+  z-index: 10;
+}
+#PerkStoreApp .application-toolbar .v-toolbar__title,
+.searchPerkStoreProductCard .application-toolbar .v-toolbar__title {
+  line-height: 37px;
+}
+#PerkStoreApp .application-toolbar .v-toolbar__content,
+.searchPerkStoreProductCard .application-toolbar .v-toolbar__content {
+  padding-right: 0 ; /** orientation=lt */ ;
+  padding-left: 0 ; /** orientation=rt */ ;
+}
+#PerkStoreApp .application-toolbar .toolbarBalance,
+.searchPerkStoreProductCard .application-toolbar .toolbarBalance {
+  line-height: 48px;
+  position: relative;
+  right: 0 ; /** orientation=lt */ ;
+  left: 0 ; /** orientation=rt */ ;
+  padding: 0 10px;
+  margin-left: 16px ; /** orientation=lt */ ;
+  margin-right: 16px ; /** orientation=rt */ ;
+  background-color: var(--allPagesTertiaryColor, #476a9c) !important;
+}
+#PerkStoreApp .contactAutoCompleteContent,
+.searchPerkStoreProductCard .contactAutoCompleteContent {
+  top: 100% !important;
+  left: 0 !important; /** orientation=lt */ ;
+  right: 0 !important; /** orientation=rt */ ;
+  position: absolute;
+  width: 100%;
+  z-index: 1050 !important;
+}
+#PerkStoreApp .contactAutoComplete,
+.searchPerkStoreProductCard .contactAutoComplete {
+  position: relative;
+  padding-bottom: 1px;
+}
+#PerkStoreApp .contactAutoComplete .v-list,
+.searchPerkStoreProductCard .contactAutoComplete .v-list {
+  padding: 0;
+}
+#PerkStoreApp .contactAutoComplete .v-list__tile,
+.searchPerkStoreProductCard .contactAutoComplete .v-list__tile {
+  height: 30px;
+  transition: unset;
+  transform: none;
+}
+#PerkStoreApp .contactAutoComplete .v-list__tile:hover,
+.searchPerkStoreProductCard .contactAutoComplete .v-list__tile:hover {
+  background-color: var(--allPagesPrimaryColor, #476a9c);
+  color: #fff;
+  transition: unset;
+  transform: none;
+}
+#PerkStoreApp .contactAutoComplete .v-list__tile__title,
+.searchPerkStoreProductCard .contactAutoComplete .v-list__tile__title {
+  transition: unset;
+  transform: none;
+}
+#PerkStoreApp .contactAutoComplete .v-list__tile__avatar,
+.searchPerkStoreProductCard .contactAutoComplete .v-list__tile__avatar {
+  min-width: 25px;
+}
+#PerkStoreApp .autocompleteSelectedItem,
+.searchPerkStoreProductCard .autocompleteSelectedItem {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 2px 6px;
+  background: var(--allPagesPrimaryColor, #476a9c);
+  color: #fff;
+  border: 1px solid var(--allPagesPrimaryColor, #476a9c);
+  border-radius: 3px;
+  font-size: 15px;
+}
+#PerkStoreApp .autocompleteSelectedItem > .v-chip__content,
+.searchPerkStoreProductCard .autocompleteSelectedItem > .v-chip__content {
+  height: auto;
+  padding: 0;
+}
+#PerkStoreApp .v-card__text,
+.searchPerkStoreProductCard .v-card__text {
+  box-sizing: border-box;
+  margin-top: -10px;
+}
+#PerkStoreApp .clickable,
+.searchPerkStoreProductCard .clickable {
+  cursor: pointer;
+}
+#PerkStoreApp .clickable .addProduct,
+.searchPerkStoreProductCard .clickable .addProduct {
+  padding: 7px;
+}
+#PerkStoreApp .clickable .addProduct > i,
+.searchPerkStoreProductCard .clickable .addProduct > i {
+  color: var(--allPagesGreyColorLighten1, #5f708a) !important;
+}
+#PerkStoreApp .clickable > button,
+.searchPerkStoreProductCard .clickable > button {
+  white-space: nowrap;
+}
+#PerkStoreApp .toolbarButton,
+.searchPerkStoreProductCard .toolbarButton {
+  min-width: auto;
+  width: auto;
+  height: 77%;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+#PerkStoreApp .searchProductsInput,
+.searchPerkStoreProductCard .searchProductsInput {
+  max-width: 200px;
+  margin-top: 10px;
+}
+#PerkStoreApp .searchProductsInput .v-input__slot,
+.searchPerkStoreProductCard .searchProductsInput .v-input__slot {
+  background: white;
+  padding: 0 7px;
+  border-radius: 24px;
+}
+#PerkStoreApp .searchProductsInput .v-input__slot:before,
+.searchPerkStoreProductCard .searchProductsInput .v-input__slot:before,
+#PerkStoreApp .searchProductsInput .v-input__slot:after,
+.searchPerkStoreProductCard .searchProductsInput .v-input__slot:after {
+  border: 0 !important;
+}
+#PerkStoreApp .searchProductsInput i,
+.searchPerkStoreProductCard .searchProductsInput i {
+  color: var(--allPagesQuoteBorder, #5f708a);
+}
+#PerkStoreApp .searchProductsInput input,
+.searchPerkStoreProductCard .searchProductsInput input {
+  background: transparent;
+}
+#PerkStoreApp .searchProductsInput input ::placeholder,
+.searchPerkStoreProductCard .searchProductsInput input ::placeholder {
+  color: var(--allPagesGreyColor, #e1e8ee);
+}
+#PerkStoreApp .textBalance,
+.searchPerkStoreProductCard .textBalance {
+  white-space: nowrap;
+  padding-top: 10px;
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+}
+#PerkStoreApp .textBalance .symbol,
+.searchPerkStoreProductCard .textBalance .symbol {
+  color: #bc4343;
+}
+#PerkStoreApp .textBalance .balance,
+.searchPerkStoreProductCard .textBalance .balance {
+  color: var(--allPagesBaseTextColor, #333333);
+}
+#PerkStoreApp .v-card--reveal,
+.searchPerkStoreProductCard .v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+#PerkStoreApp .perkStoreDetailContent,
+.searchPerkStoreProductCard .perkStoreDetailContent {
+  box-sizing: border-box;
+  padding: 25px;
+}
+#PerkStoreApp .perkStoreDetailContent .toolbarCard,
+.searchPerkStoreProductCard .perkStoreDetailContent .toolbarCard {
+  padding: 7px;
+  padding-top: 0px !important;
+  margin-top: -5px;
+}
+#PerkStoreApp .perkStoreDetailContent .productDetailContentCard,
+.searchPerkStoreProductCard .perkStoreDetailContent .productDetailContentCard {
+  border-radius: 5px;
+  border: 1px solid var(--allPagesBorderColor, #e1e8ee);
+  box-shadow: none !important;
+}
+#PerkStoreApp .perkStoreDetailContent .left-pa1,
+.searchPerkStoreProductCard .perkStoreDetailContent .left-pa1 {
+  right: 60px ; /** orientation=lt */ ;
+  left: 60px ; /** orientation=rt */ ;
+}
+#PerkStoreApp .perkStoreDetailContent .left-pa2,
+.searchPerkStoreProductCard .perkStoreDetailContent .left-pa2 {
+  right: 103px ; /** orientation=lt */ ;
+  left: 103px ; /** orientation=rt */ ;
+}
+#PerkStoreApp .perkStoreDetailContent .orderListButton .v-badge__badge,
+.searchPerkStoreProductCard .perkStoreDetailContent .orderListButton .v-badge__badge {
+  left: 19px !important; /** orientation=lt */ ;
+  right: 19px !important; /** orientation=rt */ ;
+  top: -24px !important;
+  opacity: 1 !important;
+}
+#PerkStoreApp .perkStoreDetailContent .productDetailText,
+.searchPerkStoreProductCard .perkStoreDetailContent .productDetailText {
+  max-width: 50%;
+}
+#PerkStoreApp .notificationParent .v-snack__content,
+.searchPerkStoreProductCard .notificationParent .v-snack__content {
+  height: auto;
+}
+#PerkStoreApp .notificationParent .notificationContent,
+.searchPerkStoreProductCard .notificationParent .notificationContent {
+  margin: 0;
+  padding: 5px 10px;
+}
+#PerkStoreApp .notificationParent hr,
+.searchPerkStoreProductCard .notificationParent hr {
+  border-color: #fff;
+}
+#PerkStoreApp .notificationParent hr:last-child,
+.searchPerkStoreProductCard .notificationParent hr:last-child {
+  display: none;
+}
+#PerkStoreApp .productFormParent,
+.searchPerkStoreProductCard .productFormParent {
+  margin-top: 20px;
+}
+#PerkStoreApp .productFormParent .drawerProductExpand,
+.searchPerkStoreProductCard .productFormParent .drawerProductExpand {
+  flex-direction: column !important;
+}
+#PerkStoreApp .productCardHeader,
+.searchPerkStoreProductCard .productCardHeader {
+  height: 210px;
+  max-height: 210px;
+  box-sizing: border-box;
+  background: #fff;
+}
+#PerkStoreApp .pendingCard,
+.searchPerkStoreProductCard .pendingCard {
+  position: relative;
+}
+#PerkStoreApp .productCardPending,
+.searchPerkStoreProductCard .productCardPending {
+  min-height: 25px;
+  height: 25px;
+  line-height: 42px;
+  box-sizing: border-box;
+  max-height: 100px;
+  overflow: hidden;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+#PerkStoreApp .userPendingOrders,
+.searchPerkStoreProductCard .userPendingOrders {
+  width: auto;
+  color: var(--allPagesDarkYellow, #ffb441);
+  font-size: 12px;
+  background-color: rgba(255, 202, 122, 0.3);
+  height: 17px;
+  margin-top: -10px;
+}
+#PerkStoreApp .userPendingOrdersIcon,
+.searchPerkStoreProductCard .userPendingOrdersIcon {
+  color: #ffb441 !important;
+}
+#PerkStoreApp .productImageContainer,
+.searchPerkStoreProductCard .productImageContainer {
+  margin: 5px auto;
+  padding: 0 5px;
+  text-align: center;
+  max-height: 340px;
+  width: calc(100% - 103px);
+  max-width: calc(100% - 103px);
+}
+#PerkStoreApp .productImageContainer.standaloneImage,
+.searchPerkStoreProductCard .productImageContainer.standaloneImage {
+  width: 100%;
+  max-width: 100%;
+}
+#PerkStoreApp .productImageContainer .productImage,
+.searchPerkStoreProductCard .productImageContainer .productImage {
+  border-radius: 12px;
+}
+#PerkStoreApp .productNoImages,
+.searchPerkStoreProductCard .productNoImages {
+  background-color: var(--allPagesPrimaryColor, #476a9c) !important;
+  color: #fff;
+  width: 170px;
+  height: 170px;
+  box-sizing: border-box;
+  margin: auto;
+  font-size: 4rem;
+}
+#PerkStoreApp .productNoImageContainer,
+.searchPerkStoreProductCard .productNoImageContainer {
+  margin: 0;
+  padding: 0 5px;
+  text-align: center;
+  height: 100%;
+}
+#PerkStoreApp .productNoImageContainer .productNoImages,
+.searchPerkStoreProductCard .productNoImageContainer .productNoImages {
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  font-size: 10rem;
+}
+#PerkStoreApp .buyProductForm button,
+.searchPerkStoreProductCard .buyProductForm button {
+  width: 45%;
+}
+#PerkStoreApp .productDetailRightParent .buyFormFields,
+.searchPerkStoreProductCard .productDetailRightParent .buyFormFields {
+  max-width: 50%;
+}
+#PerkStoreApp .addProductTitle,
+.searchPerkStoreProductCard .addProductTitle {
+  height: auto;
+}
+#PerkStoreApp .addProductDescription,
+.searchPerkStoreProductCard .addProductDescription {
+  max-width: 279px;
+  margin: auto;
+  font-size: 15px;
+}
+#PerkStoreApp .productCardPrice,
+.searchPerkStoreProductCard .productCardPrice {
+  color: #000000;
+  margin-top: 32px;
+  margin-left: -15px;
+  font-weight: bold;
+  font-size: 10px;
+}
+#PerkStoreApp .productCardAction,
+.searchPerkStoreProductCard .productCardAction {
+  height: 26px !important;
+  width: 26px !important;
+  color: #fff !important;
+  background: var(--allPagesBtnPrimaryDisableBackground, #afc9e5) !important;
+}
+#PerkStoreApp .productCardSubtitle,
+.searchPerkStoreProductCard .productCardSubtitle {
+  color: #000000;
+  padding-top: 3px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Helvetica, arial, sans-serif;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+#PerkStoreApp .productCardSubtitle .priceSymbol,
+.searchPerkStoreProductCard .productCardSubtitle .priceSymbol {
+  color: #bc4343;
+}
+#PerkStoreApp .productCardTitleParent,
+.searchPerkStoreProductCard .productCardTitleParent {
+  padding-top: 1px;
+  margin-top: -20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 255px;
+  color: #333333;
+  font-size: 16px;
+}
+#PerkStoreApp .addProductButton,
+.searchPerkStoreProductCard .addProductButton {
+  margin: auto;
+  width: fit-content;
+  border-radius: 100%;
+  border: 3px solid var(--allPagesLightYellow, #ffd800);
+  max-width: 100%;
+}
+#PerkStoreApp .addProductButton .addProductIcon,
+.searchPerkStoreProductCard .addProductButton .addProductIcon {
+  color: var(--allPagesLightYellow, #ffd800);
+  max-width: 100%;
+}
+#PerkStoreApp .truncate8,
+.searchPerkStoreProductCard .truncate8 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+#PerkStoreApp .uiIconLightGray:before,
+.searchPerkStoreProductCard .uiIconLightGray:before {
+  color: var(--allPagesDarkGrey, #4d5466);
+}
+#PerkStoreApp .productOrderFilter,
+.searchPerkStoreProductCard .productOrderFilter {
+  margin-top: 1px !important;
+  min-width: 340px;
+  top: 81px;
+  overflow: hidden;
+  box-shadow: none;
+  max-width: calc(100vw - 20px);
+}
+#PerkStoreApp .productOrderFilter .v-toolbar,
+.searchPerkStoreProductCard .productOrderFilter .v-toolbar {
+  box-shadow: none;
+  font-weight: bold;
+}
+#PerkStoreApp .productOrderFilter button.reset.v-btn.v-btn--contained.theme--light.v-size--default,
+.searchPerkStoreProductCard .productOrderFilter button.reset.v-btn.v-btn--contained.theme--light.v-size--default {
+  cursor: pointer!important;
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+  box-shadow: 0 0 #ffffff !important;
+  background-color: #ffffff !important;
+  padding: 0px;
+  margin: 0px;
+}
+#PerkStoreApp .productOrderFilter .reset i.fas.fa-redo,
+.searchPerkStoreProductCard .productOrderFilter .reset i.fas.fa-redo {
+  font-size: 11px;
+  margin-right: 5px ; /** orientation=lt */ ;
+  margin-left: 5px ; /** orientation=rt */ ;
+}
+#PerkStoreApp .productOrderFilterHeader,
+.searchPerkStoreProductCard .productOrderFilterHeader {
+  border: 1px solid var(--allPagesGreyColor, #e1e8ee) !important;
+}
+#PerkStoreApp .productOrderFilterContent,
+.searchPerkStoreProductCard .productOrderFilterContent {
+  height: auto;
+  overflow: hidden;
+  padding: 0 30px;
+}
+#PerkStoreApp .productOrdersParent,
+.searchPerkStoreProductCard .productOrdersParent {
+  padding: 20px 6px 10px 12px;
+}
+#PerkStoreApp .productsListParentContainer,
+.searchPerkStoreProductCard .productsListParentContainer {
+  padding: 20px 6px 20px 12px;
+}
+#PerkStoreApp .productsListParentContainer .soldOutBlock,
+.searchPerkStoreProductCard .productsListParentContainer .soldOutBlock {
+  position: absolute;
+  top: 3px;
+  right: -52px ; /** orientation=lt */ ;
+  left: -52px ; /** orientation=rt */ ;
+  transform: rotate(45deg);
+  width: 160px;
+  margin-top: 5px !important;
+}
+#PerkStoreApp .orderDetailParent,
+.searchPerkStoreProductCard .orderDetailParent {
+  border: 1px solid var(--allPagesBorderColor, #e1e8ee);
+  box-shadow: none !important;
+}
+#PerkStoreApp .orderDetailParent .align-start,
+.searchPerkStoreProductCard .orderDetailParent .align-start {
+  max-width: 100%;
+}
+#PerkStoreApp .orderDetailParent .align-end,
+.searchPerkStoreProductCard .orderDetailParent .align-end {
+  max-width: 100%;
+  text-align: end;
+}
+#PerkStoreApp .orderDetailParent .orderStatus,
+.searchPerkStoreProductCard .orderDetailParent .orderStatus {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  border: 0;
+  -webkit-appearance: none;
+  padding-right: 5px ; /** orientation=lt */ ;
+  padding-left: 5px ; /** orientation=rt */ ;
+  direction: rtl ; /** orientation=lt */ ;
+  direction: ltr ; /** orientation=rt */ ;
+}
+#PerkStoreApp .orderDetailParent .orderQuantityBadgeParent,
+.searchPerkStoreProductCard .orderDetailParent .orderQuantityBadgeParent {
+  flex-direction: row;
+  align-items: center;
+  flex: 0 1 auto;
+}
+#PerkStoreApp .orderDetailParent .orderDeliveredLabel,
+.searchPerkStoreProductCard .orderDetailParent .orderDeliveredLabel {
+  min-width: 10px;
+  max-width: 150px;
+}
+#PerkStoreApp .orderDetailParent .orderRefundedLabel,
+.searchPerkStoreProductCard .orderDetailParent .orderRefundedLabel {
+  min-width: 135px;
+}
+#PerkStoreApp .orderDetailParent .orderProcessingContent,
+.searchPerkStoreProductCard .orderDetailParent .orderProcessingContent {
+  min-height: 30px;
+}
+#PerkStoreApp .orderDetailParent .orderProcessingContent .v-list__tile,
+.searchPerkStoreProductCard .orderDetailParent .orderProcessingContent .v-list__tile {
+  height: fit-content;
+}
+#PerkStoreApp .orderDetailParent .orderProcessingContent .orderProcessingActions,
+.searchPerkStoreProductCard .orderDetailParent .orderProcessingContent .orderProcessingActions {
+  height: fit-content;
+  width: fit-content;
+  min-width: auto;
+  max-width: none;
+}
+#PerkStoreApp .orderDetailParent .orderProcessingContent .orderProcessingActions > div,
+.searchPerkStoreProductCard .orderDetailParent .orderProcessingContent .orderProcessingActions > div {
+  text-align: end;
+}
+#PerkStoreApp .orderDetailParent .orderQuantityBadge,
+.searchPerkStoreProductCard .orderDetailParent .orderQuantityBadge {
+  border-radius: 100%;
+  min-width: 22px;
+  min-height: 22px;
+  text-align: center;
+  line-height: 23px;
+  box-sizing: border-box;
+  color: #ffb441;
+  background-color: rgba(255, 202, 122, 0.3);
+  margin-right: 5px;
+}
+#PerkStoreApp .orderDetailParent .orderProcessingDetails,
+.searchPerkStoreProductCard .orderDetailParent .orderProcessingDetails {
+  min-height: 100px;
+  max-height: 100px;
+}
+#PerkStoreApp .orderDetailParent .orderProcessingDetails .align-end,
+.searchPerkStoreProductCard .orderDetailParent .orderProcessingDetails .align-end {
+  max-width: 90%;
+  text-align: end;
+  margin-left: 15% !important;
+}
+#PerkStoreApp .orderDetailParent .orderProcessingBtn,
+.searchPerkStoreProductCard .orderDetailParent .orderProcessingBtn {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+#PerkStoreApp .productDetailContainer,
+.searchPerkStoreProductCard .productDetailContainer {
+  padding: 20px 13px 20px 12px;
+}
+#PerkStoreApp .productDetailContainer .imageMiniPreviewParent,
+.searchPerkStoreProductCard .productDetailContainer .imageMiniPreviewParent {
+  display: block;
+  margin: 5px;
+}
+#PerkStoreApp .productDetailContainer .imageMiniPreviewParent .imageMiniPreview,
+.searchPerkStoreProductCard .productDetailContainer .imageMiniPreviewParent .imageMiniPreview {
+  box-sizing: border-box;
+  max-width: 70px;
+  width: 70px;
+  max-height: 70px;
+  height: 70px;
+  padding: 0;
+  margin: 0 auto 10px;
+  border-radius: 9px;
+}
+#PerkStoreApp .productDetailContainer .productDetailRightParent,
+.searchPerkStoreProductCard .productDetailContainer .productDetailRightParent {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+#PerkStoreApp .productDetailContainer .productDetailRightParent .productBuyForm,
+.searchPerkStoreProductCard .productDetailContainer .productDetailRightParent .productBuyForm {
+  min-width: 230px;
+  width: 230px;
+}
+#PerkStoreApp .productDetailContainer .productDetailRightParent .productDescription,
+.searchPerkStoreProductCard .productDetailContainer .productDetailRightParent .productDescription {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+#PerkStoreApp .fileDrop,
+.searchPerkStoreProductCard .fileDrop,
+#PerkStoreApp .fileDrop [class^="uiIcon"],
+.searchPerkStoreProductCard .fileDrop [class^="uiIcon"] {
+  color: var(--allPagesPrimaryDarkerColor, #365177);
+}
+#PerkStoreApp .fileDrop .dropZone,
+.searchPerkStoreProductCard .fileDrop .dropZone {
+  border-radius: 5px;
+  border: 3px dashed #e6e6e6;
+  font-size: 14px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+#PerkStoreApp .fileDrop .dropZone:hover,
+.searchPerkStoreProductCard .fileDrop .dropZone:hover,
+#PerkStoreApp .fileDrop .dropZone:hover .attachFileIcon,
+.searchPerkStoreProductCard .fileDrop .dropZone:hover .attachFileIcon,
+#PerkStoreApp .fileDrop .dropZone.hover,
+.searchPerkStoreProductCard .fileDrop .dropZone.hover,
+#PerkStoreApp .fileDrop .dropZone.hover .attachFileIcon,
+.searchPerkStoreProductCard .fileDrop .dropZone.hover .attachFileIcon {
+  background: var(--allPagesPrimaryColor, #476a9c);
+  opacity: 0.7;
+  color: #fff !important;
+}
+#PerkStoreApp .fileDrop .attachFileIcon:before,
+.searchPerkStoreProductCard .fileDrop .attachFileIcon:before {
+  content: "\e780";
+  font-weight: bold;
+}
+#PerkStoreApp .fileDrop .uploadContainer .fileNameLabel,
+.searchPerkStoreProductCard .fileDrop .uploadContainer .fileNameLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 345px;
+}
+#PerkStoreApp .fileDrop .uploadContainer .file,
+.searchPerkStoreProductCard .fileDrop .uploadContainer .file {
+  margin-top: 10px;
+}
+#PerkStoreApp .fileDrop .uploadContainer .file .fileSize,
+.searchPerkStoreProductCard .fileDrop .uploadContainer .file .fileSize {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#PerkStoreApp .fileDrop .uploadContainer > .uploadError,
+.searchPerkStoreProductCard .fileDrop .uploadContainer > .uploadError {
+  text-align: center;
+}
+#PerkStoreApp .fileDrop .uploadContainer .uploadError,
+.searchPerkStoreProductCard .fileDrop .uploadContainer .uploadError {
+  color: #bc4343;
+}
+#PerkStoreApp .carousselParent .editProductMenu,
+.searchPerkStoreProductCard .carousselParent .editProductMenu {
+  cursor: pointer;
+}
+#PerkStoreApp .carousselParent,
+.searchPerkStoreProductCard .carousselParent,
+#PerkStoreApp .carousselImage,
+.searchPerkStoreProductCard .carousselImage,
+#PerkStoreApp .v-carousel__item,
+.searchPerkStoreProductCard .v-carousel__item,
+#PerkStoreApp .v-window__container,
+.searchPerkStoreProductCard .v-window__container {
+  max-height: 170px;
+  height: 170px;
+  max-width: 100%;
+}
+#PerkStoreApp .productPreviewContent,
+.searchPerkStoreProductCard .productPreviewContent {
+  width: 100%;
+  opacity: 75%;
+  font-size: 12px;
+}
+#PerkStoreApp .productPreviewContent .v-list-item,
+.searchPerkStoreProductCard .productPreviewContent .v-list-item {
+  min-height: 0px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+#PerkStoreApp #interactive.viewport,
+.searchPerkStoreProductCard #interactive.viewport {
+  width: 100%;
+}
+#PerkStoreApp #interactive.viewport video,
+.searchPerkStoreProductCard #interactive.viewport video {
+  display: block;
+  margin: auto;
+}
+#PerkStoreApp #interactive.viewport canvas,
+.searchPerkStoreProductCard #interactive.viewport canvas {
+  display: none;
+}
+#PerkStoreApp .OrdersListParent,
+.searchPerkStoreProductCard .OrdersListParent {
+  max-width: 100%;
+}
+#PerkStoreApp .OrdersListItems,
+.searchPerkStoreProductCard .OrdersListItems {
+  padding: 25px;
+}
+#PerkStoreApp .requestFundsLink,
+.searchPerkStoreProductCard .requestFundsLink {
+  text-decoration: underline;
+}
+#PerkStoreAdminApp .titleSettings {
+  text-align: center;
+}
+#PerkStoreAdminApp .titleSettings .titlePerkStoreAdmin {
+  font-size: 20px;
+  font-family: Helvetica;
+}
+#PerkStoreAdminApp .perkStoreSettings {
+  width: 500px !important;
+  max-width: 84vw !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.searchPerkStoreProductCard {
+  margin-right: 6px ; /** orientation=lt */ ;
+  margin-left: 6px ; /** orientation=rt */ ;
+}
+.searchPerkStoreProductCard .productDetailContentCard {
+  box-shadow: none !important;
+}
+.searchPerkStoreProductCard .productCardTitleParent {
+  border-top: 1px solid var(--allPagesGreyColorLighten1Opacity1, rgba(95, 112, 138, 0.13));
+  padding-top: 4px !important;
+}
+.searchPerkStoreProductCard .productCardSubtitle {
+  padding-bottom: 4px !important;
+}
+.v-list-item__title.filterLabel {
+  cursor: pointer;
+}
+.editLabelProduct {
+  min-height: 30px !important;
+}
+.profileAvatarCircle {
+  max-height: 29px;
+  max-width: 29px;
+  border-radius: 100px;
+}
+.VuetifyApp .v-dialog.uiPopup .productImageBuyPage {
+  border-radius: 100%;
+  margin: auto;
+  border: 4px var(--allPagesLightYellow, #ffd800) solid;
+}
+.VuetifyApp .v-dialog.uiPopup .orderDeliverQuantity {
+  padding-top: 0;
+}
+.VuetifyApp .v-dialog.uiPopup .orderDeliverQuantity .v-input__slot {
+  margin: 0;
+}
+.VuetifyApp .v-dialog.uiPopup .orderDeliverQuantity .v-input__slot:before {
+  border-style: hidden;
+}
+.VuetifyApp .v-dialog.uiPopup .orderDeliverQuantity input {
+  padding: 0;
+}
+.VuetifyApp .v-dialog.uiPopup .flex {
+  box-sizing: border-box;
+}
+.VuetifyApp .v-dialog.uiPopup select.small,
+.VuetifyApp .v-dialog.uiPopup input.small {
+  width: auto;
+  height: 32px;
+}
+.VuetifyApp .v-dialog.uiPopup label {
+  margin-bottom: 0;
+}
+.VuetifyApp .v-dialog.uiPopup .buyProductForm .v-btn {
+  width: 45%;
+}
+.VuetifyApp .v-dialog.uiPopup .v-btn.primary:not([disabled]) {
+  background-color: var(--allPagesPrimaryColor, #476a9c) !important;
+  color: #fff;
+}
+.VuetifyApp .v-dialog.uiPopup .v-btn.v-btn--disabled.primary[disabled] {
+  pointer-events: auto;
+  background-color: var(--allPagesBtnPrimaryDisableBackground, #8da6ca) !important;
+  color: #fff !important;
+  opacity: 1;
+}
+.VuetifyApp .v-dialog.uiPopup .v-btn.v-btn--disabled.primary[disabled] i {
+  color: #fff !important;
+}
+#perkstoreOrderPortlet .big-number {
+  font-size: 2.4rem !important;
+  line-height: 2.5rem;
+  color: var(--allPagesBaseTextColor, #333333);
+  margin-top: 0;
+}
+#perkstoreOrderPortlet .product-label {
+  font-size: .75rem !important;
+  font-weight: 400;
+  letter-spacing: .0333333333em !important;
+  line-height: 1.25rem;
+}
+#perkstoreOrderPortlet .perkStoreWidget {
+  margin-bottom: 0px!important;
+  padding-bottom: 0px!important;
+}
+#perkstoreOrderPortlet .perkStoreWidgettext {
+  text-align: center;
+  font-weight: bold;
+}
+#perkstoreOrderPortlet .perkStoreGif {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3px;
+}
+.orderDetailParentTitle {
+  height: 60px;
+}
+.orderDetailUiIcons {
+  color: #5f708a;
+  padding-right: 5px;
+}
+.orderDetailCheckInUiIcons {
+  color: #bc4343;
+}
+.orderDetailCheckOutUiIcons {
+  color: #2eb58c;
+}
+.orderCardTitle {
+  height: 55px;
+  padding: 10px 3px 8px 16px !important;
+}
+.orderCardTitle .orderDetailText {
+  font-size: 14px;
+}
+.orderDetailText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+.orderCardSubtitle {
+  height: 22px;
+}
+.buyButton {
+  margin-top: 10px;
+}
+.disabledBuyButton {
+  background-color: #e0e0e0 !important;
+  pointer-events: auto !important;
+}
+.titleBuyProductDrawer {
+  display: inline;
+  white-space: nowrap ;
+  overflow: hidden ;
+  text-overflow: ellipsis ;
+}
+.spacer.spacerOrder {
+  flex-grow: 15 !important;
+}
+#buyFormProduct .errorContainer {
+  max-width: 100% !important;
+  text-align: center;
+}
+#buyFormProduct .priceSymbol {
+  color: #bc4343;
+}
+#buyFormProduct .passwordWallet {
+  max-width: 95%;
+}
+#buyFormProduct .buyFormMarchant {
+  max-width: 90%;
+}
+#buyFormProduct .buyFormMarchant a {
+  flex-grow: 1;
+}
+#buyFormProduct .buyFormMarchant a p {
+  max-width: 192px;
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+}
+#refundFormProduct .quantity,
+#buyFormProduct .quantity {
+  max-width: 80%;
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+#refundFormProduct .quantity .v-icon.v-icon,
+#buyFormProduct .quantity .v-icon.v-icon {
+  font-size: 12px !important;
+}
+@media (max-width: 600px) {
+  #PerkStoreApp .buyButton {
+    margin-top: 0px !important;
+    height: 80px !important;
+    width: 80px !important;
+  }
+  #PerkStoreApp .carousselParent,
+  #PerkStoreApp .carousselImage,
+  #PerkStoreApp .v-carousel__item,
+  #PerkStoreApp .v-window__container {
+    max-height: 250px !important;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .addProduct {
+    width: fit-content;
+    margin-bottom: 12px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter {
+    width: 100% ;
+    margin-right: -4% !important; /** orientation=lt */ ;
+    margin-left: -4% !important; /** orientation=rt */ ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .perkStoreFilterField {
+    max-width: 67%;
+    margin-top: 7px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu {
+    max-width: 30%;
+    margin-right: 16px !important; /** orientation=lt */ ;
+    margin-left: 16px !important; /** orientation=rt */ ;
+    margin-top: 0px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn {
+    display: flex !important;
+    width: 100%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .statusLabel {
+    display: block;
+    max-width: 150px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .filter_menuIcon {
+    margin-top: 6px !important;
+    margin-left: 6px !important; /** orientation=lt */ ;
+    margin-right: 6px !important; /** orientation=rt */ ;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .boxTitle {
+    width: 80%;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .download {
+    width: 5%;
+    position: absolute;
+    right: 0 !important; /** orientation=lt */ ;
+    left: 0 !important; /** orientation=rt */ ;
+    margin: 0 3%;
+    top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  #PerkStoreApp .perkStoreDetailContent {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 380px) {
+  #PerkStoreApp .orders-list .toolbarOrders .boxTitle {
+    width: 80%;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .filterOrders {
+    width: 95%;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .orderMenu {
+    width: 40%;
+    text-align: center;
+    margin: 1% 1%;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .filterList {
+    width: 40%;
+    margin: 1% 1%;
+    text-align: center;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .download {
+    width: 5%;
+    position: absolute;
+    right: 0 !important; /** orientation=lt */ ;
+    left: 0 !important; /** orientation=rt */ ;
+    margin: 0 10%;
+    top: 20px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .addProduct {
+    width: fit-content;
+    margin-bottom: 12px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter {
+    width: 100% ;
+    margin: 0 -2%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .perkStoreFilterField {
+    max-width: 65%;
+    margin-top: 7px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu {
+    max-width: 35%;
+    margin-top: 0px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn {
+    display: flex !important;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .statusLabel {
+    display: block;
+    max-width: 50px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .filter_menuIcon {
+    margin-top: 6px !important;
+    margin-left: 6px !important; /** orientation=lt */ ;
+    margin-right: 6px !important; /** orientation=rt */ ;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  #PerkStoreApp .orders-list .toolbarOrders .boxTitle {
+    width: 80%;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .filterOrders {
+    width: 95%;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .orderMenu {
+    width: 40%;
+    text-align: center;
+    margin: 1% 1%;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .filterList {
+    width: 40%;
+    margin: 1% 1%;
+    text-align: center;
+  }
+  #PerkStoreApp .orders-list .toolbarOrders .download {
+    width: 5%;
+    position: absolute;
+    right: 0 !important; /** orientation=lt */ ;
+    left: 0 !important; /** orientation=rt */ ;
+    margin: 0 10%;
+    top: 10px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .addProduct {
+    width: 38%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter {
+    width: 60% ;
+    margin-right: -6% !important; /** orientation=lt */ ;
+    margin-left: -6% !important; /** orientation=rt */ ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .perkStoreFilterField {
+    max-width: 60%;
+    margin-top: 7px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu {
+    max-width: 30%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn {
+    display: flex !important;
+    width: 100%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .statusLabel {
+    display: block;
+    max-width: 150px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .filter_menuIcon {
+    margin-top: 6px !important;
+    margin-left: 6px !important; /** orientation=lt */ ;
+    margin-right: 6px !important; /** orientation=rt */ ;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #PerkStoreApp .perkStoreDetailContent {
+    width: 50%;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .addProduct {
+    width: 30%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter {
+    width: 60% ;
+    margin-right: -4% !important; /** orientation=lt */ ;
+    margin-left: -4% !important; /** orientation=rt */ ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .perkStoreFilterField {
+    max-width: 60%;
+    margin-top: 7px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu {
+    max-width: 30%;
+    margin-right: -6% !important; /** orientation=lt */ ;
+    margin-left: -6% !important; /** orientation=rt */ ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn {
+    display: flex !important;
+    width: 100%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .statusLabel {
+    display: block;
+    max-width: 150px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn .filter_menuIcon {
+    margin-top: 6px !important;
+    margin-left: 6px !important; /** orientation=lt */ ;
+    margin-right: 6px !important; /** orientation=rt */ ;
+  }
+}
+@media (min-width: 1024px) {
+  #PerkStoreApp .perkStoreDetailContent {
+    width: 33%;
+    max-width: 33%;
+    flex-basis: 33%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .addProduct {
+    width: 31%;
+    margin-top: 5px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .spacer {
+    width: auto ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter {
+    width: 45% ;
+    margin: 0 1% ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .perkStoreFilterField {
+    width: 60%;
+    margin-top: 12px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu {
+    width: max-content;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn {
+    width: max-content;
+  }
+}
+@media (min-width: 1280px) {
+  #PerkStoreApp .perkStoreDetailContent {
+    width: 25%;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .addProduct {
+    width: 31%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .spacer {
+    width: auto ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter {
+    width: 45% ;
+    margin: 0 1% ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .perkStoreFilterField {
+    width: 64%;
+    margin-top: 15px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu {
+    width: 30%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn {
+    width: max-content;
+  }
+}
+@media (min-width: 1700px) {
+  #PerkStoreApp .perkStoreDetailContent {
+    width: 20%;
+    max-width: 20%;
+    flex-basis: 20%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .addProduct {
+    width: 31%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .spacer {
+    width: auto ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter {
+    width: 30% ;
+    margin: 0 1% ;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .perkStoreFilterField {
+    max-width: 70%;
+    margin-top: 12px;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu {
+    width: 30%;
+  }
+  #PerkStoreApp .product-list .toolbarProduct .filter .filter_menu .btn {
+    width: max-content;
+  }
+}
+/* Override uiPopup !important attributes */
+@media (max-width: 1024px) {
+  #PerkStoreApp .productDetailContainer .productDetailRightParent .productBuyForm {
+    margin: 0 auto;
+  }
+  #PerkStoreApp .productDetailContainer .v-divider--vertical {
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    max-height: 0;
+    border-width: thin 0 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1300px) {
+  #perkstoreOrderPortlet .big-number {
+    font-size: 2rem !important;
+  }
+  #perkstoreOrderPortlet .product-label {
+    font-size: .7rem !important;
+  }
+}
+@media (max-width: 599px) {
+  #perkstoreOrderPortlet .big-number {
+    margin-top: 0;
+  }
+}
+

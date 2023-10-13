@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T11:17:56Z
+Implementation-Title: eXo Add-on:: Perk Store - Application
+Implementation-URL: https://projects.exoplatform.org/addons-parent-pom/p
+ erk-store/perk-store-webapps
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.4.1-exo
+SCM-Revision: 8d6bfb82deb754b10eefdc1c02a757673826adbb
+SCM-URL: scm:git:git://github.com/meeds-io/perk-store.git/perk-store-web
+ apps
+Specification-Title: eXo Add-on:: Perk Store - Application
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

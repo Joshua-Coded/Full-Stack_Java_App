@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T12:19:24Z
+Implementation-Title: eXo Push notifications addon - Webapp
+Implementation-URL: https://projects.exoplatform.org/addons-parent-pom/e
+ xo-push-notifications/exo-push-notifications-webapp
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.4.1-exo
+SCM-Revision: 0c2c01c31effe200e9521c3e53eb4fd89cdaa99a
+SCM-URL: scm:git:git://github.com/exoplatform/push-notifications.git/exo
+ -push-notifications-webapp
+Specification-Title: eXo Push notifications addon - Webapp
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

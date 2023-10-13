@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  This file is part of the Meeds project (https://meeds.io/).
+  Copyright (C) 2022 Meeds Association
+  contact@meeds.io
+  This program is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 3 of the License, or (at your option) any later version.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+  You should have received a copy of the GNU Lesser General Public License
+  along with this program; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+-->
+<page-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_objects_1_8 http://www.exoplatform.org/xml/ns/gatein_objects_1_8" xmlns="http://www.exoplatform.org/xml/ns/gatein_objects_1_8">
+  <page>
+    <name>analytics-webconferencing</name>
+    <title>Webconferencing Analytics</title>
+    <access-permissions>*:/platform/analytics;*:/platform/administrators</access-permissions>
+    <edit-permission>manager:/platform/analytics</edit-permission>
+    <container
+            id="topAnalyticsPage"
+            template="system:/groovy/portal/webui/container/UIContainer.gtmpl"
+            cssClass="singlePageApplication border-box-sizing">
+      <access-permissions>Everyone</access-permissions>
+      <container id="breadcrumbAnalytics" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+        <access-permissions>Everyone</access-permissions>
+        <portlet-application>
+          <portlet>
+            <application-ref>analytics</application-ref>
+            <portlet-ref>AnalyticsDashboardBreadcrumb</portlet-ref>
+          </portlet>
+          <title>Breadcrumb Analytics</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+        </portlet-application>
+      </container>
+      <container cssClass="analyticsPageRow" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+        <access-permissions>Everyone</access-permissions>
+        <portlet-application>
+          <portlet>
+            <application-ref>analytics</application-ref>
+            <portlet-ref>AnalyticsPortlet</portlet-ref>
+            <preferences>
+              <preference>
+                <name>settings</name>
+                <value>{
+                  "offset": 0,
+                  "filters": [
+                    {
+                      "field": "subModule",
+                      "type": "EQUAL",
+                      "valueString": "web-conferencing",
+                      "range": null
+                    },
+                    {
+                      "field": "operation",
+                      "type": "IN_SET",
+                      "valueString": "callCreated,callStarted",
+                      "range": null
+                    }
+                  ],
+                  "limit": 0,
+                  "lang": null,
+                  "aggregations": [
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "interval": "day",
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    },
+                    {
+                      "field": "timestamp",
+                      "type": "COUNT",
+                      "offset": null,
+                      "interval": null,
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    }
+                  ],
+                  "yAxisAggregation": {
+                    "field": "timestamp",
+                    "type": "COUNT",
+                    "offset": null,
+                    "interval": null,
+                    "limit": 0,
+                    "useBounds": false,
+                    "minBound": 0,
+                    "maxBound": 0,
+                    "sortDirection": "desc"
+                  },
+                  "multipleChartsAggregation": null,
+                  "xAxisAggregations": [
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "interval": "day",
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    }
+                  ],
+                  "multipleChartsField": null,
+                  "multipleCharts": false,
+                  "chartType": "bar",
+                  "colors": null,
+                  "timeZone": null,
+                  "title": "analytics.totalCalls"
+                  }</value>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Total Calls</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+        </portlet-application>
+        <portlet-application>
+          <portlet>
+            <application-ref>analytics</application-ref>
+            <portlet-ref>AnalyticsPortlet</portlet-ref>
+            <preferences>
+              <preference>
+                <name>settings</name>
+                <value>
+                {
+                  "offset": 0,
+                  "filters": [
+                    {
+                      "field": "subModule",
+                      "type": "EQUAL",
+                      "valueString": "web-conferencing",
+                      "range": null
+                    },
+                    {
+                      "field": "operation",
+                      "type": "EQUAL",
+                      "valueString": "callRecorded",
+                      "range": null
+                    }
+                  ],
+                  "limit": 0,
+                  "lang": null,
+                  "aggregations": [
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "interval": "day",
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    },
+                    {
+                      "field": "timestamp",
+                      "type": "COUNT",
+                      "offset": null,
+                      "interval": null,
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    }
+                  ],
+                  "yAxisAggregation": {
+                    "field": "timestamp",
+                    "type": "COUNT",
+                    "offset": null,
+                    "interval": null,
+                    "limit": 0,
+                    "useBounds": false,
+                    "minBound": 0,
+                    "maxBound": 0,
+                    "sortDirection": "desc"
+                  },
+                  "multipleChartsAggregation": null,
+                  "xAxisAggregations": [
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "interval": "day",
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    }
+                  ],
+                  "multipleChartsField": null,
+                  "multipleCharts": false,
+                  "chartType": "bar",
+                  "colors": null,
+                  "timeZone": null,
+                  "title": "analytics.recordedCall"
+                }
+                </value>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Recorded Calls</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+        </portlet-application>
+      </container>
+      <container cssClass="analyticsPageRow" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+        <access-permissions>Everyone</access-permissions>
+        <portlet-application>
+          <portlet>
+            <application-ref>analytics</application-ref>
+            <portlet-ref>AnalyticsPortlet</portlet-ref>
+            <preferences>
+              <preference>
+                <name>settings</name>
+                <value>
+                {
+                  "offset": 0,
+                  "filters": [
+                    {
+                      "field": "subModule",
+                      "type": "EQUAL",
+                      "valueString": "web-conferencing",
+                      "range": null
+                    },
+                    {
+                      "field": "operation",
+                      "type": "IN_SET",
+                      "valueString": "callStarted,callCreated",
+                      "range": null
+                    }
+                  ],
+                  "limit": 0,
+                  "lang": null,
+                  "aggregations": [
+                    {
+                      "field": "callOwnerType.keyword",
+                      "type": "TERMS",
+                      "offset": null,
+                      "interval": null,
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    },
+                    {
+                      "field": "callOwnerType.keyword",
+                      "type": "COUNT",
+                      "offset": null,
+                      "interval": null,
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    }
+                  ],
+                  "yAxisAggregation": {
+                    "field": "callOwnerType.keyword",
+                    "type": "COUNT",
+                    "offset": null,
+                    "interval": null,
+                    "limit": 0,
+                    "useBounds": false,
+                    "minBound": 0,
+                    "maxBound": 0,
+                    "sortDirection": "desc"
+                  },
+                  "multipleChartsAggregation": null,
+                  "xAxisAggregations": [
+                    {
+                      "field": "callOwnerType.keyword",
+                      "type": "TERMS",
+                      "offset": null,
+                      "interval": null,
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    }
+                  ],
+                  "multipleChartsField": null,
+                  "multipleCharts": false,
+                  "chartType": "pie",
+                  "colors": null,
+                  "timeZone": null,
+                  "title": "analytics.startedCallRepartition"
+                }
+                </value>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Started call Repartition</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+        </portlet-application>
+        <portlet-application>
+          <portlet>
+            <application-ref>analytics</application-ref>
+            <portlet-ref>AnalyticsPortlet</portlet-ref>
+            <preferences>
+              <preference>
+                <name>settings</name>
+                <value>
+                {
+                  "offset": 0,
+                  "filters": [
+                    {
+                      "field": "subModule",
+                      "type": "EQUAL",
+                      "valueString": "web-conferencing",
+                      "range": null
+                    },
+                    {
+                      "field": "operation",
+                      "type": "IN_SET",
+                      "valueString": "callCreated,callStarted",
+                      "range": null
+                    }
+                  ],
+                  "limit": 0,
+                  "lang": null,
+                  "aggregations": [
+                    {
+                      "field": "callOwnerType.keyword",
+                      "type": "TERMS",
+                      "offset": null,
+                      "interval": null,
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    },
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "interval": "day",
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    },
+                    {
+                      "field": "timestamp",
+                      "type": "COUNT",
+                      "offset": null,
+                      "interval": null,
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    }
+                  ],
+                  "yAxisAggregation": {
+                    "field": "timestamp",
+                    "type": "COUNT",
+                    "offset": null,
+                    "interval": null,
+                    "limit": 0,
+                    "useBounds": false,
+                    "minBound": 0,
+                    "maxBound": 0,
+                    "sortDirection": "desc"
+                  },
+                  "multipleChartsAggregation": {
+                    "field": "callOwnerType.keyword",
+                    "type": "TERMS",
+                    "offset": null,
+                    "interval": null,
+                    "limit": 0,
+                    "useBounds": false,
+                    "minBound": 0,
+                    "maxBound": 0,
+                    "sortDirection": "desc"
+                  },
+                  "xAxisAggregations": [
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "interval": "day",
+                      "limit": 0,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    }
+                  ],
+                  "multipleChartsField": "callOwnerType.keyword",
+                  "multipleCharts": true,
+                  "chartType": "bar",
+                  "colors": [
+                    "#319AB3",
+                    "#F97575",
+                    "#98CC81",
+                    "#4273c8",
+                    "#cea6ac",
+                    "#bc99e7",
+                    "#9ee4f5",
+                    "#774ea9",
+                    "#ffa500",
+                    "#bed67e",
+                    "#0E100F",
+                    "#ffaacc"
+                  ],
+                  "timeZone": null,
+                  "title": "analytics.startedCallRepartitionByDay"
+                }
+                </value>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Started Call Repartition By Day</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+        </portlet-application>
+      </container>
+      <container cssClass="analyticsPageRow" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+        <access-permissions>Everyone</access-permissions>
+        <portlet-application>
+          <portlet>
+            <application-ref>analytics</application-ref>
+            <portlet-ref>AnalyticsPortlet</portlet-ref>
+            <preferences>
+              <preference>
+                <name>settings</name>
+                <value>
+                {
+                  "offset": 0,
+                  "multipleCharts": true,
+                  "chartType": "bar",
+                  "colors": null,
+                  "multipleChartsField": "status",
+                  "filters": [
+                    {
+                      "valueString": "web-conferencing",
+                      "field": "subModule",
+                      "type": "EQUAL",
+                      "range": null
+                    },
+                    {
+                      "valueString": "callRecorded",
+                      "field": "operation",
+                      "type": "EQUAL",
+                      "range": null
+                    }
+                  ],
+                  "limit": 0,
+                  "lang": null,
+                  "aggregations": [
+                    {
+                      "field": "status",
+                      "type": "TERMS",
+                      "offset": null,
+                      "limit": 0,
+                      "interval": null,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    },
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "limit": 0,
+                      "interval": "day",
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    },
+                    {
+                      "field": "timestamp",
+                      "type": "COUNT",
+                      "offset": null,
+                      "limit": 0,
+                      "interval": null,
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "desc"
+                    }
+                  ],
+                  "yAxisAggregation": {
+                    "field": "timestamp",
+                    "type": "COUNT",
+                    "offset": null,
+                    "limit": 0,
+                    "interval": null,
+                    "useBounds": false,
+                    "minBound": 0,
+                    "maxBound": 0,
+                    "sortDirection": "desc"
+                  },
+                  "multipleChartsAggregation": {
+                    "field": "status",
+                    "type": "TERMS",
+                    "offset": null,
+                    "limit": 0,
+                    "interval": null,
+                    "useBounds": false,
+                    "minBound": 0,
+                    "maxBound": 0,
+                    "sortDirection": "desc"
+                  },
+                  "xAxisAggregations": [
+                    {
+                      "field": "timestamp",
+                      "type": "DATE",
+                      "offset": null,
+                      "limit": 0,
+                      "interval": "day",
+                      "useBounds": false,
+                      "minBound": 0,
+                      "maxBound": 0,
+                      "sortDirection": "asc"
+                    }
+                  ],
+                  "timeZone": null,
+                  "title": "analytics.recordUploadStatus"
+                }
+                </value>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Started Call Repartition By Day</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+        </portlet-application>
+        <portlet-application>
+          <portlet>
+            <application-ref>analytics</application-ref>
+            <portlet-ref>AnalyticsRatePortlet</portlet-ref>
+            <preferences>
+              <preference>
+                <name>settings</name>
+                <value>
+                {
+                   "value":{
+                      "filters":[
+                         {
+                            "field":"subModule",
+                            "type":"EQUAL",
+                            "valueString":"web-conferencing",
+                            "range":null
+                         },
+                         {
+                            "field":"operation",
+                            "type":"EQUAL",
+                            "valueString":"callRecorded",
+                            "range":null
+                         },
+                         {
+                            "field":"status",
+                            "type":"EQUAL",
+                            "valueString":"0",
+                            "range":null
+                         }
+                      ],
+                      "yAxisAggregation":{
+                         "field":null,
+                         "type":"COUNT",
+                         "offset":null,
+                         "interval":null,
+                         "limit":0,
+                         "useBounds":false,
+                         "minBound":0,
+                         "maxBound":0,
+                         "sortDirection":"desc"
+                      }
+                   },
+                   "periodType":null,
+                   "lang":null,
+                   "threshold":{
+                      "filters":[
+                         {
+                            "field":"subModule",
+                            "type":"EQUAL",
+                            "valueString":"web-conferencing",
+                            "range":null
+                         },
+                         {
+                            "field":"operation",
+                            "type":"EQUAL",
+                            "valueString":"callRecorded",
+                            "range":null
+                         }
+                      ],
+                      "yAxisAggregation":{
+                         "field":null,
+                         "type":"COUNT",
+                         "offset":null,
+                         "interval":null,
+                         "limit":0,
+                         "useBounds":false,
+                         "minBound":0,
+                         "maxBound":0,
+                         "sortDirection":"desc"
+                      }
+                   },
+                   "currentAnalyticsPeriod":null,
+                   "previousAnalyticsPeriod":null,
+                   "percentageLimit":null,
+                   "currentPeriodLimit":0,
+                   "previousPeriodLimit":0,
+                   "analyticsPeriodType":null,
+                   "analyticsPeriodInterval":null,
+                   "customPeriod":null,
+                   "periodDate":null,
+                   "chartType":"percentageBar",
+                   "colors":[
+                      "#98CC81",
+                      "#f97575",
+                      "#98cc81",
+                      "#4273c8",
+                      "#cea6ac",
+                      "#bc99e7",
+                      "#9ee4f5",
+                      "#774ea9",
+                      "#ffa500",
+                      "#bed67e",
+                      "#0E100F",
+                      "#ffaacc"
+                   ],
+                   "timeZone":null,
+                   "title":"analytics.recordUploadSuccessRate",
+                   "xAxisAggregations":[
+
+                   ],
+                   "multipleChartsField":null
+                }
+                </value>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Record Upload Success Rate</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+        </portlet-application>
+      </container>
+    </container>
+  </page>
+</page-set>

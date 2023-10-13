@@ -1,0 +1,350 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.UIWindow .uiOrganizationPortlet {
+  overflow: visible;
+}
+.uiOrganizationPortlet {
+  overflow: auto;
+}
+.uiOrganizationPortlet .organizationPortletContainer {
+  padding: 25px 10px;
+  width: auto;
+}
+/*---------- UIUserManagement ----------*/
+.UIUserManagement .tab-content {
+  border-bottom: 0;
+  padding: 25px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.UIUserManagement .tab-content + .uiAction {
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid var(--allPagesBorderColor, #e1e8ee);
+  background: var(--allPagesBaseBackground, #ffffff);
+  padding: 15px 0;
+}
+.UIUserManagement .tab-content .table {
+  margin-bottom: 0;
+}
+.UIUserManagement .tab-content .form-horizontal {
+  padding: 0;
+}
+.UIUserManagement .uiFormTabPane {
+  padding: 0;
+}
+.UIUserManagement .nav-tabs {
+  margin: 0px;
+  background-color: var(--allPagesPrimaryBackgroundHover, #e6e6e6);
+  border: 1px solid var(--allPagesBorderColor, #e1e8ee);
+  padding: 5px 5px 0px 5px;
+  -webkit-border-radius: 3px 3px 0px 0px;
+  -moz-border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
+}
+/*---------- UISearchForm ----------*/
+.uiSearch {
+  margin: 0 0 16px 0;
+}
+.uiSearch .quickSet input[type="text"] {
+  margin: 0 8px 0 5px;
+  width: 200px;
+}
+.uiSearch .quickSet .uiSelectbox {
+  width: 145px;
+  margin: 0 8px 0 5px;
+  vertical-align: middle;
+}
+.uiSearch .quickSet .uiSelectbox .selectbox {
+  width: 145px;
+}
+/*---------- uiToolbar ----------*/
+.uiToolbar {
+  margin: 0 0 16px 0;
+}
+.uiToolbar ul li + li {
+  margin: 0 0 0 10px;
+}
+.uiToolbar ul li a {
+  color: var(--allPagesBaseTextColor, #333333);
+  padding: 2px 10px;
+}
+.uiToolbar ul li a [class^="uiIcon"] {
+  margin-right: 5px;
+}
+/*---------- UIGroupManagement ----------*/
+.uiOrganizationPortlet .uiBox {
+  -webkit-box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.18);
+}
+.uiOrganizationPortlet .uiBox .title {
+  -webkit-box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.2);
+}
+.uiOrganizationPortlet .uiGroupManagement {
+  width: 100%;
+  margin: auto;
+}
+.uiOrganizationPortlet .uiGroupManagement .breadcrumb {
+  padding: 10px;
+}
+.uiOrganizationPortlet .uiGroupManagement .breadcrumb .uiIconTree {
+  background-position: -180px -40px;
+}
+.uiOrganizationPortlet .uiFormWithTitle .form-horizontal {
+  width: 630px;
+  margin: 0 auto;
+}
+.uiOrganizationPortlet .groupNavigation {
+  width: 240px;
+}
+.uiOrganizationPortlet .groupNavigation .title {
+  line-height: 25px;
+  padding: 5px 10px;
+}
+.uiOrganizationPortlet .groupNavigation .title .tooltip {
+  font-weight: normal;
+}
+.uiOrganizationPortlet .groupNavigation + .groupDetail {
+  margin-left: 260px;
+}
+.uiOrganizationPortlet .groupNavigation + .groupDetail .form-horizontal {
+  overflow: hidden;
+}
+.uiOrganizationPortlet .groupNavigation + .groupDetail .innerGroupDetail {
+  display: inline-block;
+  width: 100%;
+}
+.uiOrganizationPortlet .groupNavigation .uiTrees {
+  background: var(--allPagesBaseBackground, #ffffff);
+  border: none;
+  margin: 4px 0 0 0;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+.uiOrganizationPortlet .groupNavigation .uiTrees .treeContainer > .nodeGroup .node {
+  margin: 3px 0;
+  padding: 2px 10px;
+}
+.uiOrganizationPortlet .groupNavigation .uiTrees .treeContainer > .nodeGroup .node:hover {
+  background: var(--allPagesPrimaryBackgroundLight, #f8f8f8);
+}
+.uiOrganizationPortlet .groupNavigation .uiTrees .homeNode .actionIcon {
+  margin: 5px 0 0 4px;
+}
+.UIGroupEditMembershipForm .form-horizontal .control-label {
+  width: 95px;
+}
+.UIGroupEditMembershipForm .form-horizontal .controls {
+  margin-left: 105px;
+}
+/*---------- UIMemberShipManagement ----------*/
+.uiOrganizationPortlet .groupNavigation .title {
+  line-height: 17px;
+  padding: 8px;
+}
+@media (max-width: 1204px) {
+  .uiOrganizationPortlet .organizationPortletContainer {
+    min-width: auto!important;
+  }
+  .uiOrganizationPortlet .groupNavigation {
+    width: 100%;
+    float: none;
+  }
+  .uiOrganizationPortlet .groupNavigation + .groupDetail {
+    margin-left: 0;
+  }
+  .uiOrganizationPortlet .uiFormWithTitle .form-horizontal {
+    width: auto;
+  }
+  .uiOrganizationPortlet .groupNavigation + .groupDetail .form-horizontal {
+    overflow: visible;
+  }
+}
+@media (max-width: 767px) {
+  .UIUserManagement #UIListUsersGird {
+    overflow: auto;
+  }
+  .UIListMembershipType {
+    overflow: auto;
+  }
+  .groupDetail #UIGridUser {
+    overflow: auto;
+  }
+  .uiToolbar .managementIconContainer .pull-left {
+    display: block;
+    float: none;
+    margin: 5px ;
+  }
+}
+

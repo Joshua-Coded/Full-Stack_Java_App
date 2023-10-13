@@ -1,0 +1,104 @@
+.indexing-service-management {
+  padding: 10px;
+}
+.indexing-service-management .page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+.indexing-service-management .h1,
+.indexing-service-management h1 {
+  font-size: 36px;
+}
+.indexing-service-management .connector-number-stat {
+  background-color: #3F7577;
+  color: #fff;
+  padding: 5px 20px 0 20px;
+  border-radius: 4px;
+}
+.indexing-service-management .operation-number-stat {
+  background-color: #67773F;
+  color: #fff;
+  padding: 5px 20px 0 20px;
+  border-radius: 4px;
+}
+.indexing-service-management .error-number-stat {
+  background-color: #D36B19;
+  color: #fff;
+  padding: 5px 20px 0 20px;
+  border-radius: 4px;
+}
+.indexing-service-management .big-number-data {
+  float: left;
+  margin-bottom: 0;
+}
+.indexing-service-management .big-number-stat .col-left {
+  float: left;
+  margin-right: 10px;
+  line-height: 1.8;
+}
+.indexing-service-management .big-number-stat .col-right {
+  float: right;
+  position: relative;
+  top: 1.5em;
+}
+.indexing-service-management .big-number-stat span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.indexing-service-management .big-number {
+  font-size: 3.5em;
+}
+.indexing-service-management .big-number-stat em {
+  display: block;
+  font-style: italic;
+}
+.indexing-service-management .big-number-stat p {
+  margin: 0px;
+  font-size: 20px;
+}
+.indexing-service-management .panel {
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.indexing-service-management .panel-body {
+  padding: 15px;
+  border-color: grey;
+  border-bottom: 1px solid #ddd;
+}
+.indexing-service-management .panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.indexing-service-management .panel > .table,
+.indexing-service-management .panel > .table-responsive > .table,
+.indexing-service-management .panel > .panel-collapse > .table {
+  margin-bottom: 0;
+}
+.indexing-service-management .panel-default {
+  border-color: #ddd;
+}
+.indexing-service-management .panel-default > .panel-heading {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+.indexing-service-management .panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ddd;
+}
+.indexing-service-management .panel-default > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+.indexing-service-management .panel-default > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ddd;
+}
+/*# sourceMappingURL=indexingManagement.css.map */

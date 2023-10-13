@@ -1,0 +1,32 @@
+<%
+   import org.gatein.security.oauth.spi.OAuthProviderType;
+   import org.gatein.security.oauth.spi.OAuthProviderTypeRegistry;
+   import org.exoplatform.portal.webui.util.Util;
+   import org.exoplatform.portal.application.PortalRequestContext;
+   PortalRequestContext prc = Util.getPortalRequestContext();
+   String contextPath = prc.getRequestContextPath();
+   String requestURI = prc.getRequestURI();
+   OAuthProviderTypeRegistry registry = uicomponent.getApplicationComponent(OAuthProviderTypeRegistry.class);
+%>
+   
+<div class="UIFormWithTitle">
+    <div class="TitleBar"><%=_ctx.appRes("UIRegisterForm.label.RegisterWith")%></div>	
+        <div class="HorizontalLayout">
+            <div class="FormContainer">
+                <div class="SocialRegisterButtons">
+<%
+   for (OAuthProviderType oauthProvType : registry.getEnabledOAuthProviders()) {
+%>
+                    <a href="<%= oauthProvType.getInitOAuthURL(contextPath, requestURI); %>" class="register-button register-<%= oauthProvType.getKey(); %>">
+                        <div><%= oauthProvType.getFriendlyName(); %></div>
+                    </a>
+<% 
+   }
+%>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   

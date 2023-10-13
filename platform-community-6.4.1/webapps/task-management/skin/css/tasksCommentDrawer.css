@@ -1,0 +1,420 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.taskCommentsAndChanges .taskComments .addCommentBtn .uiIconTaskAddComment {
+  position: relative;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.taskCommentsAndChanges .taskComments .addCommentBtn .uiIconTaskAddComment:before {
+  content: '\e620';
+  font-family: "PLF-FONT-ICONS";
+  font-size: 16px;
+  color: var(--allPagesPrimaryColor, #476a9c);
+}
+.taskCommentsAndChanges .taskComments .addCommentBtn .uiIconTaskAddComment:hover:before {
+  color: var(--allPagesPrimaryColor, #476a9c);
+}
+.taskCommentsAndChanges .taskComments .lastCommentLabel {
+  font-size: 16px;
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+}
+.taskCommentsAndChanges .taskComments .ViewAllCommentLabel {
+  font-size: 16px;
+  color: var(--allPagesPrimaryColor, #476a9c);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.taskCommentsAndChanges .taskComments .comment {
+  position: relative;
+}
+.taskCommentsAndChanges .taskComments .commentItem {
+  width: 100%;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentHeader {
+  width: 100%;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentHeader .removeCommentBtn {
+  margin-left: auto ; /** orientation=lt */ ;
+  margin-right: auto ; /** orientation=rt */ ;
+  margin-top: -4px;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentHeader .removeCommentBtn .deleteComment {
+  right: 0;
+  top: 0;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentHeader .externalTagClass {
+  color: var(--allPagesBaseColorLight, #707070);
+  font-weight: normal;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentBody {
+  display: inline-block;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentBody .taskContentComment {
+  background: var(--allPagesCommentBackgroundColor, #f2f5f8);
+  padding: 10px;
+  border-radius: 10px;
+  word-break: break-word;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentBody .taskContentComment p {
+  margin-bottom: 0!important;
+}
+.taskCommentsAndChanges .taskComments .commentItem .commentBody .taskContentComment .externalTagClass {
+  color: var(--allPagesBaseColorLight, #707070);
+  font-weight: normal;
+}
+.taskCommentsAndChanges .taskComments .TaskSubComments {
+  margin-left: -20px !important; /** orientation=lt */ ;
+  margin-right: -20px !important; /** orientation=rt */ ;
+}
+.taskCommentsAndChanges .taskComments .TaskSubComments .TaskSubCommentItem {
+  padding-left: 60px ; /** orientation=lt */ ;
+  padding-right: 60px ; /** orientation=rt */ ;
+}
+.taskCommentsAndChanges .taskComments .taskCommentEmpty .uiIconComment {
+  display: block;
+  margin-bottom: 10px;
+}
+.taskCommentsAndChanges .taskComments .taskCommentEmpty .uiIconComment:before {
+  font-family: "PLF-FONT-ICONS" !important;
+  content: '\e9c1';
+  font-style: normal;
+  font-size: 34px;
+  color: var(--allPagesGreyColor, #e1e8ee);
+}
+.taskCommentsAndChanges .taskComments .taskCommentEmpty .noCommentLabel {
+  display: block;
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+  font-size: 16px;
+}
+.taskCommentsAndChanges .taskComments .taskCommentEmpty .ViewAllCommentText {
+  display: block;
+  text-decoration: underline;
+  color: var(--allPagesPrimaryColor, #476a9c);
+  font-size: 14px;
+  cursor: pointer;
+}
+.taskCommentsAndChanges .commentBtn {
+  background-color: var(--allPagesPrimaryColor, #476a9c) !important;
+  letter-spacing: 0!important;
+  font-size: 14px!important;
+  text-transform: capitalize;
+}
+.taskCommentDrawer .addCommentBtn .uiIconTaskAddComment {
+  position: relative;
+  cursor: pointer;
+  top: 0px;
+}
+.taskCommentDrawer .addCommentBtn .uiIconTaskAddComment:before {
+  content: '\e620';
+  font-family: "PLF-FONT-ICONS";
+  font-size: 18px;
+  color: var(--allPagesPrimaryColor, #476a9c);
+}
+.taskCommentDrawer .addCommentBtn .uiIconTaskAddComment:hover:before {
+  color: var(--allPagesPrimaryColor, #476a9c);
+}
+.taskCommentDrawer .drawerTitle > * {
+  flex: 0 0 auto!important;
+}
+.taskCommentDrawer .drawerHeader .v-list-item__content {
+  padding: 0 !important;
+}
+.taskCommentDrawer .uiArrowBAckIcon {
+  cursor: pointer;
+  color: var(--allPagesBtnDisableColor, #c6c6c6) !important;
+  margin-left: -4px ; /** orientation=lt */ ;
+  margin-right: -4px ; /** orientation=rt */ ;
+}
+.taskCommentDrawer .uiArrowBAckIcon:before {
+  content: "\e913";
+  font-family: "PLF-FONT-ICONS" !important;
+  font-style: normal;
+  font-size: 22px;
+}
+.taskCommentDrawer .drawerContent {
+  padding: 8px;
+}
+.taskCommentDrawer .drawerContent .dateTime.caption {
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+  text-align: start;
+  padding-left: 10px ; /** orientation=lt */ ;
+  padding-right: 10px ; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem {
+  width: 100%;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentHeader {
+  width: 100%;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentHeader .removeCommentBtn {
+  margin-left: auto ; /** orientation=lt */ ;
+  margin-right: auto ; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentHeader .removeCommentBtn .deleteComment {
+  right: 0;
+  top: 0;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentHeader .removeCommentBtn .deleteComment .uiIconTrashMini {
+  font-size: 12px;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentHeader .externalTagClass {
+  color: var(--allPagesBaseColorLight, #707070);
+  font-weight: normal;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentBody {
+  display: inline-block;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentBody .taskContentComment {
+  background: var(--allPagesCommentBackgroundColor, #f2f5f8);
+  padding: 10px;
+  border-radius: 10px;
+  word-break: break-word;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentBody .taskContentComment p {
+  margin-bottom: 0!important;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentItem .commentBody .taskContentComment .externalTagClass {
+  color: var(--allPagesBaseColorLight, #707070);
+  font-weight: normal;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .TaskSubComments {
+  margin-left: -20px !important; /** orientation=lt */ ;
+  margin-right: -20px !important; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .TaskSubComments .TaskSubCommentItem {
+  padding-left: 60px ; /** orientation=lt */ ;
+  padding-right: 60px ; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .commentEditorContainer {
+  padding-left: 40px ; /** orientation=lt */ ;
+  padding-right: 40px ; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .TaskCommentContent .newCommentEditor {
+  padding-left: 0 ; /** orientation=lt */ ;
+  padding-right: 0 ; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .editorContent .inactiveEditor {
+  display: none !important;
+}
+.taskCommentDrawer .drawerContent .editorContent .comment {
+  position: relative;
+}
+.taskCommentDrawer .drawerContent .editorContent .comment .editorContainer {
+  width: 100%;
+}
+.taskCommentDrawer .drawerContent .editorContent .tooManyChars {
+  color: #bc4343!important;
+}
+.taskCommentDrawer .drawerContent .editorContent .tooManyChars .uiIconMessageLength {
+  color: #bc4343!important;
+}
+.taskCommentDrawer .drawerContent .editorContent .activityCharsCount {
+  position: absolute;
+  bottom: 46px;
+  font-size: 12px;
+  right: 3px ; /** orientation=lt */ ;
+  left: 3px ; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .editorContent .activityCharsCount .uiIconMessageLength {
+  font-size: 14px;
+  color: #2eb58c;
+}
+.taskCommentDrawer .drawerContent .editorContent .activityCharsCount .uiIconMessageLength:before {
+  content: "\e910";
+}
+.taskCommentDrawer .drawerContent .editorContent .cke_bottom.cke_reset_all {
+  background-color: transparent;
+  height: 30px!important;
+}
+.taskCommentDrawer .drawerContent .editorContent .cke_toolbar {
+  border-right: none !important; /** orientation=lt */ ;
+  border-left: none !important; /** orientation=rt */ ;
+}
+.taskCommentDrawer .drawerContent .editorContent .cke_bottom .cke_button_icon {
+  filter: opacity(0.4);
+}
+.taskCommentDrawer .drawerContent .editorContent .tooManyChars {
+  color: #bc4343!important;
+}
+.taskCommentDrawer .drawerContent .editorContent .tooManyChars .uiIconMessageLength {
+  color: #bc4343!important;
+}
+.taskCommentDrawer .drawerContent .changeUserAvatar .pull-left.ml-2.d-flex.flex-column {
+  align-self: flex-start;
+  margin-top: -5px;
+}
+.taskCommentDrawer .drawerContent .changeUserAvatar .pull-left.ml-2.d-flex.flex-column p {
+  font-weight: bold;
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+}
+.taskCommentDrawer .drawerContent .changesText {
+  max-width: 270px;
+}
+.taskContentComment blockquote {
+  margin: 10px 0 7px 20px ; /** orientation=lt */ ;
+  margin: 10px 20px 7px 0 ; /** orientation=rt */ ;
+  background: var(--allPagesBaseBackground, #ffffff);
+  border-left: 5px solid var(--allPagesPrimaryColor, #476a9c) !important; /** orientation=lt */ ;
+  border-right: 5px solid var(--allPagesPrimaryColor, #476a9c) !important; /** orientation=rt */ ;
+  padding: 10px;
+}
+.taskContentComment blockquote p,
+.taskContentComment blockquote ul li,
+.taskContentComment blockquote ol li {
+  margin-bottom: 0;
+  font-size: 14px !important;
+  font-weight: 300;
+  line-height: 1.25;
+  font-style: italic !important;
+  color: var(--allPagesBaseTextColor, #333333) !important;
+}
+

@@ -1,0 +1,120 @@
+=========================
+Changelog Platform 6.4.1
+=========================
+
+
+Changelogs of previous releases are available at https://community.exoplatform.com/portal/intranet/wiki/group/spaces/platform_4/Release_Notes.
+
+
+eXo ECMS 6.4.1
+*************************
+Fixes :
+- fix:Add missing German transaltion in Ckeditor - EXO-63816 (#2078)
+- fix : Save new version by only office generate no contenet activity - EXO-63508 
+- fix: display missing change location link for the first uploded item - EXO-63466
+- fix: Cannot use existing uploads when folde contains a document with name that includes the "%" character - EXO-62908
+
+eXo Social 6.4.1
+*************************
+Fixes :
+ -fix : Technical label displayed instead of label on people advanced filter button - Meeds-io/meeds#890 - EXO-63060
+- fix: New multi valued profile attribute not saved - Meeds-io/meeds#889 - EXO-63578
+- fix: third element in people card menu is invisible - EXO-62230 - Meeds-io/meeds#891
+- fix: Refresh cache is needed after renaming profile attribute - Meeds-io/meeds#867 - EXO-62875
+- fix: Replace the error alert with a global notification alert when creating a space with an existing name - Meeds-io/meeds#859 - EXO-62856
+
+eXo Documents 1.1.1
+*************************
+Fixes :
+- fix : Blank content page displayed when open document app - EXO-63718
+- fix: Implement a Natural Comparator to sort the tree view items - EXO-63141
+- fix: implement natural comparatore to sort tree view items - EXO-63141
+- fix: Sort tree-view items on move to drawer - EXO-63141
+- fix: navigate between folders using history button of browser - EXO-63527
+- fix: Fix visibility rules when share folder with a user personal drive - EXO-63701
+- fix: Notification redirection issue after sharing documment with personal drive -EXO-63618
+- fix: Can't disable document edition on which there are all rights - EXO-63201 (#861)
+- fix: Add the ability to upload by drag and drop when recent view is empty - EXO-62902
+
+eXo agenda 1.3.1
+*************************
+Fixes :
+- fix: some properties lost when updating a recurrent event - EXO-63856
+- fix: wrong recurrence day selected when updating an event by D&D - EXO-63851
+
+eXo Chat 3.4.1
+*************************
+Fixes :
+- fix: Fix mobile view of the  unread message on the chat application drawer - EXO-62457
+
+eXo News 2.4.1
+*************************
+Features :
+- Feat: display views count on news list template -EXO-63953
+
+Fixes :
+- fix: favorite button is not colored for news posted in other spaces - EXO-62273
+
+eXo task 3.4.1
+*************************
+Fixes :
+- fix: Process space is displayed twice in the process task project participants - EXO-62456 -  Meeds-io/meeds#924
+- fix: fix style issues with task drawer - EXO-63729 - Meeds-io/meeds#892
+- fix: update duplicated skin module name - EXO-63729 - Meeds-io/meeds#892
+- fix: task drawer does not open for task search results - EXO-62888 - Meeds-io/meeds#892
+
+eXo gatein-portal 6.4.1
+*************************
+Fixes :
+- fix: correctly remove the remember me token if it does not manage to authenticate - EXO-63622 - Meeds-io/meeds#882
+
+eXo analytics 1.3.1
+*************************
+Fixes :
+- fix : Deleted space message displayed instead of space name in content analytics page - Meeds-io/meeds#903 - EXO-63797
+
+eXo onlyoffice 2.4.1
+*************************
+
+eXo web-conferencing 2.4.1
+*************************  
+ 
+eXo jitsi 1.3.1
+*************************
+
+eXo platform-ui 6.4.1
+*************************
+
+eXo perk-store 2.4.1
+*************************
+
+eXo Kudos 2.4.1
+*************************
+
+eXo gamification 2.4.1
+*************************
+
+eXo commons 6.4.1
+*************************
+ 
+eXo kernel 6.4.1
+*************************
+
+eXo push-notifications 2.4.1
+*************************
+
+eXo jcr 6.4.1
+*************************
+
+eXo notes 1.2.1
+*************************
+
+eXo app-center 2.4.1
+*************************
+
+eXo Wallet 2.4.1
+*************************
+
+eXo jitsi-call 1.2.4
+*************************
+

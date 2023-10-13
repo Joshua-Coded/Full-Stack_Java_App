@@ -1,0 +1,262 @@
+<!--
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+-->
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_resources_1_4 http://www.exoplatform.org/xml/ns/gatein_resources_1_4"
+  xmlns="http://www.exoplatform.org/xml/ns/gatein_resources_1_4">
+
+  <portal-skin>
+    <skin-name>Enterprise</skin-name>
+    <skin-module>appCenter</skin-module>
+    <css-path>/skin/css/app-center.css</css-path>
+    <css-priority>130</css-priority>
+  </portal-skin>
+
+  <portlet>
+    <name>AppCenterAdminSetupPortlet</name>
+    <module>
+      <depends>
+        <module>vue</module>
+      </depends>
+      <depends>
+        <module>vuetify</module>
+      </depends>
+      <depends>
+        <module>eXoVueI18n</module>
+      </depends>
+      <depends>
+        <module>commonVueComponents</module>
+      </depends>
+      <depends>
+        <module>adminSetupPortletBundle</module>
+      </depends>
+    </module>
+  </portlet>
+
+  <portlet>
+    <name>AppCenterUserSetupPortlet</name>
+    <module>
+      <depends>
+        <module>vue</module>
+      </depends>
+      <depends>
+        <module>vuetify</module>
+      </depends>
+      <depends>
+        <module>eXoVueI18n</module>
+      </depends>
+      <depends>
+        <module>commonVueComponents</module>
+      </depends>
+      <depends>
+        <module>userSetupPortletBundle</module>
+      </depends>
+    </module>
+  </portlet>
+
+  <portlet>
+    <name>AppCenterMyApplicationsPortlet</name>
+    <module>
+      <depends>
+        <module>vue</module>
+      </depends>
+      <depends>
+        <module>vuetify</module>
+      </depends>
+      <depends>
+        <module>eXoVueI18n</module>
+      </depends>
+      <depends>
+        <module>commonVueComponents</module>
+      </depends>
+      <depends>
+        <module>myApplicationsBundle</module>
+      </depends>
+    </module>
+  </portlet>
+
+  <portlet>
+    <name>AppCenterAppLauncherPortlet</name>
+    <module>
+      <depends>
+        <module>vue</module>
+      </depends>
+      <depends>
+        <module>vuetify</module>
+      </depends>
+      <depends>
+        <module>eXoVueI18n</module>
+      </depends>
+      <depends>
+        <module>commonVueComponents</module>
+      </depends>
+      <depends>
+        <module>appLauncherBundle</module>
+      </depends>
+    </module>
+  </portlet>
+
+  <module>
+    <name>sortablejs</name>
+    <script>
+      <adapter>
+        (function() {
+        <include>/javascript/Sortable.min.js</include>
+        })();
+      </adapter>
+    </script>
+  </module>
+
+  <module>
+    <name>vueDraggable</name>
+    <script>
+      <adapter>
+        (function() {
+        <include>/javascript/vueDraggable.min.js</include>
+        })();
+      </adapter>
+    </script>
+    <depends>
+      <module>sortablejs</module>
+    </depends>
+  </module>
+
+  <module>
+    <name>adminSetupPortletBundle</name>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/vue/adminSetup.bundle.js</path>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+    <depends>
+      <module>vuetify</module>
+    </depends>
+    <depends>
+      <module>eXoVueI18n</module>
+    </depends>
+    <depends>
+      <module>commonVueComponents</module>
+    </depends>
+    <depends>
+      <module>jquery</module>
+    </depends>
+    <depends>
+      <module>suggester</module>
+    </depends>
+  </module>
+
+  <module>
+    <name>userSetupPortletBundle</name>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/vue/userSetup.bundle.js</path>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+    <depends>
+      <module>vuetify</module>
+    </depends>
+    <depends>
+      <module>eXoVueI18n</module>
+    </depends>
+    <depends>
+      <module>commonVueComponents</module>
+    </depends>
+    <depends>
+      <module>jquery</module>
+    </depends>
+  </module>
+
+  <module>
+    <name>myApplicationsBundle</name>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/vue/myApplications.bundle.js</path>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+    <depends>
+      <module>vuetify</module>
+    </depends>
+    <depends>
+      <module>eXoVueI18n</module>
+    </depends>
+    <depends>
+      <module>commonVueComponents</module>
+    </depends>
+    <depends>
+      <module>jquery</module>
+    </depends>
+  </module>
+
+  <module>
+    <name>appLauncherBundle</name>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/vue/appLauncher.bundle.js</path>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+    <depends>
+      <module>vuetify</module>
+    </depends>
+    <depends>
+      <module>sortablejs</module>
+    </depends>
+    <depends>
+      <module>vueDraggable</module>
+    </depends>
+    <depends>
+      <module>eXoVueI18n</module>
+    </depends>
+    <depends>
+      <module>commonVueComponents</module>
+    </depends>
+    <depends>
+      <module>jquery</module>
+    </depends>
+  </module>
+
+  <module>
+    <name>AppCenterSearch</name>
+    <script>
+      <minify>false</minify>
+      <path>/javascript/vue/applicationSearch.bundle.js</path>
+    </script>
+    <depends>
+      <module>vue</module>
+    </depends>
+    <depends>
+      <module>vuetify</module>
+    </depends>
+    <depends>
+      <module>eXoVueI18n</module>
+    </depends>
+    <depends>
+      <module>commonVueComponents</module>
+    </depends>
+    <depends>
+      <module>jquery</module>
+    </depends>
+  </module>
+
+</gatein-resources>

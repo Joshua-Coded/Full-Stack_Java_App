@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T10:57:15Z
+Implementation-Title: eXo PLF:: Commons - Commons Extension Webapp
+Implementation-URL: https://projects.exoplatform.org/commons/commons-ext
+ ension-webapp
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 6.4.1-exo
+SCM-Revision: acf70fd4a72a44728f4450a236cc51be2b7569e7
+SCM-URL: scm:git:git://github.com/meeds-io/commons.git/commons-extension
+ -webapp
+Specification-Title: eXo PLF:: Commons - Commons Extension Webapp
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

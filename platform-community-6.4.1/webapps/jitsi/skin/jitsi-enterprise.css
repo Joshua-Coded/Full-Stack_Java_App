@@ -1,0 +1,9 @@
+/* Styles for Jitsi in Enterprise Skin */
+
+.uiIconSocJitsi:before {
+	content: "\e829";
+}
+
+.spaceCall i.uiIconJitsiCall {
+	font-size: 14px;
+}

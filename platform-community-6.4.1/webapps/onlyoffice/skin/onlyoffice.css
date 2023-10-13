@@ -1,0 +1,427 @@
+.onlyofficeEditorBody {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.onlyofficeEditorBody #RightBody, .onlyofficeEditorBody .onlyofficeContainer>.editor {
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+.onlyofficeEditorBody #editor-drawer-loader {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  z-index: 100;
+}
+.onlyofficeEditorBody #editor-drawer {
+  background-color: #FFF;
+}
+
+.onlyofficeEditorBody #editor-drawer div {
+  vertical-align: baseline;
+}
+
+.onlyofficeEditorBody #editor-drawer .eip-editable,
+.onlyofficeEditorBody #editor-drawer div.form-group {
+  height: 25px;
+  margin: 0;
+}
+
+.onlyofficeEditorBody #editor-drawer[rel=tooltip] {
+  height: 0 !important;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.onlyofficeEditorBody #save-btn {
+  position: relative;
+  top: 1px;
+  padding: 6px 25px;
+}
+
+.onlyofficeEditorBody #editor-drawer .comment input,
+.onlyofficeEditorBody  #editor-drawer .document-title {
+  margin: 0;
+  height: 25px !important;
+}
+
+.onlyofficeEditorBody #editor-drawer .comment input {
+  margin-top: -4px;
+}
+
+
+.onlyofficeEditorBody  #editor-drawer .document-title {
+  max-width: 320px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: initial;
+  position: initial;
+  cursor: pointer;
+}
+
+.onlyofficeEditorBody #editor-drawer .comment {
+  padding-left: 0px;
+}
+
+.onlyofficeEditorBody #editor-drawer .editors-comment-versions {
+  font-style: italic;
+  max-width: 370px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 12px;
+  text-align: initial;
+  margin-left: 10px;
+  position: relative;
+  padding-right: 6px;
+  color: #999999;
+}
+
+.onlyofficeEditorBody #editor-drawer .editors-comment-versions:not(:empty):after {
+    position: absolute;
+    top: 0;
+    right: 1px;
+}
+
+.onlyofficeEditorBody #editor-drawer #load-more-btn {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  padding: 6px;
+  height: 40px;
+  color: black;
+  font-size: 15px;
+}
+
+.onlyofficeEditorBody #editor-drawer #versions {
+   margin-top: 50px;
+}
+
+.onlyofficeEditorBody #editor-drawer #save-btn {
+  display: flex;
+  cursor: pointer;
+  float: right;
+}
+
+.onlyofficeEditorBody #editor-drawer .close-btn {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  top: 7px;
+}
+
+.onlyofficeEditorBody #editor-drawer .document-path {
+  padding-right: 5px;
+  margin-top: -5px;
+  color: #999;
+  font-size: 12px;
+}
+
+div#open-drawer-btn {
+  width: 20px;
+  height: 40px;
+  position: fixed;
+  border-radius: 50%;
+  display: block;
+  right: 63px;
+  z-index: 1057;
+  bottom: 86px;
+}
+
+div#open-drawer-btn:hover {
+  background-color: #476a9c;
+  background-position: 0px -65px;
+  cursor: pointer;
+}
+
+a.icon-place {
+  padding: 4px;
+}
+
+.onlyofficeEditorBody #editor-drawer .header .closebtn {
+  cursor: pointer;
+  font-size: 35px!important;
+  line-height: 22px!important;
+  font-weight: 500;
+}
+
+.onlyofficeEditorBody #editor-drawer .contentDisplay {
+ display: inline-flex;
+}
+
+.onlyofficeEditorBody #editor-drawer i.uiIconArrowRight {
+  color: #999;
+}
+
+.onlyofficeEditorBody #editor-drawer .uiIconPencilEdit:before {
+  content: "\e9e4";
+  margin-left: 5px;
+  color: black;
+  font-size: 13px;
+}
+
+.onlyofficeEditorBody #open-drawer-btn .uiIconSaveDrawer:before {
+  content: "\e79e";
+  margin: 0px -5px;
+  font-size: 23px;
+}
+
+.onlyofficeEditorBody #editor-drawer .header {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.onlyofficeEditorBody #editor-drawer .versionSummaryField {
+  height: 100px!important;
+  width: 100%!important;
+  margin-top: 10px!important;
+  resize: none;
+}
+
+.onlyofficeEditorBody #editor-drawer .avatarCircle {
+   width: 25px;
+   height: 25px;
+   margin-left: 6px;
+}
+
+.onlyofficeEditorBody #editor-drawer .avatarCircle img {
+  margin: -14px -11px 0px!important;
+  max-height: 35px!important;
+  max-width: 35px!important;
+}
+
+.onlyofficeEditorBody #editor-drawer .userAvatar{
+  margin: -5px -6px 14px!important;
+  width: 35px!important;
+  height: 35px;
+}
+
+.onlyofficeEditorBody #editor-drawer .seeMoreLink{
+  display: none;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.onlyofficeEditorBody #editor-drawer .uiIconOpenLinkVersions:before {
+   content: "\e966";
+   color: #DEE4F2;
+   font-size: 24px;
+   line-height: 24px;
+}
+
+.onlyofficeEditorBody #editor-drawer .uiIconNoVersions:before {
+   content: "\e79f";
+   color: #DEE4F2;
+   font-size: 60px;
+   line-height: 24px;
+}
+
+.onlyofficeEditorBody #editor-drawer .no-versions-icon {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.onlyofficeEditorBody #editor-drawer .no-versions {
+  padding: 10px;
+  color: #999;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.onlyofficeEditorBody #editor-drawer .spaceAvatar {
+  width: 33px;
+  margin-right: 10px;
+}
+
+.onlyofficeEditorBody #editor-drawer .spaceAvatar img {
+  cursor: pointer;
+  max-width: 35px;
+  border-radius: 5px;
+}
+
+.onlyofficeEditorBody #editor-drawer .tableHead {
+  background: aliceblue;
+  height: 35px;
+  border: solid 0.5px lightgray;
+}
+
+.onlyofficeEditorBody #editor-drawer .tableStyle {
+  margin-top: 8px;
+}
+
+.onlyofficeEditorBody #editor-drawer .tableContentStyle {
+  margin-top: 10px;
+}
+
+.onlyofficeEditorBody #editor-drawer .tableContent {
+  height: 40px;
+  border: solid 0.5px lightgrey;
+}
+
+.onlyofficeEditorBody #editor-drawer .alert.alert-success {
+  width: 220px!important;
+  text-align: center;
+  position: absolute!important;
+  margin: 35px 85px 5px!important;
+}
+
+.onlyofficeEditorBody #editor-drawer .alert.alert-error {
+  width: 220px!important;
+  text-align: center;
+  position: absolute!important;
+  margin: 35px 85px 5px!important;
+}
+
+.onlyofficeEditorBody #editor-drawer .displayAvatarFullName {
+  display: flex;
+}
+
+.onlyofficeEditorBody #editor-drawer .user-edit {
+  padding: 8px;
+  color: #333333;
+  width: 45%;
+  text-align: left;
+}
+
+.onlyofficeEditorBody #editor-drawer .created-date {
+  padding: 9px;
+  width: 40%;
+  text-align: end;
+  color: #999999;
+  font-size: 12px;
+}
+
+.onlyofficeEditorBody #editor-drawer .user-label {
+  display: flex;
+  padding: 7px;
+  color: #999999;
+}
+
+.onlyofficeEditorBody .RightBodyTDContainer {
+  padding-top: 0px;
+}
+
+.maskLayer .onlyofficeEditorClose .uiIconClose {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.maskLayer .onlyofficeEditorClose .uiIconClose:before {
+  color: #ffffff !important;
+}
+
+.maskLayer .onlyofficeEditorClose .uiIconClose:hover {
+  color: #ffffff !important;
+}
+
+#UIDocumentWorkspace .fileContent .content {
+  text-align: left;
+}
+
+.onlyofficeContainer>#editor, .onlyofficeContainer>.editor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-width: 665px;
+}
+
+.onlyofficeContainer>.loading {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 0px;
+  min-width: 665px;
+  min-height: 550px;
+  margin-bottom: 15px;
+}
+
+.ui-pnotify.onlyoffice-notification {
+  top: 70px !important;
+}
+
+.onlyofficeContainer>#editor>iframe, .onlyofficeContainer>.editor>iframe {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.waitThrobber {
+  width: 32px;
+  height: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  pointer-events: none;
+  background: url('icons/oxygen/32/animations/throbber.gif') no-repeat left center !important; /* orientation=lt */
+  background: url('icons/oxygen/32/animations/throbber.gif') no-repeat right center !important; /* orientation=rt */
+}
+
+/***** Disabled styles *******/
+.editorDisabled {
+  opacity: .6
+}
+
+/******** Pnotify icons ********/
+.picon-32.picon-task-complete {
+  background-image: url("icons/oxygen/32/status/task-complete.png")
+}
+
+.picon-32.picon-throbber {
+  background-image: url("icons/oxygen/32/animations/throbber.gif")
+}
+
+.picon-32.picon-dialog-error {
+  background-image: url("icons/oxygen/32/status/dialog-error.png")
+}
+
+.picon-32.picon-dialog-information {
+  background-image: url("icons/oxygen/32/status/dialog-information.png")
+}
+
+.picon-32.picon-dialog-warning {
+  background-image: url("icons/oxygen/32/status/dialog-warning.png")
+}
+
+.picon-32.picon-process-stop {
+  background-image: url("icons/oxygen/32/actions/process-stop.png")
+}
+
+.picon.picon-task-complete {
+  background-image: url("icons/oxygen/16/status/task-complete.png")
+}
+
+.picon.picon-throbber {
+  background-image: url("icons/oxygen/16/animations/throbber.gif")
+}
+
+.picon.picon-dialog-error {
+  background-image: url("icons/oxygen/16/status/dialog-error.png")
+}
+
+.picon.picon-dialog-information {
+  background-image: url("icons/oxygen/16/status/dialog-information.png")
+}
+
+.picon.picon-dialog-warning {
+  background-image: url("icons/oxygen/16/status/dialog-warning.png")
+}
+
+.picon.picon-process-stop {
+  background-image: url("icons/oxygen/16/actions/process-stop.png")
+}
+.onlyofficeContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3000;
+}

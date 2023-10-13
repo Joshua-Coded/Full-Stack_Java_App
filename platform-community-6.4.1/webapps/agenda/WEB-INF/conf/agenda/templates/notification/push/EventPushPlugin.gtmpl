@@ -1,0 +1,42 @@
+<% eventTitle = _ctx.escapeHTML(eventTitle); %>
+<div>
+    <div>
+        <%
+        if(org.exoplatform.agenda.constant.AgendaEventModificationType.ADDED.name().equals(modificationType)) { %>
+           <%= _ctx.appRes("Notification.agenda.event.push.created", eventTitle, creatorName) %>
+        <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.UPDATED.name().equals(modificationType) && org.exoplatform.agenda.constant.EventStatus.CONFIRMED.name().equals(eventStatus)){ %>
+           <%= _ctx.appRes("Notification.agenda.event.updated", eventTitle) %>
+       <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.UPDATED.name().equals(modificationType) && org.exoplatform.agenda.constant.EventStatus.TENTATIVE.name().equals(eventStatus)){ %>
+           <%= _ctx.appRes("Notification.agenda.event.datePoll.updated", eventTitle) %>
+       <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.DATES_UPDATED.name().equals(modificationType) && org.exoplatform.agenda.constant.EventStatus.CONFIRMED.name().equals(eventStatus)){ %>
+            <%= _ctx.appRes("Notification.agenda.event.dates.updated", eventTitle) %>
+      <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.DATES_UPDATED.name().equals(modificationType) && org.exoplatform.agenda.constant.EventStatus.TENTATIVE.name().equals(eventStatus)){ %>
+            <%= _ctx.appRes("Notification.agenda.event.datePoll.dates.updated", eventTitle) %>
+        <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.SWITCHED_EVENT_TO_DATE_POLL.name().equals(modificationType)){ %>
+          <%= _ctx.appRes("Notification.agenda.event.switchedToDatePoll", eventTitle) %>
+        <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.SWITCHED_DATE_POLL_TO_EVENT.name().equals(modificationType)){ %>
+          <%= _ctx.appRes("Notification.agenda.event.switchedToEvent", eventTitle) %>
+        <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.DELETED.name().equals(modificationType) && org.exoplatform.agenda.constant.EventStatus.TENTATIVE.name().equals(eventStatus)){ %>
+           <%= _ctx.appRes("Notification.agenda.event.mail.body.datePoll.deleted", eventTitle) %>
+       <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.UPDATED.name().equals(modificationType)){ %>
+            <%= _ctx.appRes("Notification.agenda.event.updated", eventTitle) %>
+        <% } else { %>
+            <%= _ctx.appRes("Notification.agenda.event.canceled", eventTitle) %>
+        <% } %>
+    </div>
+    <div>
+        <a href="<%= eventURL %>">
+            <a href="<%= eventURL %>">
+                <%
+                if(org.exoplatform.agenda.constant.AgendaEventModificationType.ADDED.name().equals(modificationType)
+                    || org.exoplatform.agenda.constant.AgendaEventModificationType.DATES_UPDATED.name().equals(modificationType)
+                    || org.exoplatform.agenda.constant.AgendaEventModificationType.SWITCHED_DATE_POLL_TO_EVENT.name().equals(modificationType)
+                    || org.exoplatform.agenda.constant.AgendaEventModificationType.SWITCHED_EVENT_TO_DATE_POLL.name().equals(modificationType)) { %>
+                  <%= _ctx.appRes("Notification.agenda.event.reply") %>
+                <% } else if(org.exoplatform.agenda.constant.AgendaEventModificationType.UPDATED.name().equals(modificationType)){ %>
+                  <%= _ctx.appRes("Notification.agenda.event.view") %>
+                <% } %>
+            </a>
+        </a>
+    </div>
+</div>

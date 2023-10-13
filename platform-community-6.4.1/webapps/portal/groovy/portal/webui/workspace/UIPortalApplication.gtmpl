@@ -1,0 +1,223 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%
+  import java.util.Map;
+  import java.util.Iterator;
+  import java.util.ArrayList;
+  import java.util.Enumeration;
+  import org.json.JSONArray;
+  import org.apache.commons.lang.StringUtils;
+  import org.exoplatform.container.PortalContainer;
+  import org.exoplatform.webui.core.UIComponent;
+  import org.exoplatform.portal.application.PortalRequestContext ;
+  import org.exoplatform.portal.config.model.PortalProperties ;
+  import org.exoplatform.commons.info.ProductInformations;
+  import org.exoplatform.portal.webui.workspace.UIPortalApplication;
+  import org.exoplatform.portal.webui.workspace.UIWorkingWorkspace;
+  import org.exoplatform.web.security.csrf.CSRFTokenUtil;
+  import org.exoplatform.commons.utils.HTMLEntityEncoder;
+  import org.exoplatform.portal.webui.util.Util;
+  import org.exoplatform.services.resources.Orientation;
+
+  def rcontext = _ctx.getRequestContext() ;
+  def session = rcontext.getRequest().getSession();
+  def userName = rcontext.getRemoteUser();
+  def productName = uicomponent.getApplicationComponent(ProductInformations.class).getProductName();
+  def selectedNodeUri = Util.getUIPortal().getSelectedUserNode().getURI();
+  def previousURI = session.getAttribute("previousURI");
+  session.setAttribute("previousURI", selectedNodeUri);
+  def portal = org.exoplatform.portal.webui.util.Util.getUIPortal();
+  String language = rcontext.getLocale().getLanguage();
+  String country = rcontext.getLocale().getCountry();
+  if (country != null && country.length() > 0) {
+    language += "-" + country;
+  }
+  String docBase =  rcontext.getRequestContextPath() ;
+  String skin = uicomponent.getSkin();
+  def portalSkins = uicomponent.getPortalSkins();
+  def portletSkins = uicomponent.getPortletSkins();
+  def customSkins = uicomponent.getCustomSkins();
+  def scriptsURLs = uicomponent.getScripts();
+  def headerScripts = new LinkedList();
+  def jsConfig = uicomponent.getJSConfig();
+  def remoteScripts = new JSONArray();
+  for (module in scriptsURLs.keySet()) {
+    def url = !jsConfig.has("paths") ? null :
+              (!jsConfig.get("paths").has(module) ? null :
+                jsConfig.get("paths").get(module));
+    headerScripts.add(url != null ? url + ".js" : module);
+    if (scriptsURLs.get(module)) {
+      remoteScripts.put(module);
+    }
+  }
+  def title = rcontext.getTitle();
+  def metaInformation = rcontext.getMetaInformation();
+
+  def bodyClasses = session.getAttribute("UIPortalApplication.body.class");
+%>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="$language" lang="$language" dir="$dir">
+  <head id="head">
+    <title><%=HTMLEntityEncoder.getInstance().encode(title)%></title>
+
+    <!-- Metadatas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="theme-color" content="#476A9C"/>
+
+    <% if (portal.viewport != null) { %>
+      <meta name="viewport" content = "${portal.viewport}"/>
+    <% } %>
+    <% if (metaInformation!= null) {
+         Iterator<String> keys = metaInformation.keySet().iterator();
+         while (keys.hasNext()) {
+           String metaName = keys.next();
+           String metaContent = metaInformation.get(metaName); %>
+      <meta name="<%=metaName%>" content="<%=metaContent%>" />
+    <%   } %>
+    <% } %>
+
+    <% _ctx.includeTemplates("UIPortalApplication-Start-head") %>
+
+    <link rel="shortcut icon" type="image/x-icon"  href="<%= org.exoplatform.portal.branding.Utils.getFaviconPath() %>" />
+
+    <!-- Styles -->
+    <link id="brandingSkin" rel="stylesheet" type="text/css" href="<%=uicomponent.getBrandingUrl()%>">
+    <% for (skinConfig in portalSkins) {
+         def url = skinConfig.createURL(rcontext.controllerContext);
+         url.setOrientation(orientation); %>
+      <link id="${skinConfig.id}" rel="stylesheet" type="text/css" href="$url" skin-type="portal-skin" />
+    <% } %>
+    <% for (portletSkin in portletSkins) {
+         def url = portletSkin.createURL(rcontext.controllerContext);
+         url.setOrientation(orientation); %>
+      <link id="${portletSkin.id}" rel="stylesheet" type="text/css" href= "$url" skin-type="portlet-skin" />
+    <% } %>
+    <% for (customSkin in customSkins) {
+         def url = customSkin.createURL(rcontext.controllerContext);
+         url.setOrientation(orientation); %>
+      <link id="${customSkin.id}" rel="stylesheet" type="text/css" href= "$url" skin-type="custom-skin" />
+    <% } %>
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+      var require = <%=jsConfig%>;
+    </script>
+
+    <% for (url in headerScripts) { %>
+      <script type="text/javascript" src="<%= url %>"></script>
+    <% } %>
+
+   <script type="text/javascript">
+     eXo.env.addLoadedRemoteScripts(<%=remoteScripts%>);
+     <% if (org.exoplatform.commons.utils.PropertyManager.isDevelopping()) { %>
+          eXo.developing = true ;
+     <% } %>
+   </script>
+   <script type="text/javascript" id="portalHeadScripts">
+     eXo.env.portal.context = "<%=docBase%>";
+     eXo.env.portal.accessMode = "<%= rcontext.getAccessPath() == 0 ? "public" : "private" %>";
+     eXo.env.portal.portalName = "<%=rcontext.getPortalOwner()%>";
+     eXo.env.portal.containerName = "<%=PortalContainer.getInstance().getName()%>";
+     eXo.env.portal.userName='<%= userName %>';
+     eXo.env.portal.language='<%= language %>';
+     eXo.env.portal.orientation='<%= orientation == Orientation.RT ? "rtl" : "ltr" %>';
+     eXo.env.portal.selectedNodeUri = '<%= selectedNodeUri %>';
+     eXo.env.portal.previousURI = '<%= previousURI %>';
+     eXo.env.portal.rest = '<%= PortalContainer.getCurrentRestContextName() %>';
+     eXo.env.portal.csrfToken = "<%=CSRFTokenUtil.getToken(rcontext.getRequest())%>";
+     eXo.env.portal.productName = "<%=productName%>";
+     eXo.env.server.context = "<%=docBase%>";
+     eXo.env.server.portalBaseURL = "<%=uicomponent.getBaseURL()%>";
+     eXo.env.server.portalURLTemplate = "<%=uicomponent.getPortalURLTemplate()%>";
+     eXo.env.client.skin = "$skin";
+     eXo.env.client.assetsVersion = "<%=org.gatein.portal.controller.resource.ResourceRequestHandler.VERSION%>";
+     <% 
+       String sessionAliveLevel = (portal == null ? null : portal.sessionAlive);
+       boolean canKeepState = sessionAliveLevel == null ? false : !sessionAliveLevel.equals(PortalProperties.SESSION_NEVER) ;
+     %>
+     eXo.portal.portalMode = <%= uicomponent.getModeState() %>;
+     eXo.portal.portalEditLevel = '<%= uicomponent.getEditLevel().toString() %>';
+     eXo.portal.fullPreview = '<%= org.exoplatform.portal.webui.page.UIPage.isFullPreview() %>';
+     eXo.session.level = "$sessionAliveLevel";
+     eXo.session.canKeepState = $canKeepState;
+     eXo.session.isOpen = <%=uicomponent.isSessionOpen()%> ;
+     eXo.session.itvTime = ${session.getMaxInactiveInterval()} ;
+
+     require(['SHARED/topbarLoading'], topbarLoading => topbarLoading.init());
+     eXo.env.portal.onLoadCallbacks = eXo.env.portal.onLoadCallbacks || [];
+     eXo.env.portal.addOnLoadCallback = callback => {
+       eXo.env.portal.onLoadCallbacks.push(callback);
+       if (document.readyState === 'complete') {
+         callback();
+       }
+     };
+     eXo.env.portal.onLoad = () => {
+       if (!eXo.env.portal.onLoadTriggered && eXo.env.portal.onLoadCallbacks && eXo.env.portal.onLoadCallbacks.length) {
+         eXo.env.portal.onLoadTriggered = true;
+         eXo.env.portal.onLoadCallbacks.forEach(callback => callback());
+       }
+     };
+   </script>
+   <%
+     def headerElements = rcontext.getExtraMarkupHeadersAsStrings();
+     if (headerElements != null) {
+       for (element in headerElements) {
+         print(element);
+       }
+     }
+   %>
+
+   <!-- 508 Compliancy -->
+   <style type="text/css">
+     .skipHidden {
+       position:absolute !important;
+       left:-10000px !important;
+       top:auto !important;
+       width:1px !important;
+       height:1px !important;
+       overflow:hidden !important; 
+     }
+     html[dir="rtl"] .skipHidden {
+       right: -10000px !important;
+       left: auto !important;
+     }
+   </style>
+   <!-- The android browser on 2.3.x doesn't properly handle rtl so we need to handle this special situation.
+        This old browser it expects right to be positive instead of negative in order to hide the content instead of displaying it.
+        If the page is over 10000px wide and rtl we assume this situation. -->
+   <script type="text/javascript">
+     if (window.onload) {
+       var currentOnLoad = window.onload;
+       window.onload = function() { currentOnLoad(); checkRTLWidth() };
+     } else {
+       window.onload = checkRTLWidth;
+     }
+     function checkRTLWidth() {
+       if (document.documentElement && document.documentElement.getAttribute("dir") == "rtl" && document.body.scrollWidth >= 10000) {
+         var stylesheet = document.styleSheets[document.styleSheets.length - 1];
+         stylesheet.insertRule("html[dir='rtl'] .skipHidden { right: 10000px !important;}", stylesheet.cssRules.length);
+       }
+     }
+     require(['SHARED/bodyScrollListener']);
+   </script>
+   <!-- /508 Compliancy -->
+
+   <!-- Include extensible templates configured by Kernel configuration to be imported in Page Header -->
+   <% _ctx.includeTemplates("UIPortalApplication-head") %>
+ </head>
+
+ <body style="height: 100%;" class="$bodyClasses" onload="eXo.env.portal.onLoad()">
+   <!-- Include extensible templates configured by Kernel configuration to be imported in the beginning of the body section of the Page -->
+   <% _ctx.includeTemplates("UIPortalApplication-Start-body") %>
+   <div class="visible-tablet"></div>
+   <div class="visible-tabletL"></div>
+   <div class="visible-phone"></div>
+   <div class="visible-phone-small"></div>
+   <div class="VuetifyApp"><div data-app="true" class="v-application v-application--is-<%= orientation == Orientation.RT ? "rtl" : "ltr"  %> transparent theme--light" id="vuetify-apps"></div></div>
+   <div class="$uicomponent.skin" id="UIPortalApplication" style="!height: 100%;">
+     <div class="ajaxLoadingMask clearfix" id="AjaxLoadingMask" style="display: none; margin: auto;">
+       <a onclick="javascript:ajaxAbort();" class="uiIconClose uiIconWhite pull-right"></a>
+       <i class="loadingProgressBar pull-left"></i>
+       <div class="loadingText"><%=_ctx.appRes("UIPortalApplication.label.Loading")%></div>
+     </div>

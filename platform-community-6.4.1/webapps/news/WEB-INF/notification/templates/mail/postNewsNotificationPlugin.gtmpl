@@ -1,0 +1,109 @@
+<table border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" align="center"
+	   style="background-color: #ffffff; font-size: 13px;color:#333333;line-height: 18px;font-family: HelveticaNeue, Helvetica, Arial, sans-serif;"
+	   xmlns="http://www.w3.org/1999/html">
+<tr>
+<td align="center"  valign="middle" >
+<table  cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" align="center" style="border:1px solid #d8d8d8;">
+<tr>
+<td  height="45" valign="middle" style="margin:0;height:45px;font-weight:bold;vertical-align:middle;;background-color: #efefef;font-family: 'HelveticaNeue Bold', Helvetica, Arial, sans-serif;color:#2f5e92;font-size:18px;text-align:center">
+<a href="$ACTIVITY_LINK" style="text-decoration: none; color: #2f5e92; font-family: 'HelveticaNeue Bold', Helvetica, Arial, sans-serif; font-size: 18px;">
+<%
+def title = "";
+switch(CONTEXT) {
+ case "POST NEWS":
+   title =  _ctx.appRes("news.notification.title",CONTENT_SPACE);
+   break;
+ case "MENTION IN NEWS":
+   title = _ctx.appRes("news.notification.title.mention.in.news",CONTENT_TITLE);
+   break;
+ case "PUBLISH NEWS":
+   title =  _ctx.appRes("news.notification.title.published.news");
+   break;
+ default:
+   break;
+ }
+%>
+$title
+</a>
+						</td>
+</tr>
+				</table>
+</td>
+		</tr><!--end header area-->
+<tr>
+<td bgcolor="#ffffff" style="background-color: #ffffff;">
+<table cellpadding="0" cellspacing="0" width="100%"  bgcolor="#ffffff" style="background-color: #ffffff; border-left:1px solid #d8d8d8;border-right:1px solid #d8d8d8;">
+<tr>
+<td bgcolor="#ffffff" style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" width="92%" bgcolor="#ffffff" align="center" style="background-color: #ffffff; font-size: 13px;color:#333333;line-height: 18px;">
+<tr>
+<td align="left" bgcolor="#ffffff" style="background-color: #ffffff;padding: 20px 0 10px;">
+<p style="margin: 0 0 10px; color: #333333; font-size: 13px; line-height: 18px;">
+<%=_ctx.appRes("news.notification.label.SayHello")%> $FIRST_NAME,
+</p>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" align="center" style="background-color: #ffffff; font-size: 13px;color:#333333;line-height: 18px;"><tbody><tr><td align="left" style="padding: 0;"><table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" align="center" style="width: 100%; background-color: #ffffff; font-size: 13px; color:#333333;line-height: 18px;">
+	<tr>
+	<td align="left" valign="top" bgcolor="#ffffff" style="vertical-align: top; background-color: #ffffff; padding: 0 15px 0 0;">
+		<a href="$ACTIVITY_LINK" style="margin: 4px 0 0; padding: 0; display: block;">
+<img style="border-radius: 4px;" height="76" width="76" src="$AUTHOR_AVATAR_URL"/>
+</a>
+																</td>
+<td align="left" bgcolor="#ffffff" width="90%" align="top" style="width: 90%; background-color: #ffffff; padding: 0 0; vertical-align: top;">
+<p style="margin: 0 0 10px; color: #333333; font-size: 13px; line-height: 18px;">
+<%
+String spaceName = "<span style=\"font-weight: bold;\">" + CONTENT_SPACE + "</span>";
+String creator = "<span style=\"color: #476A9C; font-weight: bold;\">" + CONTENT_AUTHOR + "</span>";
+String currentUser = "<span style=\"color: #476A9C; font-weight: bold;\">" + CURRENT_USER + "</span>";
+def notificationDescription = "";
+switch(CONTEXT) {
+ case "POST NEWS":
+   notificationDescription =  _ctx.appRes("news.notification.description",creator,CONTENT_TITLE,spaceName);
+   break;
+ case "MENTION IN NEWS":
+   notificationDescription =  _ctx.appRes("news.notification.description.mention.in.news",CONTENT_TITLE);
+   break;
+ case "PUBLISH NEWS":
+   notificationDescription =  _ctx.appRes("news.notification.description.publish.news", CURRENT_USER, CONTENT_TITLE);
+   break;
+ default:
+   break;
+}
+
+%>
+
+</p>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f9f9f9" align="center" style="margin:0 0 10px; width: 100%; background-color: #f9f9f9; font-size: 13px; color:#333333;line-height: 18px;">
+	<tr>
+	<td align="left" valign="top" bgcolor="#f9f9f9" style="vertical-align: top; background-color: #f9f9f9; padding: 10px 15px;">
+	<p style="margin: 0 0 10px; color: #333333; font-size: 13px; line-height: 18px;">
+	<a href="#" style="text-decoration: none; color: #2f5e92; font-family: 'HelveticaNeue Bold', Helvetica, Arial, sans-serif">
+</a>
+</p>
+<p style="margin: 0; color: #333333; font-size: 13px; line-height: 18px;">
+		<%=notificationDescription%>
+</p>
+</td>
+</tr>
+																	</table>
+</td>
+															</tr>
+</table>
+													</td>
+</tr>
+											</tbody>
+</table>
+										<br>
+										<p style="margin: 0 0 10px; color: #999999; font-size: 13px; line-height: 18px;">
+										   <%=_ctx.appRes("news.notification.label.footer", "" + FOOTER_LINK)%>
+										</p>
+</td>
+								</tr>
+</table>
+						</td>
+</tr>
+				</table>
+
+</td>
+		</tr><!--end content area-->
+    <% _ctx.include("war:/notification/templates/mail/NotificationFooter.gtmpl", _templateContext);%>
+	</table>

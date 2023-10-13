@@ -1,0 +1,313 @@
+/* Typography */
+/* colors */
+/* layout */
+/* layout */
+/* border & shadow */
+/* borde & shadow */
+/* Responsive */
+/* Responsive */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-space-evenly {
+  justify-content: space-between;
+}
+.flex-space-evenly:before,
+.flex-space-evenly:after {
+  content: '';
+  display: block;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.flex-remaining-width {
+  flex: 1;
+  min-width: 0;
+}
+.overflow-wrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.display-hidden {
+  display: none;
+}
+/*
+ * Web Conferencing common style 
+ */
+/****** Icons ******/
+@font-face {
+  font-family: "webconf-icons";
+  src: url("../fonts/webconf-icons.eot?38hfju");
+  src: url("../fonts/webconf-icons.eot?38hfju#iefix") format("embedded-opentype"), url("../fonts/webconf-icons.ttf?38hfju") format("truetype"), url("../fonts/webconf-icons.woff?38hfju") format("woff"), url("../fonts/webconf-icons.svg?38hfju#webconf-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.callButtonIconVideo {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "webconf-icons" !important;
+  speak: none;
+  align-self: center;
+  margin-right: 4px;
+}
+.callButtonIconVideo::before {
+  content: "\e900";
+  font-size: 24px;
+  vertical-align: middle;
+}
+[class^="call-button-container-"] > a {
+  display: inherit;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+.callTitle {
+  vertical-align: middle;
+  align-self: center;
+}
+/* Fix default font size for webfont's ios camera */
+.dropdown-menu > li > a > .uiIcon.callButtonIconVideo {
+  position: relative;
+  top: 2px;
+  font-size: 18px;
+}
+/******/
+.callButtonContainer {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  white-space: nowrap;
+  min-height: 30px;
+}
+.mini-chat .callButtonContainer {
+  min-height: 0;
+}
+.callButtonContainer .btn {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.callButtonContainer .btn > * {
+  position: static;
+}
+.callButton.preferred {
+  margin-right: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 3px 0 0 3px;
+}
+.callButton.preferred ~ .dropdown-toggle {
+  margin-left: -1px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  border-left-color: transparent;
+  border-radius: 0 3px 3px 0;
+}
+.callButton .callTitle {
+  margin-left: 5px;
+  vertical-align: middle;
+  align-self: center;
+}
+.callButtonContainer > .dropdown-toggle > .uiIconArrowDown {
+  position: relative;
+  top: 2px;
+  vertical-align: text-bottom;
+}
+#tiptip_content .connectAction .callButton {
+  text-align: left;
+  border: none;
+}
+#tiptip_content .connectAction .callButton:hover {
+  background-color: transparent;
+  box-shadow: none !important;
+}
+#tiptip_content .connectAction .callButton:focus {
+  background-color: transparent;
+  box-shadow: none !important;
+}
+#tiptip_holder .callButtonContainer > .callButton > .callTitle {
+  display: none;
+}
+#tiptip_holder .connectAction .callButtonContainer .dropdown-toggle {
+  width: auto;
+}
+.callButtonContainerWrapper {
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.callButtonContainer .tooltip {
+  position: fixed;
+}
+.callButtonContainer .tooltip-inner {
+  max-width: 130px;
+  text-align: center;
+}
+/***** Transparent styles (for space avatar and mini-chat, the transparentButton class will be triggered by Javascript) *******/
+.transparentButton {
+  background: transparent;
+  border: solid 1px transparent;
+  box-shadow: none;
+}
+/***** Disabled styles *******/
+.callButton.disabled {
+  color: #999;
+}
+.callButton.disabled > i:before {
+  opacity: 0.6;
+}
+.callDisabled {
+  opacity: 0.75;
+}
+/***** Room/Space status ******/
+.activeCall .td-status .user-status {
+  color: #d62126;
+}
+@keyframes blink {
+  0% {
+    color: #d62126;
+  }
+  100% {
+    color: #999999;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    color: #d62126;
+  }
+  100% {
+    color: #999999;
+  }
+}
+.activeCall.startingCall .td-status .user-status:before {
+  -webkit-animation: blink 1.5s linear infinite;
+  -moz-animation: blink 1.5s linear infinite;
+  -ms-animation: blink 1.5s linear infinite;
+  -o-animation: blink 1.5s linear infinite;
+  animation: blink 1.5s linear infinite;
+}
+@media (max-width: 480px) {
+  .uiAction .callButtonContainer {
+    display: block;
+    margin: 5px auto !important;
+    width: 100%;
+  }
+}
+/* Dialog BEGIN */
+#webconferencing-dialog .uiPopup {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: auto;
+  min-width: 400px;
+  max-width: 800px;
+}
+#webconferencing-dialog .popupContent {
+  max-height: 400px;
+  overflow: auto;
+  min-width: 600px;
+}
+#webconferencing-dialog .popupIcon,
+#webconferencing-dialog .popupMessage {
+  display: inline-block;
+  padding-right: 5px;
+}
+#webconferencing-dialog .popupIcon {
+  float: left;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#webconferencing-dialog .popupMessage {
+  width: 90%;
+}
+#webconferencing-dialog .title {
+  font-weight: bold;
+}
+#webconferencing-dialog .contentReference {
+  opacity: 0.75;
+}
+#webconferencing-dialog .uiAction {
+  margin: 30px 0 0;
+  text-align: center;
+}
+#webconferencing-dialog .uiAction button {
+  min-width: 80px;
+  max-width: 180px;
+}
+/* Dialog END */
+/******** Pnotify icons ********/
+.picon-32.picon-task-complete {
+  background-image: url("../icons/oxygen/32/status/task-complete.png");
+}
+.picon-32.picon-throbber {
+  background-image: url("../icons/oxygen/32/animations/throbber.gif");
+}
+.picon-32.picon-dialog-error {
+  background-image: url("../icons/oxygen/32/status/dialog-error.png");
+}
+.picon-32.picon-dialog-information {
+  background-image: url("../icons/oxygen/32/status/dialog-information.png");
+}
+.picon-32.picon-dialog-warning {
+  background-image: url("../icons/oxygen/32/status/dialog-warning.png");
+}
+.picon-32.picon-process-stop {
+  background-image: url("../icons/oxygen/32/actions/process-stop.png");
+}
+.picon.picon-task-complete {
+  background-image: url("../icons/oxygen/16/status/task-complete.png");
+}
+.picon.picon-throbber {
+  background-image: url("../icons/oxygen/16/animations/throbber.gif");
+}
+.picon.picon-dialog-error {
+  background-image: url("../icons/oxygen/16/status/dialog-error.png");
+}
+.picon.picon-dialog-information {
+  background-image: url("../icons/oxygen/16/status/dialog-information.png");
+}
+.picon.picon-dialog-warning {
+  background-image: url("../icons/oxygen/16/status/dialog-warning.png");
+}
+.picon.picon-process-stop {
+  background-image: url("../icons/oxygen/16/actions/process-stop.png");
+}
+/*
+ * Web Conferencing style for Enterprise skin (for Platform 5.0)
+ */
+.callButtonContainer {
+  font-size: 15px;
+}
+@media (min-width: 481px) {
+  .popoverCall {
+    /*text-align: initial !important;*/
+  }
+}
+@media (max-width: 480px) {
+  .popoverCall {
+    text-align: center !important;
+  }
+}
+.preferred.popoverCall ~ .dropdown-toggle {
+  margin-left: -2px;
+}
+.transparentButton,
+.transparentButton ~ .dropdown-toggle {
+  background: transparent !important;
+  border: solid 1px transparent !important;
+  box-shadow: none !important;
+}
+/* The icon for call records folder */
+.uiIcon64x64exo_recordingsFolder:before {
+  content: "\e65d";
+}
+

@@ -1,0 +1,11 @@
+/**
+ * WebRTC CSS tweaks for Enterprise skin. TODO not used currently
+ */ 
+.uiIconWebrtcCall:before {
+	top: -1px;
+}
+
+#webrtc-call-container>.callHoverBar .callClose {
+	top: 3px;
+  left: -6px;
+}

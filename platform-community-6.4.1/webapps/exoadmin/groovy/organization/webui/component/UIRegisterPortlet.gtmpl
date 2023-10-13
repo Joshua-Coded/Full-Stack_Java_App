@@ -1,0 +1,30 @@
+<%	
+	import org.exoplatform.portal.webui.register.UIRegisterEditMode;
+	import javax.portlet.PortletMode ;
+	import org.gatein.security.oauth.spi.OAuthProviderTypeRegistry;
+%>
+<%
+if(_ctx.getRequestContext().getApplicationMode() == PortletMode.VIEW)
+{
+   uicomponent.renderChild("UIRegisterForm");
+   OAuthProviderTypeRegistry registry = uicomponent.getApplicationComponent(OAuthProviderTypeRegistry.class);
+      if (registry.isOAuthEnabled()) {
+        %>
+        <div class="RegisterDelimiter">
+            <span><%=_ctx.appRes("UIRegisterForm.label.Or")%></span>
+        </div>
+        <%
+        uicomponent.renderChild("UISocialRegisterButtons");
+      }
+}
+else
+{
+  for (inputEntry in uicomponent.getChildren())
+  {
+    if (inputEntry instanceof UIRegisterEditMode)
+    {
+      uicomponent.renderUIComponent(inputEntry);	
+    }
+  }
+}
+%>

@@ -1,0 +1,362 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+#kudosMessage {
+  margin: 5px 0 0;
+}
+.kudosIconsContainer {
+  max-height: calc(100vh - 365px);
+  overflow: auto;
+  margin: 0 auto !important;
+  justify-content: center;
+}
+.kudosDateSelector {
+  width: 288px;
+}
+.kudosIconContainerTop {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 115px;
+  max-width: 100%;
+  min-height: 82px;
+  height: auto;
+  display: table;
+}
+.kudosIconContainerTop .kudosIconContainer {
+  padding: 0;
+  overflow: hidden !important;
+}
+.kudosIconContainerTop .kudosIconContainer .uiIconKudosCheck {
+  position: absolute;
+  left: calc(50% - 8px) ; /** orientation=lt */ ;
+  right: calc(50% - 8px) ; /** orientation=rt */ ;
+  top: 15px;
+}
+.kudosIconContainerTop .kudosIconContainerCurrent {
+  left: 0 ; /** orientation=lt */ ;
+  right: 0 ; /** orientation=rt */ ;
+  top: -3px;
+  position: absolute;
+  background-color: var(--allPagesPrimaryColor, #476a9c);
+  opacity: .2;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--allPagesPrimaryColor, #476a9c);
+  z-index: 1;
+}
+.kudosIconContainerTop .kudosIconLink {
+  padding: 0;
+}
+.kudosIconContainerTop .kudosIconLinkInvisible {
+  position: static;
+  visibility: hidden;
+}
+.kudosPeriodConfiguration > * {
+  display: inline-block;
+}
+.kudosPeriodTypeInput {
+  max-width: 150px;
+  display: inline-block;
+}
+.SendKudosButtonTemplate button {
+  width: auto !important;
+}
+.SendKudosButtonTemplate button:hover:before,
+.SendKudosButtonTemplate button:focus:before {
+  background-color: transparent !important;
+}
+.SendKudosButtonTemplate .uiIconKudos {
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+}
+.kudosWebNotifContent blockquote p {
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+#KudosApp .v-autocomplete label {
+  z-index: 1002;
+}
+#KudosApp .v-menu__content {
+  z-index: 1050 !important;
+}
+#KudosApp .contactAutoCompleteContent {
+  z-index: 1050 !important;
+}
+#KudosAdminApp .v-input input,
+#KudosApp .v-input input {
+  margin-bottom: 0;
+  border: 0;
+  box-shadow: none;
+}
+#KudosAdminApp .contactAutoCompleteContent,
+#KudosApp .contactAutoCompleteContent {
+  top: 55px !important;
+  left: 0 !important; /** orientation=lt */ ;
+  right: 0 !important; /** orientation=rt */ ;
+  position: absolute;
+  width: 100%;
+}
+#KudosAdminApp .contactAutoComplete,
+#KudosApp .contactAutoComplete {
+  position: relative;
+}
+#KudosAdminApp .contactAutoComplete .v-list,
+#KudosApp .contactAutoComplete .v-list {
+  padding: 0;
+}
+#KudosAdminApp .contactAutoComplete .v-list__tile,
+#KudosApp .contactAutoComplete .v-list__tile {
+  height: 30px;
+  transition: unset;
+  transform: none;
+}
+#KudosAdminApp .contactAutoComplete .v-list__tile:hover,
+#KudosApp .contactAutoComplete .v-list__tile:hover {
+  background-color: var(--allPagesPrimaryColor, #476a9c);
+  color: #fff;
+  transition: unset;
+  transform: none;
+}
+#KudosAdminApp .contactAutoComplete .v-list__tile__title,
+#KudosApp .contactAutoComplete .v-list__tile__title {
+  transition: unset;
+  transform: none;
+}
+#KudosAdminApp .contactAutoComplete .v-list__tile__avatar,
+#KudosApp .contactAutoComplete .v-list__tile__avatar {
+  min-width: 25px;
+}
+#KudosAdminApp .autocompleteSelectedItem,
+#KudosApp .autocompleteSelectedItem {
+  cursor: pointer;
+  margin: 0 3px 3px 0 ; /** orientation=lt */ ;
+  margin: 0 0 3px 3px ; /** orientation=rt */ ;
+  padding: 2px 6px;
+  background: var(--allPagesPrimaryColor, #476a9c);
+  color: #fff;
+  border: 1px solid var(--allPagesPrimaryColor, #476a9c);
+  border-radius: 3px;
+  font-size: 15px;
+}
+#KudosAdminApp .autocompleteSelectedItem > .v-chip__content,
+#KudosApp .autocompleteSelectedItem > .v-chip__content {
+  height: auto;
+  padding: 0;
+}
+#KudosAdminApp .clickable,
+#KudosApp .clickable {
+  cursor: pointer;
+}
+#KudosAdminApp .v-autocomplete.identitySuggester,
+#KudosApp .v-autocomplete.identitySuggester {
+  width: 100%;
+}
+#KudosAdminApp .v-autocomplete.identitySuggester.identitySuggester,
+#KudosApp .v-autocomplete.identitySuggester.identitySuggester {
+  margin-bottom: 0 !important;
+}
+#KudosAdminApp .v-autocomplete.identitySuggester .v-input__slot,
+#KudosApp .v-autocomplete.identitySuggester .v-input__slot {
+  margin: auto !important;
+}
+#KudosAdminApp .v-autocomplete.identitySuggester .v-select__selections,
+#KudosApp .v-autocomplete.identitySuggester .v-select__selections {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: auto;
+  display: flex !important;
+}
+#KudosAdminApp .v-autocomplete.identitySuggester input,
+#KudosApp .v-autocomplete.identitySuggester input {
+  padding: 0;
+}
+.uiIconKudos.uiIconLightGrey {
+  color: #c6c6c6 !important;
+}
+.uiIconKudosCheck.uiIconBlue {
+  color: var(--allPagesTertiaryColor, #476a9c) !important;
+}
+.uiIconKudos.uiIconBlue {
+  color: var(--allPagesTertiaryColor, #476a9c) !important;
+}
+.uiIconKudos.uiKudosAction.uiIconBlue {
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+}
+.uiIconKudosTipTip {
+  font-size: 18px !important;
+}
+.v-divider--vertical {
+  height: inherit!important;
+  min-height: inherit!important;
+}
+.kudosOverviewCardsParent .kudosReceivedOverviewPeriod,
+.kudosOverviewCard .kudosReceivedOverviewPeriod,
+.kudosOverviewCardsParent .kudosSentOverviewPeriod,
+.kudosOverviewCard .kudosSentOverviewPeriod {
+  max-width: 230px;
+  min-height: 27px;
+}
+.kudosOverviewCardsParent .kudosReceivedOverviewPeriod .kudosOverviewLabel,
+.kudosOverviewCard .kudosReceivedOverviewPeriod .kudosOverviewLabel,
+.kudosOverviewCardsParent .kudosSentOverviewPeriod .kudosOverviewLabel,
+.kudosOverviewCard .kudosSentOverviewPeriod .kudosOverviewLabel,
+.kudosOverviewCardsParent .kudosReceivedOverviewPeriod .kudosOverviewCount,
+.kudosOverviewCard .kudosReceivedOverviewPeriod .kudosOverviewCount,
+.kudosOverviewCardsParent .kudosSentOverviewPeriod .kudosOverviewCount,
+.kudosOverviewCard .kudosSentOverviewPeriod .kudosOverviewCount {
+  overflow-wrap: normal;
+  min-height: 47px;
+}
+

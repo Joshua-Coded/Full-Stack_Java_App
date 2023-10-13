@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T11:35:23Z
+Implementation-Title: Gamification - Github Connector - Webapp
+Implementation-URL: https://projects.exoplatform.org/addons-parent-pom/g
+ amification-github/gamification-github-webapp
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.1.1-exo
+SCM-Revision: e3d28776858151451f8bcfd33437083fbcfa4212
+SCM-URL: scm:git:git://github.com/meeds-io/gamification-github.git/gamif
+ ication-github-webapp
+Specification-Title: Gamification - Github Connector - Webapp
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

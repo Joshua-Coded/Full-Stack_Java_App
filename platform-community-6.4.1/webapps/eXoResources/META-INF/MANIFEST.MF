@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T10:48:42Z
+Implementation-Title: GateIn Portal Web Resources
+Implementation-URL: https://projects.exoplatform.org/exo.portal.parent/e
+ xo.portal.web/exo.portal.web.eXoResources
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 6.4.1-exo
+SCM-Revision: cf003121cfde38516cb91ba0173764c0ca63f669
+SCM-URL: scm:git:git://github.com/meeds-io/gatein-portal.git/exo.portal.
+ web/exo.portal.web.eXoResources
+Specification-Title: GateIn Portal Web Resources
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

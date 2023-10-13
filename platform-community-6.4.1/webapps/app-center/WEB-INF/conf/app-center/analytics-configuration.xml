@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+-->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd" xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+    
+    <external-component-plugins>
+        <target-component>org.exoplatform.analytics.api.service.AnalyticsService</target-component>
+        <component-plugin profiles="analytics">
+            <name>AppLauncher menu icon</name>
+            <set-method>addUIWatcherPlugin</set-method>
+            <type>org.exoplatform.analytics.api.service.StatisticUIWatcherPlugin</type>
+            <init-params>
+                <object-param>
+                    <name>watcher</name>
+                    <object type="org.exoplatform.analytics.api.service.StatisticWatcher">
+                        <!-- Statistic data: name field -->
+                        <field name="name">
+                            <string>AppLauncher menu icon</string>
+                        </field>
+                        <!-- Statistic data: operation field -->
+                        <field name="operation">
+                            <string>click</string>
+                        </field>
+                        <!-- Statistic data: additional embedded parameters -->
+                        <field name="parameters">
+                            <map type="java.util.HashMap">
+                                <entry>
+                                    <key>
+                                        <string>ui</string>
+                                    </key>
+                                    <value>
+                                        <string>toolbar</string>
+                                    </value>
+                                </entry>
+                                <entry>
+                                    <key>
+                                        <string>application</string>
+                                    </key>
+                                    <value>
+                                        <string>appcenter</string>
+                                    </value>
+                                </entry>
+                                <entry>
+                                    <key>
+                                        <string>operation</string>
+                                    </key>
+                                    <value>
+                                        <string>AppLauncherMenu</string>
+                                    </value>
+                                </entry>
+                            </map>
+                        </field>
+                        <!-- DOM jquery selector, used to search elements -->
+                        <field name="domSelector">
+                            <string>#appLauncher #appcenterLauncherButton</string>
+                        </field>
+                        <!-- DOM jquery event, used to trigger storing new statistic data -->
+                        <field name="domEvent">
+                            <string>mousedown</string>
+                        </field>
+                        <!-- DOM jquery properties, used to store additional information in statistic data -->
+                        <field name="domEventProperties">
+                            <collection type="java.util.ArrayList" item-type="java.lang.String">
+                                <value>
+                                    <string>type</string>
+                                </value>
+                                <value>
+                                    <string>pageX</string>
+                                </value>
+                                <value>
+                                    <string>pageY</string>
+                                </value>
+                            </collection>
+                        </field>
+                    </object>
+                </object-param>
+            </init-params>
+        </component-plugin>
+        <component-plugin profiles="analytics">
+            <name>AppLauncher View All Applications</name>
+            <set-method>addUIWatcherPlugin</set-method>
+            <type>org.exoplatform.analytics.api.service.StatisticUIWatcherPlugin</type>
+            <init-params>
+                <object-param>
+                    <name>watcher</name>
+                    <object type="org.exoplatform.analytics.api.service.StatisticWatcher">
+                        <!-- Statistic data: name field -->
+                        <field name="name">
+                            <string>AppLauncher View All Applications</string>
+                        </field>
+                        <!-- Statistic data: operation field -->
+                        <field name="operation">
+                            <string>click</string>
+                        </field>
+                        <!-- Statistic data: additional embedded parameters -->
+                        <field name="parameters">
+                            <map type="java.util.HashMap">
+                                <entry>
+                                    <key>
+                                        <string>ui</string>
+                                    </key>
+                                    <value>
+                                        <string>toolbar</string>
+                                    </value>
+                                </entry>
+                                <entry>
+                                    <key>
+                                        <string>application</string>
+                                    </key>
+                                    <value>
+                                        <string>appcenter</string>
+                                    </value>
+                                </entry>
+                                <entry>
+                                    <key>
+                                        <string>operation</string>
+                                    </key>
+                                    <value>
+                                        <string>AppLauncherClickViewAll</string>
+                                    </value>
+                                </entry>
+                            </map>
+                        </field>
+                        <!-- DOM jquery selector, used to search elements -->
+                        <field name="domSelector">
+                            <string>#appLauncher .seeAllApplicationsBtn</string>
+                        </field>
+                        <!-- DOM jquery event, used to trigger storing new statistic data -->
+                        <field name="domEvent">
+                            <string>mousedown</string>
+                        </field>
+                        <!-- DOM jquery properties, used to store additional information in statistic data -->
+                        <field name="domEventProperties">
+                            <collection type="java.util.ArrayList" item-type="java.lang.String">
+                                <value>
+                                    <string>type</string>
+                                </value>
+                                <value>
+                                    <string>pageX</string>
+                                </value>
+                                <value>
+                                    <string>pageY</string>
+                                </value>
+                            </collection>
+                        </field>
+                    </object>
+                </object-param>
+            </init-params>
+        </component-plugin>
+    </external-component-plugins>
+
+</configuration>

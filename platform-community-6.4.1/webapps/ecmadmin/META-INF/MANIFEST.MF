@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T12:01:18Z
+Implementation-Title: eXo PLF:: Site Administration Portlet
+Implementation-URL: https://projects.exoplatform.org/ecms/ecms-apps/ecms
+ -apps-portlet-administration
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 6.4.1
+SCM-Revision: 40652397afd61f734a777e2eaed4ebbf7ad26f53
+SCM-URL: scm:git:git://github.com/exoplatform/ecms.git/ecms-apps/ecms-ap
+ ps-portlet-administration
+Specification-Title: eXo PLF:: Site Administration Portlet
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

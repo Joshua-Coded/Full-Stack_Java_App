@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Date: 2023-05-09T12:51:54Z
+Implementation-Title: eXo Meeds:: Meeds Public Distribution - Webapps - 
+ Tomcat Integration WebApp
+Implementation-URL: https://projects.exoplatform.org/plf-public-distribu
+ tions/plf-webapps/plf-tomcat-integration-webapp
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.4.1-exo
+SCM-Revision: 416c20a2ce6debbe9322468bcf7994e2df3c2c25
+SCM-URL: scm:git:git://github.com/meeds-io/meeds.git/plf-webapps/plf-tom
+ cat-integration-webapp
+Specification-Title: eXo Meeds:: Meeds Public Distribution - Webapps - T
+ omcat Integration WebApp
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A.0
+

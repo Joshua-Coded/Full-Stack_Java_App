@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node-navigation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_7 http://www.gatein.org/xml/ns/gatein_objects_1_7"
+  xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_7">
+  <priority>4</priority>
+  <page-nodes>
+    <node>
+      <name>home</name>
+      <label>#{portal.dw.home}</label>
+      <page-reference>portal::dw::homepage</page-reference>
+    </node>
+    <node>
+      <name>external-stream</name>
+      <label>#{portal.dw.externalHome}</label>
+      <page-reference>portal::dw::stream</page-reference>
+    </node>
+    <node>
+      <name>overview</name>
+      <label>#{portal.dw.overview}</label>
+      <page-reference>portal::global::overview</page-reference>
+    </node>
+  </page-nodes>
+
+</node-navigation>

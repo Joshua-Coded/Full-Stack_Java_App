@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2003-2021 eXo Platform SAS.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd" xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.cache.CacheService</target-component>
+    <component-plugin>
+      <name>addExoCacheConfig</name>
+      <set-method>addExoCacheConfig</set-method>
+      <type>org.exoplatform.services.cache.ExoCacheConfigPlugin</type>
+      <description></description>
+      <init-params>
+        <object-param>
+          <name>agenda.calendar</name>
+          <description>The Cache configuration for the Agenda calendar</description>
+          <object type="org.exoplatform.services.cache.impl.infinispan.generic.GenericExoCacheConfig">
+            <field name="name">
+              <string>agenda.calendar</string>
+            </field>
+            <field name="strategy" profiles="cluster">
+              <string>${exo.cache.agenda.calendar.strategy:LIRS}</string>
+            </field>
+            <field name="maxSize">
+              <int>${exo.cache.agenda.calendar.MaxNodes:2000}</int>
+            </field>
+            <field name="liveTime">
+              <long>${exo.cache.agenda.calendar.TimeToLive:86400}</long>
+            </field>
+            <field name="cacheMode" profiles="cluster">
+              <string>${exo.cache.agenda.calendar.cacheMode:replication}</string>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>agenda.event</name>
+          <description>The Cache configuration for the Agenda event</description>
+          <object type="org.exoplatform.services.cache.impl.infinispan.generic.GenericExoCacheConfig">
+            <field name="name">
+              <string>agenda.event</string>
+            </field>
+            <field name="strategy" profiles="cluster">
+              <string>${exo.cache.agenda.event.strategy:LIRS}</string>
+            </field>
+            <field name="maxSize">
+              <int>${exo.cache.agenda.event.MaxNodes:2000}</int>
+            </field>
+            <field name="liveTime">
+              <long>${exo.cache.agenda.event.TimeToLive:86400}</long>
+            </field>
+            <field name="cacheMode" profiles="cluster">
+              <string>${exo.cache.agenda.event.cacheMode:replication}</string>
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009 eXo Platform SAS.
+    
+    This is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 2.1 of
+    the License, or (at your option) any later version.
+    
+    This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+    
+    You should have received a copy of the GNU Lesser General Public
+    License along with this software; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+<portlet-app version="1.0" xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+  <portlet>
+    <description xml:lang="EN">Group Navigation Portlet</description>
+    <portlet-name>GroupNavigationPortlet</portlet-name>
+    <display-name xml:lang="EN">Group Navigation Portlet</display-name>
+    <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
+
+    <init-param>
+      <name>webui.configuration</name>
+      <value>/WEB-INF/conf/portlet/layoutManagement/GroupNavigationPortlet/webui/configuration.xml</value>
+    </init-param>
+
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>help</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+
+    <resource-bundle>locale.portlet.layoutManagement.GroupNavigationPortlet</resource-bundle>
+    <portlet-info>
+      <title>Group Navigation Portlet</title>
+      <short-title>Group Navigation Portlet</short-title>
+      <keywords>Administration</keywords>
+    </portlet-info>
+    <portlet-preferences>
+      <preference>
+        <name>level</name>
+        <value>2</value>
+      </preference>
+    </portlet-preferences>
+    <supported-publishing-event>
+      <name>NavigationChange</name>
+    </supported-publishing-event>
+  </portlet>
+
+  <portlet>
+    <description xml:lang="EN">Portal Navigation Portlet</description>
+    <portlet-name>PortalNavigationPortlet</portlet-name>
+    <display-name xml:lang="EN">Portal Navigation Portlet</display-name>
+    <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
+
+    <init-param>
+      <name>webui.configuration</name>
+      <value>/WEB-INF/conf/portlet/layoutManagement/PortalNavigationPortlet/webui/configuration.xml</value>
+    </init-param>
+
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>help</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+
+    <resource-bundle>locale.portlet.layoutManagement.PortalNavigationPortlet</resource-bundle>
+    <portlet-info>
+      <title>Portal Navigation Portlet</title>
+      <short-title>Portal Navigation Portlet</short-title>
+      <keywords>System</keywords>
+    </portlet-info>
+
+    <portlet-preferences>
+      <preference>
+        <name>level</name>
+        <value>2</value>
+      </preference>
+    </portlet-preferences>
+  </portlet>
+
+  <portlet>
+    <description xml:lang="EN">Page Management Portlet</description>
+    <portlet-name>PageManagementPortlet</portlet-name>
+    <display-name xml:lang="EN">Page Management Portlet</display-name>
+    <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
+
+    <init-param>
+      <name>webui.configuration</name>
+      <value>/WEB-INF/conf/portlet/layoutManagement/PageManagementPortlet/webui/configuration.xml</value>
+    </init-param>
+
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>help</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+
+    <resource-bundle>locale.portlet.layoutManagement.PortalNavigationPortlet</resource-bundle>
+    <portlet-info>
+      <title>Page Management Portlet</title>
+      <short-title>Page Management Portlet</short-title>
+      <keywords>Administration</keywords>
+    </portlet-info>
+    <supported-publishing-event>
+      <name>NavigationChange</name>
+    </supported-publishing-event>
+  </portlet>
+
+  <portlet>
+    <description xml:lang="EN">Quick edit layout Toolbar portlet</description>
+    <portlet-name>QuickEditLayoutPortlet</portlet-name>
+    <display-name xml:lang="EN">Quick edit layout portlet</display-name>
+    <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
+    <init-param>
+      <name>webui.configuration</name>
+      <value>/WEB-INF/conf/portlet/layoutManagement/QuickEditLayoutPortlet/webui/configuration.xml</value>
+    </init-param>
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>help</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <resource-bundle>locale.portlet.layoutManagement.QuickEditLayoutPortlet</resource-bundle>
+    <portlet-info>
+      <title>Quick edit layout - toolbar portlet</title>
+      <short-title>Quick edit layout</short-title>
+    </portlet-info>
+  </portlet>
+
+  <event-definition>
+    <name>NavigationChange</name>
+  </event-definition>
+
+  <public-render-parameter>
+    <identifier>navigation_uri</identifier>
+    <qname xmlns:prp='http://www.gatein.org/xml/ns/prp_1_0'>prp:navigation_uri</qname>
+  </public-render-parameter>
+</portlet-app>

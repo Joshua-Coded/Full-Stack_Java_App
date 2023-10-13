@@ -1,0 +1,27 @@
+<%
+import org.exoplatform.portal.webui.workspace.UIPortalApplication;
+import org.exoplatform.portal.webui.portal.UIPortal;
+import org.exoplatform.webui.core.UIComponent;
+import org.exoplatform.portal.webui.application.UIPortlet;
+import org.exoplatform.portal.webui.page.UIPageBody;
+import org.exoplatform.portal.webui.util.Util;
+
+def rcontext = _ctx.getRequestContext();
+UIPortalApplication uiPortalApp = rcontext.getUIApplication();
+
+String permissionClasses = "";
+if (uiPortalApp.isEditing()) {
+	permissionClasses = uicomponent.getPermissionClasses();
+}
+%>
+<div class="UIPage<%=permissionClasses%>" id="UIPage-${uicomponent.id}">
+	<div class="UIComponentBlock">
+		<div class="VIEW-PAGE">
+			<div id="UIPage">
+				<div class="UIRowContainer">
+					<%uicomponent.renderChildren()%>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

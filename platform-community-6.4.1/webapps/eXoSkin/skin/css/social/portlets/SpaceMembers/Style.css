@@ -1,0 +1,559 @@
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/* default btn */
+/* primary btn */
+/* btn group */
+/* dropdown */
+/* btn dropdown */
+/* btn-primary dropdown */
+/* btn group dropdown */
+/* switchBtnHandle */
+/* switchBtnLabelOff */
+/* switchBtnLabelOn */
+/* uiradio */
+/* uicheckbox */
+/* uiSwitcher */
+/* input-append btn */
+/* Tags and mention */
+/* Thumbnail */
+/* popover  */
+/* */
+/* alerts  */
+/* progress bar */
+/*  tabs  */
+/* tables */
+/*  popup   */
+/* pagination */
+/* Welcome pages */
+/* Badge */
+/* uiBox */
+/* Alert */
+/* Left bar */
+/* The background of drop area when a file is dragged into it */
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+/*
+This file is part of the Meeds project (https://meeds.io/).
+Copyright (C) 2020 Meeds Association
+contact@meeds.io
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*/
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.loading-action {
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+#spaceMembersApplication .selectPeopleFilter {
+  height: 40px;
+  width: auto;
+  padding-right: 20px;
+}
+#spaceMembersApplication #spaceMembersBody {
+  min-height: calc(100vh - 180px);
+}
+#spaceMembersApplication .noPeopleYetBlock {
+  min-height: calc(100vh - 280px);
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+}
+#spaceMembersApplication .noPeopleYetBlock .addNewPeopleLink {
+  padding-bottom: 3px;
+}
+#spaceMembersApplication .noPeopleYetBlock .noPeopleYetIcons i::before {
+  font-size: 140px !important;
+  color: var(--allPagesGreyColorLighten1, #5f708a);
+}
+#spaceMembersApplication .inputPeopleFilter {
+  max-width: 215px;
+}
+#spaceMembersApplication .showingPeopleText {
+  min-width: 120px;
+}
+#spaceMembersApplication .peopleFormDrawer textarea {
+  resize: none;
+}
+#spaceMembersApplication .peopleBannerImg {
+  position: absolute;
+}
+#spaceMembersApplication .peopleAvatar .v-image {
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px -2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+#spaceMembersApplication .peopleAvatar .v-image__image {
+  border-radius: 5px;
+}
+#spaceMembersApplication .connectUserButton:not(.skeleton-text),
+#spaceMembersApplication .acceptToConnectButton:not(.skeleton-text),
+#spaceMembersApplication .peopleButtonMenu:not(.skeleton-text) {
+  border: 1px solid var(--allPagesPrimaryColor, #476a9c) !important;
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+}
+#spaceMembersApplication .connectUserButton:not(.skeleton-text) i,
+#spaceMembersApplication .acceptToConnectButton:not(.skeleton-text) i,
+#spaceMembersApplication .peopleButtonMenu:not(.skeleton-text) i {
+  color: var(--allPagesPrimaryColor, #476a9c) !important;
+}
+#spaceMembersApplication .cancelRequestButton {
+  flex: auto;
+  border: 1px solid var(--allPagesBtnBorder, var(--allPagesGreyColor, #e1e8ee)) !important;
+  color: var(--allPagesDarkGrey, #4d5466) !important;
+}
+#spaceMembersApplication .cancelRequestButton i {
+  color: var(--allPagesDarkGrey, #4d5466) !important;
+}
+#spaceMembersApplication .disconnectUserButton,
+#spaceMembersApplication .refuseToConnectButton {
+  border: 1px solid #bc4343 !important;
+  color: #bc4343 !important;
+}
+#spaceMembersApplication .disconnectUserButton i,
+#spaceMembersApplication .refuseToConnectButton i {
+  color: #bc4343 !important;
+}
+#spaceMembersApplication .refuseToConnectButton {
+  margin-top: 2px;
+  width: 100%;
+}
+#spaceMembersApplication .refuseToConnectButton .v-btn__content {
+  max-width: 100%;
+}
+#spaceMembersApplication .refuseToConnectButton .v-btn__content span {
+  display: inline-block !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+#spaceMembersApplication .externalFlagClass {
+  color: var(--allPagesBaseColorLight, #707070);
+  font-weight: normal;
+}
+#spaceMembersApplication .peopleMenuIcon {
+  height: 26px !important;
+  width: 26px !important;
+  margin-top: 6px;
+}
+#spaceMembersApplication .peopleMenuIcon:not(.skeleton-text) {
+  color: #fff !important;
+  background: var(--allPagesBtnPrimaryDisableBackground, #8da6ca) !important;
+}
+#spaceMembersApplication .peopleActionItem {
+  display: flex;
+  line-height: 20px;
+}
+#spaceMembersApplication .peopleActionItem i {
+  font-size: 18px;
+  margin-right: 7px ; /** orientation=lt */ ;
+  margin-left: 7px ; /** orientation=rt */ ;
+}
+#spaceMembersApplication .inputPeopleFilter input {
+  padding: 6px 0 0;
+}
+#spaceMembersApplication .peopleInfoIcon,
+#spaceMembersApplication .peopleGroupMemberBindingIcon {
+  height: 26px;
+  width: 26px;
+  margin-top: 6px;
+}
+#spaceMembersApplication .peopleInfoIcon:not(.skeleton-text),
+#spaceMembersApplication .peopleGroupMemberBindingIcon:not(.skeleton-text) {
+  background: #fff;
+  border: 1px solid #476a9c !important;
+  color: #476a9c !important;
+}
+#spaceMembersApplication .peopleInfoIcon:not(.skeleton-text) {
+  background: #fff;
+  border: 1px solid #476a9c !important;
+  color: #476a9c !important;
+}
+#spaceMembersApplication .peopleGroupMemberBindingIcon:not(.skeleton-text) {
+  background: var(--allPagesDarkGrey, #4d5466);
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+#spaceMembersApplication .peopleToolbarIcons {
+  display: flex;
+}
+#spaceMembersApplication .peopleActionMenu {
+  right: 21px ; /** orientation=lt */ ;
+  left: auto !important; /** orientation=lt */ ;
+  left: 21px ; /** orientation=rt */ ;
+  right: auto !important; /** orientation=rt */ ;
+  top: 42px !important;
+}
+#spaceMembersApplication .aboutMeText {
+  max-height: 112px;
+}
+#spaceMembersApplication .peopleCardFlipped {
+  transform: rotateY(180deg);
+}
+#spaceMembersApplication .peopleCardFlip {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  min-height: 249px;
+  padding: 0;
+}
+#spaceMembersApplication .peopleCardFront,
+#spaceMembersApplication .peopleCardBack {
+  backface-visibility: hidden;
+  /* Safari */
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0 ; /** orientation=lt */ ;
+  right: 0 ; /** orientation=rt */ ;
+  height: 227px;
+  max-height: 227px;
+  width: 100%;
+  max-width: 100%;
+}
+#spaceMembersApplication .peopleCardFront {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+#spaceMembersApplication .peopleCardBack {
+  transform: rotateY(180deg);
+}
+#spaceMembersApplication .peopleCardItem {
+  height: 227px;
+  max-height: 227px;
+  flex-direction: column;
+  border-radius: 5px;
+}
+#spaceMembersApplication .peopleDisplayName {
+  color: var(--allPagesBaseTextColor, #333333) !important;
+}
+#spaceMembersApplication .peopleMembersLabel {
+  color: var(--allPagesGreyColorLighten1, #5f708a) !important;
+}
+#spaceMembersApplication .peopleCardActions {
+  align-items: flex-end !important;
+}
+#spaceMembersApplication .peopleCardActions button i {
+  margin-right: 10px ; /** orientation=lt */ ;
+  margin-left: 10px ; /** orientation=rt */ ;
+}
+#spaceMembersApplication .invitationButtons {
+  width: 100%;
+}
+#spaceMembersApplication .acceptToConnectButtonParent {
+  display: inline-flex;
+  max-width: 90%;
+}
+#spaceMembersApplication .acceptToConnectButtonParent .acceptToConnectButton {
+  max-width: 85%;
+  width: 85%;
+  border-right: 0 ; /** orientation=lt */ ;
+  border-left: 0 ; /** orientation=rt */ ;
+  border-bottom-right-radius: 0 !important; /** orientation=lt */ ;
+  border-top-right-radius: 0 !important; /** orientation=lt */ ;
+  border-bottom-left-radius: 0 !important; /** orientation=rt */ ;
+  border-top-left-radius: 0 !important; /** orientation=rt */ ;
+}
+#spaceMembersApplication .acceptToConnectButtonParent .acceptToConnectButton .v-btn__content {
+  max-width: 100%;
+}
+#spaceMembersApplication .acceptToConnectButtonParent .acceptToConnectButton .v-btn__content span {
+  width: auto;
+  max-width: calc(72%);
+  min-width: auto;
+  display: inline-block !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+#spaceMembersApplication .acceptToConnectButtonParent .peopleButtonMenu {
+  max-width: 15%;
+  width: 15%;
+  padding: 5px 20px;
+  height: auto;
+  border-left: 0 ; /** orientation=lt */ ;
+  margin-left: -11px ; /** orientation=lt */ ;
+  border-bottom-left-radius: 0 !important; /** orientation=lt */ ;
+  border-top-left-radius: 0 !important; /** orientation=lt */ ;
+  border-right: 0 ; /** orientation=rt */ ;
+  margin-right: -11px ; /** orientation=rt */ ;
+  border-bottom-right-radius: 0 !important; /** orientation=rt */ ;
+  border-top-right-radius: 0 !important; /** orientation=rt */ ;
+}
+#spaceMembersApplication .acceptToConnectButtonParent .peopleButtonMenu i {
+  margin: 0;
+}
+#spaceMembersApplication .peopleCardFront > *,
+#spaceMembersApplication .peopleCardBack > * {
+  margin: 0 5px;
+}
+#spaceMembersApplication .peopleCardItem {
+  margin: 0px 6px 0px 0px;
+}
+.spaceInvitationDrawer .externalList {
+  padding: 0px !important;
+  position: relative!important;
+}
+.spaceInvitationDrawer .externalList .v-list-item {
+  background-color: var(--allPagesTableThBackground, #f6f7fa) !important;
+}
+.spaceInvitationDrawer .externalList .v-list-item__content {
+  cursor: default;
+}
+.spaceInvitationDrawer .externalList .v-badge--bordered .v-badge__badge::after {
+  border-width: 1px;
+}
+.spaceInvitationDrawer .externalList .theme--light.v-badge .v-badge__badge::after {
+  border-color: var(--allPagesPrimaryColor, #476a9c);
+}
+.spaceInvitationDrawer .externalList .v-badge__badge {
+  padding-left: 3px;
+  padding-top: 1px;
+  height: 18px;
+  width: 18px;
+  min-width: 18px!important;
+}
+.spaceInvitationDrawer .externalList .mdi-close-circle {
+  color: #bc4343 !important;
+}
+.spaceInvitationDrawer .externalList .externalUserEmail {
+  color: #333333;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem!important;
+  letter-spacing: 0.0071428571em;
+}
+.spaceInvitationDrawer .externalList .subEmail {
+  color: var(--allPagesGreyColorLighten1, #5f708a) !important;
+}
+.spaceInvitationDrawer .externalList .subExpired {
+  color: #bc4343 !important;
+  max-width: fit-content;
+}
+.spaceInvitationDrawer .externalList .uiIconSocUserProfile {
+  font-size: 12px;
+}
+.spaceInvitationDrawer .externalList .helpIcon {
+  margin-left: -10px !important;
+  margin-bottom: 6px!important;
+  font-size: 8px!important;
+}
+.spaceInvitationDrawer .alreadyExistAlert {
+  color: #7F221D!important;
+  background-color: #ffffff !important;
+  border: 2px solid #bc4343 !important;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 6px;
+  font-size: 0.875rem!important;
+}
+.spaceInvitationDrawer .successfulInvitation {
+  color: var(--allPagesAlertSuccessColor, #084130) !important;
+  background-color: #2eb58c !important;
+  border: 2px solid!important;
+  font-size: 13.5px;
+}
+.tooltip {
+  max-width: 280px !important;
+}
+@media (max-width: 767px) {
+  #spaceMembersApplication #spaceMembersToolbar .inputPeopleFilter {
+    max-width: none;
+  }
+  #spaceMembersApplication .inputPeopleFilter .v-input__prepend-inner {
+    display: none;
+  }
+  #spaceMembersApplication .inputPeopleFilter input {
+    padding-top: 0;
+  }
+  #spaceMembersApplication .peopleCardFront,
+  #spaceMembersApplication .peopleCardItem,
+  #spaceMembersApplication .peopleCardFlip {
+    height: 72px;
+    max-height: 72px;
+    min-height: 72px;
+    margin-bottom: 5px;
+  }
+  #spaceMembersApplication .peopleAvatar {
+    position: absolute;
+    max-width: 60px;
+    margin: 6px 10px;
+  }
+  #spaceMembersApplication .peopleAvatar .v-image {
+    height: 60px !important;
+    max-height: 60px !important;
+    width: 60px !important;
+    max-width: 60px !important;
+  }
+  #spaceMembersApplication .peopleToolbarIcons {
+    width: 50px;
+    right: 3px;
+    margin: auto;
+    position: absolute;
+    padding: 0 !important;
+  }
+  #spaceMembersApplication .peopleToolbarIcons .peopleActionIcon {
+    color: var(--allPagesDarkGrey, #4d5466) !important;
+  }
+  #spaceMembersApplication .peopleCardActions {
+    float: right;
+    margin-top: 32px;
+    margin-right: 2px;
+  }
+  #spaceMembersApplication .peopleCardActions button {
+    border-radius: 50%;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    box-sizing: content-box;
+    min-width: auto;
+  }
+  #spaceMembersApplication .peopleCardActions button i {
+    margin-right: 0;
+  }
+  #spaceMembersApplication .peopleCardBody {
+    float: left;
+    left: 72px;
+    position: absolute;
+    width: calc(100% - 108px);
+    align-items: start !important;
+    text-align: left !important;
+    padding: 5px;
+  }
+  #spaceMembersApplication .peopleCardBody > * {
+    float: left;
+    padding: 0 !important;
+    clear: both;
+    max-width: 100%;
+    margin: 6px 5px 0;
+  }
+  #spaceMembersApplication .invitationButtons {
+    display: flex;
+  }
+  #spaceMembersApplication .invitationButtons .refuseToConnectButton {
+    display: block !important;
+    margin-top: 0;
+    margin-left: 6px !important;
+    min-width: auto !important;
+  }
+  #spaceMembersApplication .invitationButtons .acceptToConnectButtonParent .acceptToConnectButton {
+    border-radius: 50% !important;
+    min-width: auto !important;
+  }
+  #spaceMembersApplication .peopleBannerImg,
+  #spaceMembersApplication .peopleInfoIcon,
+  #spaceMembersApplication .peopleMenuIcon,
+  #spaceMembersApplication .peopleDeleteButton,
+  #spaceMembersApplication .peopleRelationshipButton .peopleRelationshipIcon,
+  #spaceMembersApplication .peopleRelationshipButton .peopleRelationshipButtonText,
+  #spaceMembersApplication .peopleButtonMenu {
+    display: none !important;
+  }
+  #spaceMembersApplication .peopleDeleteButtonMinus,
+  #spaceMembersApplication .relationshipButtonMinus {
+    display: inline !important;
+  }
+}
+
