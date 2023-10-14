@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16966616448720" configfile="/PlantStore/src/main/webapp/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16966616448720" configfile="/PlantStore/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf16971638131850" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16971638131861 pf16972532675180" path="index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="result.xhtml" id="pf16971638131872" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16971638131861" path="result.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="noResult.xhtml" id="pf16972532675181" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16972532675180" path="noResult.xhtml"/>
+  <links id="pf16971638131861" target="pf16971638131872" source="pf16971638131850" outcome="search"/>
+  <links id="pf16972532675180" target="pf16972532675181" source="pf16971638131850" outcome="noresult"/>
+</pageflow:Pageflow>
