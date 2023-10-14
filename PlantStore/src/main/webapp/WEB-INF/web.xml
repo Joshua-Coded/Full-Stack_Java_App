@@ -25,6 +25,13 @@
     <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
     <param-value>resources.application</param-value>
   </context-param>
+  
+  <context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>glass-x</param-value>
+  </context-param>
+  
+  
   <listener>
     <listener-class>
 		org.springframework.web.context.ContextLoaderListener
