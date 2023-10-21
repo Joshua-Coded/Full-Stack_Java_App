@@ -1,5 +1,8 @@
 package com.plantstore.ui;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.ManagedBean;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -33,6 +36,25 @@ public class SearchPlants {
 	 */
 	public void setPlant(Plant plant) {
 		this.plant = plant;
+	}
+	
+	public List<Plant> completePlants(String query) {
+			ArrayList<Plant> allPlants = new ArrayList<Plant>();
+			
+//			create all plants and add them to the collections.
+			Plant redbud = new Plant();
+			redbud.setName("Eastern Redbud");
+			allPlants.add(redbud);
+			
+			Plant pawpaw =  new Plant();
+			pawpaw.setName("Pawpaw");
+			allPlants.add(pawpaw);
+			
+			Plant mango = new Plant();
+			mango.setName("Mango");
+			allPlants.add(mango);
+			
+			return allPlants;
 	}
 
 }
