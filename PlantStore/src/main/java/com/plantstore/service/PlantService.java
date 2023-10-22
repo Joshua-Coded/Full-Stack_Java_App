@@ -14,13 +14,14 @@ import com.plantstore.dto.Plant;
 public class PlantService implements IPlantService {
 	
 	@Inject
+	private
 	IPlantDAO  plantDAO;
 	private List<Plant> allPlants;
 
 	@Override
 	public List<Plant> filterPlant(String filter) {
 		if (allPlants == null) {
-			allPlants = plantDAO.fetchPlants();
+			allPlants = getPlantDAO().fetchPlants();
 		}
 
 		List<Plant> returnPlants = new ArrayList<Plant>();
@@ -34,6 +35,20 @@ public class PlantService implements IPlantService {
 		}
 		
 		return returnPlants;
+	}
+
+	/**
+	 * @return the plantDAO
+	 */
+	public IPlantDAO getPlantDAO() {
+		return plantDAO;
+	}
+
+	/**
+	 * @param plantDAO the plantDAO to set
+	 */
+	public void setPlantDAO(IPlantDAO plantDAO) {
+		this.plantDAO = plantDAO;
 	}
 
 }
