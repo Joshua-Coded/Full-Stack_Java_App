@@ -1,4 +1,5 @@
 /home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/service/test/TestPlantService.java
+/home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/ui/AddPlant.java
 /home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/ui/ApplicationInfo.java
 /home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/dto/Plant.java
 /home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/dao/IPlantDAO.java
@@ -6,3 +7,4 @@
 /home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/service/PlantService.java
 /home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/dao/PlantDAOStub.java
 /home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/ui/SearchPlants.java
+/home/dev-josh/eclipse-workspace/invictus/PlantStore/src/main/java/com/plantstore/ui/test/TestSearchPlants.java

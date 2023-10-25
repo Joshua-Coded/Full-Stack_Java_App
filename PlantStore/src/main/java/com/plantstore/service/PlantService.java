@@ -10,7 +10,7 @@ import com.plantstore.dto.Plant;
 
 
 @Named
-public class PlantService implements IPlantService {
+public  class PlantService implements IPlantService {
 
 	@Inject
 	private	IPlantDAO plantDAO;
@@ -37,7 +37,14 @@ public class PlantService implements IPlantService {
 		}
 		
 		return returnPlants;
-		};		
+		}
+	
+	
+	@Override
+	public void save(Plant Plant) throws Exception {
+			plantDAO.insertPlant(Plant);
+	}	
+	
 	/**
 	 * @return the plantDAO
 	*/
