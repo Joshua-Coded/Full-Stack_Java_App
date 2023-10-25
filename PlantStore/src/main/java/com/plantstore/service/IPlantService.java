@@ -15,5 +15,5 @@ public interface IPlantService {
      * @param filter a substring that should be contained in the returned plants.
      * @return a collection of matching plants
      */
-	public List<Plant> filterPlant(String filter);
+	public List<Plant> filterPlants(String filter);
 }

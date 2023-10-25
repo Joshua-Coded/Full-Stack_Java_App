@@ -10,6 +10,7 @@ import javax.inject.Named;
 import org.springframework.context.annotation.Scope;
 
 import com.plantstore.dto.Plant;
+import com.plantstore.service.IPlantService;
 
 @Named
 @ManagedBean
@@ -18,6 +19,9 @@ public class SearchPlants {
 	
 	@Inject
 	private Plant plant; 
+	
+	@Inject
+	private IPlantService plantService;
 	public String execute() {
 		
 		if (plant != null &&  plant.getName().equalsIgnoreCase("redbud")) {
@@ -39,22 +43,7 @@ public class SearchPlants {
 	}
 	
 	public List<Plant> completePlants(String query) {
-			ArrayList<Plant> allPlants = new ArrayList<Plant>();
-			
-//			create all plants and add them to the collections.
-			Plant redbud = new Plant();
-			redbud.setName("Eastern Redbud");
-			allPlants.add(redbud);
-			
-			Plant pawpaw =  new Plant();
-			pawpaw.setName("Pawpaw");
-			allPlants.add(pawpaw);
-			
-			Plant mango = new Plant();
-			mango.setName("Mango");
-			allPlants.add(mango);
-			
-			return allPlants;
+			return plantService.filterPlants(query);
 	}
 
 }

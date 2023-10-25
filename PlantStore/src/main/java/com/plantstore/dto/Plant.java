@@ -28,13 +28,6 @@ public class Plant {
 		this.name = name;
 	}
 	
-	
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return name;
-	}
-
 	public String getGenus() {
 		return genus;
 	}
@@ -67,7 +60,12 @@ public class Plant {
 		this.common = common;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return genus + " " + species + " " + cultivar + " " + common;
+	}
+
 	
 
 }
