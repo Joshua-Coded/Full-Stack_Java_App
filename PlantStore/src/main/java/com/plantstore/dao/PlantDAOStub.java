@@ -4,16 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Named;
+import javax.websocket.Session;
 
 import org.apache.log4j.Logger;
 
 import com.plantstore.dto.Plant;
 
 @Named("plantDAO")
-public abstract class PlantDAOStub implements IPlantDAO {
-	 static final Logger log = Logger.getLogger(PlantDAOStub.class);
+public class PlantDAOStub implements IPlantDAO {
+	
+	static final Logger log = Logger.getLogger(PlantDAOStub.class);
+
 	@Override
 	public List<Plant> fetchPlants() {
+		// TODO Auto-generated method stub
 		List<Plant> allPlants = new ArrayList<Plant>();
 
 		// Create plants and add them to the collection.
@@ -41,15 +45,20 @@ public abstract class PlantDAOStub implements IPlantDAO {
 		redMaple.setSpecies("rubrum");
 		redMaple.setCommon("Red Maple");
 		allPlants.add(redMaple);
+
+		Plant redOak = new Plant();
+		redOak.setGenus("Quercus");
+		redOak.setSpecies("rubra");
+		redOak.setCommon("Red Oak");
+		allPlants.add(redOak);
 		
 		return allPlants;
-		
+
 	}
 
-	@Override
-	public void insertPlant(Plant plant) throws Exception {
+	public void insert(Plant plant) throws Exception {
 		// TODO Auto-generated method stub
-		log.warn("Inserting to Stub; this does not persist the item");
+		log.warn("Inserting to stub; this does NOT persist the item"); 
 	}
 
 	@Override
@@ -62,6 +71,22 @@ public abstract class PlantDAOStub implements IPlantDAO {
 	public void delete(Plant plant) throws Exception {
 		// TODO Auto-generated method stub
 
+	}
+
+	public List<Plant> fetchPlants(Plant plant) {
+		return new ArrayList<Plant>();
+	}
+
+	@Override
+	public void insert(Session session, Plant plant) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void save(Plant plant) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -19,7 +19,6 @@ public class AddPlant {
 	
 	final static Logger logger = Logger.getLogger(AddPlant.class);
 
-
 	
 	private Plant plant;
 	
@@ -29,7 +28,7 @@ public class AddPlant {
 	private String message = "foo";
 
 	public String execute() {
-		logger.info("Entering  the excuted method");
+		logger.info("Entering the Execute method");
 		String returnValue = "";
 		
 		// get faces context
@@ -38,7 +37,7 @@ public class AddPlant {
 		try {
 			plantService.save(plant);
 			
-			logger.info("Saved successful" + plant.toString());
+			logger.info("Save successful " + plant.toString());
 			
 			// what is the message that we want to show?
 			FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Saved", "Plant Saved");
@@ -46,7 +45,7 @@ public class AddPlant {
 			currentInstance.addMessage(null, fm);
 			
 		} catch (Exception e) {
-			logger.error("Error while saving plant, message" + e.getMessage());
+			logger.error("Error while saving plant.  Message: " + e.getMessage());
 			
 			e.printStackTrace();
 			returnValue = "fail";
