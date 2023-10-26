@@ -5,6 +5,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
@@ -16,7 +17,8 @@ import com.plantstore.service.IPlantService;
 @Scope("session")
 public class AddPlant {
 	
-	
+	final static Logger logger = Logger.getLogger(AddPlant.class);
+
 
 	
 	private Plant plant;
@@ -27,7 +29,7 @@ public class AddPlant {
 	private String message = "foo";
 
 	public String execute() {
-		
+		logger.info("Entering  the excuted method");
 		String returnValue = "";
 		
 		// get faces context
@@ -36,7 +38,7 @@ public class AddPlant {
 		try {
 			plantService.save(plant);
 			
-			
+			logger.info("Saved successful" + plant.toString());
 			
 			// what is the message that we want to show?
 			FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Saved", "Plant Saved");
@@ -44,7 +46,7 @@ public class AddPlant {
 			currentInstance.addMessage(null, fm);
 			
 		} catch (Exception e) {
-			
+			logger.error("Error while saving plant, message" + e.getMessage());
 			
 			e.printStackTrace();
 			returnValue = "fail";
