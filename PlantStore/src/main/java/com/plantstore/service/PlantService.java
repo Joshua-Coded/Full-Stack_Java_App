@@ -41,8 +41,11 @@ public  class PlantService implements IPlantService {
 	
 	
 	@Override
-	public void save(Plant Plant) throws Exception {
-			plantDAO.insertPlant(Plant);
+	public void save(Plant plant) throws Exception {
+		if (plant.getGenus() == null || plant.getGenus().isEmpty()) {
+			throw new Exception ("Genus required");
+		}
+			plantDAO.insertPlant(plant);
 	}	
 	
 	/**
@@ -54,6 +57,13 @@ public  class PlantService implements IPlantService {
 
 	public void setPlantDAO(IPlantDAO plantDAO) {
 		this.plantDAO = plantDAO;
+	}
+
+
+	@Override
+	public void save(Plant plant) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 

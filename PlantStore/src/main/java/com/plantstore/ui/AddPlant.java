@@ -1,9 +1,11 @@
 package com.plantstore.ui;
 
-import javax.faces.bean.ManagedBean;
-import javax.inject.Inject;
+import javax.annotation.ManagedBean;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
 import com.plantstore.dto.Plant;
@@ -13,49 +15,71 @@ import com.plantstore.service.IPlantService;
 @ManagedBean
 @Scope("session")
 public class AddPlant {
-	@Inject
-	private Plant plant; 
 	
-	@Inject
+	
+
+	
+	private Plant plant;
+	
+	@Autowired
 	private IPlantService plantService;
+	
+	private String message = "foo";
 
 	public String execute() {
-		String returnValue = "Success";
+		
+		String returnValue = "";
+		
+		// get faces context
+		FacesContext currentInstance = FacesContext.getCurrentInstance();
+					
 		try {
 			plantService.save(plant);
+			
+			
+			
+			// what is the message that we want to show?
+			FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_INFO, "Saved", "Plant Saved");
+			// display the message
+			currentInstance.addMessage(null, fm);
+			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
+			
 			e.printStackTrace();
 			returnValue = "fail";
+			
+			// what is the message that we want to show?
+			FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Unable to Save", "Plant not Saved");
+			// display the message
+			currentInstance.addMessage(null, fm);
+						
 		}
 		return returnValue;
 	}
 
-	/**
-	 * @return the plant
-	 */
 	public Plant getPlant() {
 		return plant;
 	}
 
-	/**
-	 * @param plant the plant to set
-	 */
 	public void setPlant(Plant plant) {
 		this.plant = plant;
 	}
 
-	/**
-	 * @return the plantService
-	 */
 	public IPlantService getPlantService() {
 		return plantService;
 	}
 
-	/**
-	 * @param plantService the plantService to set
-	 */
 	public void setPlantService(IPlantService plantService) {
 		this.plantService = plantService;
 	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
 }
