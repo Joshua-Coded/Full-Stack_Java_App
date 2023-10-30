@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.plantstore.dto.Plant" table="PLANTS" catalog="PlantStores">
+        <id name="guid" type="java.lang.Integer">
+            <column name="PLANT_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="genus" type="string">
+            <column name="GENUS" length="255" not-null="false" unique="false" />
+        </property>
+        <property name="species" type="string">
+            <column name="SPECIES" length="255" not-null="false" unique="false" />
+        </property>        
+        <property name="cultivar" type="string">
+            <column name="CULTIVAR" length="255" not-null="false" unique="false" />
+        </property>      
+        <property name="common" type="string">
+            <column name="COMMON" length="255" not-null="false" unique="false" />
+        </property>      
+    </class>
+</hibernate-mapping>

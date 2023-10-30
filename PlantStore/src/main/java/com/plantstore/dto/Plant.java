@@ -1,32 +1,24 @@
 package com.plantstore.dto;
 
+
 import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
+
 import org.springframework.context.annotation.Scope;
+
 
 @Named
 @ManagedBean
 @Scope("session")
-public class Plant {
+public class Plant{
+	
 	private String name;
 	private String genus;
 	private String species;
 	private String cultivar;
 	private String common;
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+	private int guid;
+	
 	
 	public String getGenus() {
 		return genus;
@@ -59,13 +51,27 @@ public class Plant {
 	public void setCommon(String common) {
 		this.common = common;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return genus + " " + species + " " + cultivar + " " + common;
+		return genus + "  " + species + " " + cultivar + " " + common;
 	}
 
-	
+	public int getGuid() {
+		return guid;
+	}
+
+	public void setGuid(int guid) {
+		this.guid = guid;
+	}
 
 }
