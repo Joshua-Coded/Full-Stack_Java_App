@@ -13,5 +13,5 @@ public interface IPlantDAO {
 	public void update(Plant plant) throws Exception;
 	public void delete(Plant plant) throws Exception;
 
-	public void save(Plant plant);
+	public void save(Plant plant) throws Exception;
 }

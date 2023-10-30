@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Named;
-import javax.websocket.Session;
 
 import org.apache.log4j.Logger;
+import org.hibernate.Session;
 
 import com.plantstore.dto.Plant;
 
