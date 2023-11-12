@@ -5,4 +5,47 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
     version="2.2">
 
+    <application>
+        <!-- Configure Spring EL resolver -->
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+    </application>
+
+    <!-- Configure Spring Application Context -->
+    <application>
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+    </application>
+
+    <application>
+        <resource-bundle>
+            <base-name>com.example.messages</base-name>
+            <var>msgs</var>
+        </resource-bundle>
+    </application>
+
+    <!-- Configure Managed Beans -->
+    <managed-bean>
+        <managed-bean-name>accountBean</managed-bean-name>
+        <managed-bean-class>com.joshua.beans.AccountBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+        <property-name>sharedBean</property-name>
+        <value>#{sharedBean}</value>
+    </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>sharedBean</managed-bean-name>
+        <managed-bean-class>com.joshua.beans.SharedBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+        
+
+    <!-- Configure Navigation Rules -->
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/accounts.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
